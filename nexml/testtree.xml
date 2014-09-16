@@ -1,0 +1,96 @@
+<?xml-stylesheet href="sys-bio.tss"
+              alternate="yes" title="Systematic Biology house style"
+              media="screen, print" type="text/tss"?>
+<nex:nexml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:nex="http://www.nexml.org/2009"
+xmlns:tss="http://mesquiteproject.org/tss#"   xmlns:cdao="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns="http://www.nexml.org/2009" version="0.9"
+  xml:base="http://example.org/"
+  xsi:schemaLocation="http://www.nexml.org/2009 ../xsd/nexml.xsd">
+
+  <otus id="tax1" label="RootTaxaBlock">
+    <otu id="t1" label="species 1"/>
+    <otu id="t2" label="species 2"/>
+    <otu id="t3" label="species 3"/>
+    <otu id="t4" label="species 4"/>
+    <otu id="t5" label="species 5"/>
+  </otus>
+  <trees otus="tax1" id="Trees" label="TreesBlockFromXML">
+    <tree id="tree1" xsi:type="nex:FloatTree" label="tree1">
+      <node id="n1" label="n1" root="true">
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta1" property="tss:syndrome_probability" content="[70,10,20]"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta22" property="tss:environment" content="benthic"/>
+      </node>
+      <node id="n2" label="n2" otu="t1">
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta2" property="tss:trophic_level" content="herbivore"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta3" property="tss:syndrome_probability" content="[65,20,15]"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta23" property="tss:environment" content="benthic"/>
+      </node>
+      <node id="n3" label="n3">
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta4" property="tss:syndrome_probability" content="[65,20,15]"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta24" property="tss:environment" content="limnetic"/>
+      </node>
+      <node id="n4" label="n4">
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta5" property="tss:syndrome_probability" content="[90,0,10]"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta25" property="tss:environment" content="pelagic"/>
+      </node>
+      <node id="n5" label="n5" otu="t3">
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta6" property="tss:trophic_level" content="carnivore"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta7" property="tss:syndrome_probability" content="[30,30,40]"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta26" property="tss:environment" content="pelagic"/>
+      </node>
+      <node id="n6" label="n6" otu="t2">
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta8" property="tss:trophic_level" content="herbivore"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta9" property="tss:syndrome_probability" content="[0,50,50]"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta10" property="tss:extinct" content="true"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta27" property="tss:environment" content="benthic"/>
+      </node>
+      <node id="n7" label="n7">
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta11" property="tss:syndrome_probability" content="[40,20,40]"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta28" property="tss:environment" content="limnetic"/>
+      </node>
+      <node id="n8" label="n8" otu="t5">
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta12" property="tss:trophic_level" content="carnivore"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta13" property="tss:syndrome_probability" content="[35,45,20]"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta29" property="tss:environment" content="pelagic"/>
+      </node>
+      <node id="n9" label="n9" otu="t4">
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta15" property="tss:trophic_level" content="herbivore"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta14" property="tss:syndrome_probability" content="[15,60,25]"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta30" property="tss:environment" content="benthic"/>
+      </node>
+      <edge source="n1" target="n3" id="e1" length="0.34534">
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta16" property="tss:bootstrap" content="97"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta17" property="tss:posterior_prob" content="91"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta38" property="tss:char4change" content="1"/>
+      </edge>
+      <edge source="n1" target="n2" id="e2" length="0.4353">
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta31" property="tss:char1change" content="1"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta34" property="tss:char2change" content="1"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta37" property="tss:char3change" content="1"/>
+      </edge>
+      <edge source="n3" target="n4" id="e3" length="0.324">
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta18" property="tss:bootstrap" content="76"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta19" property="tss:posterior_prob" content="82"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta40" property="tss:majortransition" content="1"/>
+      </edge>
+      <edge source="n3" target="n7" id="e4" length="0.3247">
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta20" property="tss:bootstrap" content="58"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta21" property="tss:posterior_prob" content="48"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta32" property="tss:char1change" content="1"/>
+      </edge>
+      <edge source="n4" target="n5" id="e5" length="0.234">
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta39" property="tss:char4change" content="0"/>
+      </edge>
+      <edge source="n4" target="n6" id="e6" length="0.3243">
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta33" property="tss:char1change" content="1"/>
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta35" property="tss:char2change" content="1"/>
+      </edge>
+      <edge source="n7" target="n8" id="e7" length="0.32443">
+        <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta36" property="tss:char2change" content="1"/>
+      </edge>
+      <edge source="n7" target="n9" id="e8" length="0.2342">
+      </edge>
+    </tree>
+  </trees>
+</nex:nexml>
