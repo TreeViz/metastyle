@@ -1,0 +1,93 @@
+canvas {
+	background-color: white;
+	width: 500px;
+	height: 500px;
+	font: 12pt "Helvetica",serif;
+}
+
+tree {
+	border: 2px black solid;
+	layout: rectangular;
+	tip-orientation: right;
+	scaled: true;
+}
+
+scale {
+	visible: false;
+}/Users/jima/Downloads/default (1).tss
+
+trophic_level.herbivore {
+	color: green;
+}
+
+trophic_level.carnivore 
+	color: red;
+}
+
+posterior_prob[min=0][max=50] {
+	text: "<50";
+	font-style: italic;
+}
+
+posterior_prob[min=51][max=90] {
+	text: value;
+	font-style: italic;
+}
+
+posterior_prob[min=91][max=100] {
+	text: "*";
+	border: 10px;
+	font-style: italic;
+	font-size: 200%;
+}
+
+bootstrap[min=91][max=100] {
+	border: 10px;
+	font-style: italic;
+	font-size: 200%;
+}
+
+bootstrap[min=0.9][max=1.0] {
+	border: 10px;
+	font-style: italic;
+	font-size: 200%;
+}
+
+/*
+      <node about="#node746" id="node746" label="">
+        <meta content="0.97" datatype="xsd:string" id="meta748" property="tss:bootstrap" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node750" label="NMY 11141" otu="otu38">
+        <meta content="Y" datatype="xsd:string" id="meta01" property="tss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="tss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+ */
+chromosome.Y {
+	color: blue;
+}
+
+chromosome.X {
+	color: red;
+}
+
+sequence_type.SANG {
+	color: bold;
+}
+
+sequence_type.TRAM {
+	color: italic;
+}
+
+
+majortransition {
+	border: 5px green solid;
+}
+
+colored_branch {
+    border: 10px value;
+}
+
+clade {
+    collapsed: true;
+}
+
