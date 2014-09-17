@@ -1,17 +1,58 @@
 from ete2 import Nexml, TreeStyle, NodeStyle
+
+import argparse
 import tinycss
 import sys
 import os
 
-if len(sys.argv) < 2:
-    print("Command line argument required: NeXML file")
-    exit(-1)
+argparser = argparse.ArgumentParser(
+    description='Produce publication-quality phylogenetic trees using NexSS stylesheets'
+)
+argparser.add_argument(
+    'source',
+    nargs=1,
+    help='Input NeXML file to process'
+)
+argparser.add_argument(
+    'stylesheet',
+    nargs='*',
+    help='NexSS stylesheet to format the NeXML file with'
+)
+argparser.add_argument(
+    '-o', '--output',
+    nargs=1,
+    default='output.svg',
+    help='The name of the output file. Must have a .svg, .png or .pdf extension.'
+)
+argparser.add_argument(
+    '-ow', '--width',
+    nargs=1,
+    default=[None],
+    type=int,
+    help='The width of the output image'
+)
+argparser.add_argument(
+    '-oh', '--height',
+    nargs=1,
+    default=[None],
+    type=int,
+    help='The height of the output image'
+)
+argparser.add_argument(
+    '--dpi',
+    nargs=1,
+    default=[300],
+    type=int,
+    help='The dots-per-inch (DPI) in the output file.'
+)
+args = argparser.parse_args()
 
-custom_stylesheet = None
-if len(sys.argv) > 2:
-    if sys.argv[2]:
-        custom_stylesheet = sys.argv[2]
-    
+# Change single-list items into single items.
+args.output = args.output[0]
+args.dpi = args.dpi[0]
+args.width = args.width[0]
+args.height = args.height[0]
+
 nexml = Nexml()
 nexml.build_from_file(sys.argv[1])
 
@@ -108,8 +149,8 @@ def apply_node_rule(rule, node_style, node):
 def gather_tss_stylesheets(tree):
     sheets = []
     # if a stylesheet was provided, this is all we should use
-    if custom_stylesheet:
-        sheets.append(custom_stylesheet)
+    if args.stylesheet:
+        sheets.extend(args.stylesheet)
         return sheets
 
     # TODO: add any default stylesheet for this tool?
@@ -195,14 +236,31 @@ def apply_stylesheet(stylesheet, tree_style, node_rules):
             #tree_style.show_branch_length = True
                 
     return tree_style, node_rules
+        
+# Figure out the file basename in case we have multiple trees.
+(output_basename, output_extension) = os.path.splitext(args.output)
 
-# render a series of SVG files (one for each tree)
+# render a series of output files (one for each tree)
+tree_index = 0
 for trees in nexml.get_trees():
-    tree_index = 0
     for tree in trees.get_tree():
         tree_index += 1
         ts = build_tree_style(tree)
-        tree.render("output%d.svg" % tree_index, tree_style=ts)
+
+
+        # Only use suffixes if there is more than one tree.
+        output_filename = "%s%s" % (output_basename, output_extension)
+        if tree_index > 1:
+            output_filename = "%s%d%s" % (output_basename, tree_index, output_extension)
+        
+        if args.width and args.height:
+            tree.render(output_filename, tree_style=ts, w=args.width, h=args.height, dpi=args.dpi)
+        elif args.width:
+            tree.render(output_filename, tree_style=ts, w=args.width, dpi=args.dpi)
+        elif args.height:
+            tree.render(output_filename, tree_style=ts, h=args.height, dpi=args.dpi)
+        else:
+            tree.render(output_filename, tree_style=ts, dpi=args.dpi)
 
         # let's try the interactive QT viewer
         tree.show(tree_style=ts)
