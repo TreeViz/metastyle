@@ -1,10 +1,9 @@
 canvas {
-	background-color: white;
-	width: 500px;
-	height: 500px;
-	font: 12pt "Helvetica",serif;
+        background-color: white;
+        width: 500px;
+        height: 500px;
+        font: 12pt "Helvetica",serif;
 }
-
 tree {
 	border: 2px black solid;
 	layout: rectangular;
@@ -14,13 +13,13 @@ tree {
 
 scale {
 	visible: false;
-}/Users/jima/Downloads/default (1).tss
+}
 
 trophic_level.herbivore {
 	color: green;
 }
 
-trophic_level.carnivore 
+trophic_level.carnivore {
 	color: red;
 }
 
@@ -91,3 +90,6 @@ clade {
     collapsed: true;
 }
 
+clade node {
+    color: #f00;
+]
