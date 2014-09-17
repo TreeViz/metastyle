@@ -1,0 +1,17 @@
+<nex:nexml xmlns="http://www.nexml.org/2009" version="0.9" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xsi:schemaLocation="http://www.nexml.org/2009 http://www.nexml.org/2009/nexml.xsd" xmlns:map="http://purl.org/phylo/phylomap/terms#" generator="Bio::Phylo::Project v.0.50_1660" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:nex="http://www.nexml.org/2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:dc="http://purl.org/dc/elements/1.1/"><otus id="os10">
+<otu label="&apos;Bos taurus | Bos taurus alpha Bcrystallin (CRYAB) mRNA complete cds.&apos;" id="ou12"/>
+<otu label="&apos;Mus musculus | Mus musculus similar to heat shock 20kDa protein (LOC243912) mRNA.&apos;" id="ou14"/>
+<otu label="&apos;Rattus norvegicus | Rattus norvegicus heat shock 20kDa protein (Loc192245) mRNA&apos;" id="ou13"/>
+<otu label="Homo_sapiens_|_Homo_sapiens_cDNA_FLJ32389_fis_clone_SKMUS1000138_highly_similar_to_HEATSHOCK_20_KDA_LIKEPROTEIN_P20." id="ou11"/></otus><trees otus="os10" id="ts2">
+<tree xsi:type="nex:FloatTree" id="te3">
+<node root="true" id="ne4"/>
+<node label="1.0000" id="ne5"/>
+<node label="Homo_sapiens_|_Homo_sapiens_cDNA_FLJ32389_fis_clone_SKMUS1000138_highly_similar_to_HEATSHOCK_20_KDA_LIKEPROTEIN_P20." id="ne8" otu="ou11"/>
+<node label="&apos;Bos taurus | Bos taurus alpha Bcrystallin (CRYAB) mRNA complete cds.&apos;" id="ne9" otu="ou12"/>
+<node label="&apos;Rattus norvegicus | Rattus norvegicus heat shock 20kDa protein (Loc192245) mRNA&apos;" id="ne6" otu="ou13"/>
+<node label="&apos;Mus musculus | Mus musculus similar to heat shock 20kDa protein (LOC243912) mRNA.&apos;" id="ne7" otu="ou14"/>
+<edge source="ne4" length="0.07419368" target="ne5" id="edge5"/>
+<edge source="ne4" length="0.14460549" target="ne8" id="edge8"/>
+<edge source="ne4" length="0.21605025" target="ne9" id="edge9"/>
+<edge source="ne5" length="0.05373043" target="ne6" id="edge6"/>
+<edge source="ne5" length="0.05388936" target="ne7" id="edge7"/></tree></trees></nex:nexml>
