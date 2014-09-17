@@ -52,7 +52,7 @@ def test_node_against_selector(node, selector):
     # in the context of a live tree (vs. a DOM)
     return True
 
-TREE_STYLE_PROPERTIES = ("layout",)
+TREE_STYLE_PROPERTIES = ("layout","border",)
 # See the full list at 
 # http://pythonhosted.org/ete2/reference/reference_treeview.html#treestyle
 
@@ -180,6 +180,13 @@ def apply_stylesheet(stylesheet, tree_style, node_rules):
                             tree_style.mode = "r"
                         elif its_value == "circular":
                             tree_style.mode = "c"
+                    elif style.name == "border":
+                        # crappy support for this
+                        its_value = style.value.as_css()
+                        if its_value == "none":
+                            tree_style.show_border = False
+                        else:
+                            tree_style.show_border = True
                     else:
                         setattr(tree_style, style.name, style.value.as_css())
 
