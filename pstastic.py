@@ -80,7 +80,7 @@ def apply_node_rule(rule, node_style, node):
         # N.B. name is always normalized lower-case
         # Translate TSS/CSS property names into ETE properties
         if style.name not in NODE_STYLE_PROPERTIES:
-            report_unsupported_tree_style(style.name)
+            report_unsupported_node_style(style.name)
             continue
 
         # TODO: handle dynamic (data-driven) values in all cases!
@@ -172,7 +172,7 @@ def apply_stylesheet(stylesheet, tree_style, node_rules):
             if r.selector.as_css() in ("canvas", "tree", "scale"):
                 for style in r.declarations:
                     if style.name not in TREE_STYLE_PROPERTIES:
-                        report_unsupported_node_style(style.name)
+                        report_unsupported_tree_style(style.name)
                         continue
                     if style.name == "layout":
                         its_value = style.value.as_css()
