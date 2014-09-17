@@ -7,7 +7,7 @@
 The idea is based on cascading style sheets, where the "tree" provides semantic content, but the manner in which that content is displayed is controlled by the style sheet. The most common tree file format is based on the Newick descriptor, but this format is too limiting for detailed semantic markup. Therefore, while the style sheet concept described herein can certainly be applied to trees stored in Newick format (or those formats that embed Newick trees, such as Nexus), the amount of styling available to Newick trees is limited. For full flexibility of display properties, trees would have to be stored in a more extendable format, such as NeXML.
 
 ##nexss namespace
-nexss has the xmlns namespace xmlns:nexss="http://www.phylotastic.org/nexss"
+nexss has the xmlns namespace xmlns:nexss="http://www.phylotastic.org/nexss#"
 
 
 ##NeXML Annotations
@@ -46,7 +46,10 @@ to specify bootstrap properties with values between 0 and 50 (inclusive).
 
 The nexss file itself is set up exactly like a css file to allow existing css parsers to work on it. While much of the nexss is the same as in css, some of it is unique to drawing trees. It is up to the tree renderer to know how to use the results, but the tokenization can be handled by any css parser without modification.
 
-Below are described the nexss components and properties.
+One can use typical conventions for linking external stylesheets in *XML ():
+<pre><code>&lt;?xml-stylesheet href="sys-bio.tss" alternate="yes" title="Systematic Biology house style" 
+   media="screen, print" type="text/nexss"?&gt;</code></pre>
+
 
 ##General Components
 These are components which apply globally to the rendering of a tree, and would apply equally well to trees stored in any format (Newick, NeXML, etc.).
