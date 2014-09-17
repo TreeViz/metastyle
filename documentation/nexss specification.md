@@ -1,6 +1,5 @@
 #nexss specification
 
-**NOTE: Are we calling this "nexss", "TSS", or "TreeSS"?**
 
 ## Introduction
 **Concept:** To design a style sheet that can be easily formatted by the user to create publishable quality phylogenetic trees that have a meta-tag that would include the tree and full annotations and style sheets. Someone can then share not only the tree and data but also the style. People can then version control tree quality images.
@@ -75,11 +74,11 @@ The figure represents the rendering box for the tree. This is functionally simil
        available for CSS */
  }</pre>
 
+
 ###Tree
 The tree represents the entire drawn tree and contains default properties for the rendering of the tree as a whole
 
-<pre><code>
-tree {
+<pre><code>tree {
   border-width: 1px;
   border-color: black;
   border-style: solid; 
@@ -101,14 +100,12 @@ tree {
     /* describes whether the tree should be scaled to branch lengths are drawn 
        in an ultrametric/equal branch-length style. Valid options are: true | 
        false */
- }
-</code></pre>
+ }</code></pre>
 
 ###Scale
 Describes the style of a scale bar for the tree
 
-<pre><code>
-scale {   
+<pre><code>scale {   
   visible : true;
     /* describes whether a scale bar is to be drawn. Valid options are true | 
        false */
@@ -132,18 +129,18 @@ scale {
 
   /* Additional options needed: control of tick marks? different font options 
      for title vs. tick labels? */
-}
-</code></pre>
+}</code></pre>
 
 
 ##Specific Annotated Components
-Everything else in the nexss file refers to specific annotations of nodes or edges. The options are detailed below.
+Everything else in the nexss file refers to specific annotations of nodes or edges. The options are detailed below. Many of these options may be unavailable in Newick trees due to limitations in methods for semanatic markup in that format.
 
+### General Properties
 Some general properties and parameters will apply to many features. The first of these is the (potential) alignment of the styled element. Where the item should be rendered relative to the annotated element is controlled by the “align” parameter. Because directions on a tree vary relative to the direction it is drawn, we are using the terms “root” and “tip” to specify alignments on the root side or tip side of an object, and “left” and “right” to indicate the left or right side of the object WHEN FACING THE TIP (as opposed to the actual screen). “Center” specifies the center of the element.
 
 The following figure illustrates the orientation of the align parameter relative to an edge on trees oriented with tips on the right and the top. The same logic works relative to a node.
 
-<img src="fig1.png" />
+<center><img src="fig1.png" width="600" /></center>
 
 <pre><code>  align: center; 
     /* Supported options are: center | tip | root | left | right */
@@ -151,7 +148,7 @@ The following figure illustrates the orientation of the align parameter relative
 
 When align is left or right for annotated edges, an additional parameter “edge-align” is used to control where along the edge the item is rendered. The options for this are “root”, “tip”, and “center”, as show in the following figure already using “align: left”:
 
-<img src="fig2.png" />
+<center><img src="fig2.png" width="400" /></center>
 
 <pre><code>  edge-align: center; 
     /* Supported options are: center | tip | root */
@@ -159,10 +156,10 @@ When align is left or right for annotated edges, an additional parameter “edge
 
 In addition to a few specialized parameters, tree renderers will need to recognize existing css definitions for things such as colors, borders, fonts, and opacity.
 
-##Labels
-Labels for edges and nodes may come from multiple places. First, if the node is an OTU, it may have a label in the OTU block of the NeXML file which specifies a name (e.g., the species name). Specific annotations may contain content which can be used as a label. Finally, the text for a label can be specified based in the nexss itself.
+###Labels
+Labels for edges and nodes may come from multiple places. First, if the node is an OTU, it may have a label in the OTU block of the NeXML file which specifies a name (*e.g.*, the species name). Specific annotations may contain content which can be used as a label. Finally, the text for a label can be specified based in the nexss itself.
 
-To label an edge or node with text based on a specific annotation, use the “text” parameter. Text can either be specified with a literal string in quotes, or be the content of the annotation by using VALUE, or be the label associated with the element by using LABEL. Generally, only OTU’s will make use of the LABEL element. The relative alignment of the text to the annotated element is controlled using the align (and if applicable, edge-align) parameters. Other aspects of the text, such as color, font, etc., use standard css formatting. If not specified, the default font properties are those of the figure (e.g., by default most tree renderers will label tips with the OTU labels using the default figure font). Some specific examples of controlling labels with nexss:
+To label an edge or node with text based on a specific annotation, use the “text” parameter. Text can either be specified with a literal string in quotes, or be the content of the annotation by using VALUE, or be the label associated with the element by using LABEL. Generally, only OTU’s will make use of the LABEL element. The relative alignment of the text to the annotated element is controlled using the align (and if applicable, edge-align) parameters. Other aspects of the text, such as color, font, etc., use standard css formatting. If not specified, the default font properties are those of the figure (*e.g.*, by default most tree renderers will label tips with the OTU labels using the default figure font). Some specific examples of controlling labels with nexss:
 
 ####Example: labeling nodes with the specified property content
 ***NeXML annotation:***
@@ -240,7 +237,7 @@ To label an edge or node with text based on a specific annotation, use the “te
   color: red;
 }</code></pre>
 
-##Edges
+###Edges
 The rendering of the edge itself can be specified for specific annotation by specifying border properties. Examples:
 
 ####Example: styling edges with bootstrap values above 95%
@@ -278,10 +275,10 @@ trophic_level.carnivore {
   border-style: dotted;
 }</code></pre>
 
-## Pie Charts
+###Pie Charts
 To draw a pie chart, use the special style parameter called pie&#95;chart, whose only option is VALUE. Generally, the data from the pie chart should be stored as a vector content of the annotation, and should add up to 100 (i.e., the vector content should represent percentages). The colors for each slice are specified using the category&#95;colors parameter, whose value should be a list of colors in (), one color for each pie slice in the same order as the values in the data vector.
 
-#### Example:
+####Example:
 The below commands would specify that a pie chart drawn from the allele&#95;freq annotation should be drawn, centered on the annotated element, with red, green and blue used as the colors for the pie slices, which in the meta annotation example have %’s of 70, 10, and 20 respectively.
 
 ***NeXML annotation:***
@@ -295,7 +292,7 @@ The below commands would specify that a pie chart drawn from the allele&#95;freq
   align: center;
  }</code></pre>
 
-## Images and Icons
+###Images and Icons
 Images and icons can be added to a node or edge by using the image parameter and specifying the path and name of the image as the value. 
 
 #### Example: adding images next to nodes based on specific content
@@ -324,7 +321,7 @@ trophic_level.carnivore {
   edge-align: center;
 }</code></pre>
 
-##Symbols
+###Symbols
 Symbols are best displayed by leveraging the ability to add text labels consisting of special unicode characters. such as • ● ▲ ► ▼ ◄ ♦ ♥ ◊ ■ and ▪. By controlling the size and color of these and similar symbols, one can easy draw circle, boxes, ticks, and other symbols on top of nodes or along edges.
 
 ####Example: adding red circles to nodes representing gene duplication events
@@ -361,7 +358,7 @@ char1change.reverse {
   align: center;
 }</code></pre>
 
-##Collapsing Nodes
+###Collapsing Nodes
 To specify that a specific node should be collapsed, set the collapsed parameter to true. In addition to collapsing the node, properties of the collapsed set can be specified. Text labels can be added, with their font properties controlled through standard font- and color settings. The color of the collapsed region is controlled by the border-color, since color and background-color are reserved for the label.
 
 ####Example: labeling nodes with custom text for a specific property value
@@ -377,7 +374,7 @@ To specify that a specific node should be collapsed, set the collapsed parameter
   border-color: red;
 }</code></pre>
 
-##Confidence Intervals
+###Confidence Intervals
 To specify that a confidence interval around a node (e.g., representing a range of depth), use the special bar parameter. The range of the bar should be specified as a two item vector in the content of the property. Since the bar can be viewed as a thick border, we use those properties to style it.
 
 ####Example: labeling nodes with custom text for a specific property value
@@ -394,3 +391,4 @@ To specify that a confidence interval around a node (e.g., representing a range 
   border-width: 20px;
   opacity: 40%;
 }</code></pre>
+
