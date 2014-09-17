@@ -1,0 +1,30 @@
+<trees>
+    <tree>
+      <node id="node19" label="inodeABCDEF" root="true" about="uniquely_this_node19">
+        <meta property="cdao:has_Datum">
+          <meta typeof="cdao:CharacterStateDatum" rel="cdao:has_State" resource="#s1"/>
+        </meta>
+      </node>
+      <node id="node20" label="otuA" otu="otu2"/>
+      <node id="node21" label="inodeBCDEF" about="uniquely_this_node21">
+        <meta property="cdao:has_Datum">
+          <meta typeof="cdao:CharacterStateDatum" rel="cdao:has_State" resource="#s1"/>
+        </meta>
+      </node>
+      <node id="node22" label="inodeBCD" about="uniquely_this_node22">
+        <meta property="cdao:has_Datum">
+          <meta typeof="cdao:CharacterStateDatum" rel="cdao:has_State" resource="#s1"/>
+        </meta>
+      </node>
+      <node id="node27" label="inodeEF" about="uniquely_this_node27">
+        <meta property="cdao:has_Datum">
+          <meta typeof="cdao:CharacterStateDatum" rel="cdao:has_State" resource="#s3"/>
+        </meta>
+      </node>
+      <node id="node23" label="inodeBC" about="uniquely_this_node23">
+        <meta property="cdao:has_Datum">
+          <meta typeof="cdao:CharacterStateDatum" rel="cdao:has_State" resource="#s1"/>
+        </meta>
+      </node>
+    </tree>
+  <trees>

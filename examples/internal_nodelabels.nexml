@@ -1,0 +1,13 @@
+
+  <trees>
+    <tree>
+      <node id="node19" label="inodeABCDEF" root="true"/>
+      <node id="node20" label="otuA" otu="otu2"/>
+      <node id="node21" label="inodeBCDEF"/>
+      <node id="node22" label="inodeBCD"/>
+      <node id="node27" label="inodeEF"/>
+      <node id="node23" label="inodeBC"/>
+      <node id="node26" label="otuD" otu="otu5"/>
+    </tree>
+  <trees>
+ 

@@ -1,0 +1,14 @@
+<trees>
+    <tree>
+      <edge id="edge22" about="this_edge22" length="1" source="node21" target="node22">
+        <meta typeof="cdao:Edge" property="cdao:has_Support_Value" datatype="xsd:float">0.425</meta>
+      </edge>
+      <edge id="edge27" about="this_edge27" length="2" source="node21" target="node27">
+        <meta typeof="cdao:Edge" property="cdao:has_Support_Value" datatype="xsd:float">0.65</meta>
+      </edge>
+      <edge id="edge23" about="this_edge23" length="1" source="node22" target="node23">
+        <meta typeof="cdao:Edge" property="cdao:has_Support_Value" datatype="xsd:float">0.35</meta>
+      </edge>
+    </tree>
+  <trees>
+ 
