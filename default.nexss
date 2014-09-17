@@ -41,13 +41,13 @@ posterior_prob[min=91][max=100] {
 	font-size: 200%;
 }
 
-bootstrap[min=91][max=100] {
+node[sequence_type>=91][sequence_type<=100] {
 	border: 10px;
 	font-style: italic;
 	font-size: 200%;
 }
 
-bootstrap[min=0.9][max=1.0] {
+node[bootstrap>=0.91][sequence_type<=1.0] {
 	border: 10px;
 	font-style: italic;
 	font-size: 200%;
@@ -62,19 +62,19 @@ bootstrap[min=0.9][max=1.0] {
         <meta content="SANG" datatype="xsd:string" id="meta01" property="tss:sequence_type" xsi:type="nex:LiteralMeta"/>
       </node>
  */
-chromosome.Y {
+node[chromosome=Y] {  /* or node[nexss:chromosome=Y]  ? */
 	color: blue;
 }
 
-chromosome.X {
+node[chromosome=X] {
 	color: red;
 }
 
-sequence_type.SANG {
+node[sequence_type=SANG] {
 	font-style: bold;
 }
 
-sequence_type.TRAM {
+node[sequence_type=TRAM] {
 	font-style: italic;
 }
 
