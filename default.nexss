@@ -6,7 +6,7 @@ canvas {
 }
 tree {
 	border: 2px black solid;
-	layout: rectangular;
+	layout: circular;
 	tip-orientation: right;
 	scaled: true;
 }
