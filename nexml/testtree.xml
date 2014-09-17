@@ -1,6 +1,6 @@
-<?xml-stylesheet href="sys-bio.tss"
+<?xml-stylesheet href="sys-bio.nexss"
               alternate="yes" title="Systematic Biology house style"
-              media="screen, print" type="text/tss"?>
+              media="screen, print" type="text/nexss"?>
 <nex:nexml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:nex="http://www.nexml.org/2009"
 xmlns:tss="http://mesquiteproject.org/tss#"   xmlns:cdao="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#"
