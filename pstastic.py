@@ -60,11 +60,27 @@ NODE_STYLE_PROPERTIES = ("color", "background-color", "size", "shape",)
 # See the full list at 
 # http://pythonhosted.org/ete2/reference/reference_treeview.html#ete2.NodeStyle
 
+
+# Report unsupported style properties *just once*
+unsupported_tree_styles = []
+def report_unsupported_tree_style(name):
+    if name not in unsupported_tree_styles:
+        print("ETE does not support '%s' in TreeStyle" % name)
+        unsupported_tree_styles.append(name)
+
+unsupported_node_styles = []
+def report_unsupported_node_style(name):
+    if name not in unsupported_node_styles:
+        print("ETE does not support '%s' in NodeStyle" % name)
+        unsupported_node_styles.append(name)
+
+
 def apply_node_rule(rule, node_style, node):
     for style in rule.declarations:
         # N.B. name is always normalized lower-case
         # Translate TSS/CSS property names into ETE properties
         if style.name not in NODE_STYLE_PROPERTIES:
+            report_unsupported_tree_style(style.name)
             continue
 
         # TODO: handle dynamic (data-driven) values in all cases!
@@ -156,6 +172,7 @@ def apply_stylesheet(stylesheet, tree_style, node_rules):
             if r.selector.as_css() in ("canvas", "tree", "scale"):
                 for style in r.declarations:
                     if style.name not in TREE_STYLE_PROPERTIES:
+                        report_unsupported_node_style(style.name)
                         continue
                     if style.name == "layout":
                         its_value = style.value.as_css()
