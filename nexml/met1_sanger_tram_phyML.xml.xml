@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nex:nexml xmlns:nex="http://www.nexml.org/2009" xmlns="http://www.nexml.org/2009" xmlns:msq="http://mesquiteproject.org#" xmlns:nr="http://mesquiteproject.org/namereference#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:nexss="http://phylotastic.org/nexss#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" generator="org.nexml.model.impl.DocumentImpl" version="0.9">
+  <otus about="#otus1" id="otus1" label="Taxa">
+    <otu about="#otu3" id="otu3" label="SANG TMY 11060">
+    </otu>
+    <otu about="#otu8" id="otu8" label="SANG NMY 11131">
+    </otu>
+    <otu about="#otu13" id="otu13" label="SANG NMY 11221">
+    </otu>
+    <otu about="#otu18" id="otu18" label="SANG TMY 10956">
+    </otu>
+    <otu about="#otu23" id="otu23" label="SANG NMY 11145">
+    </otu>
+    <otu about="#otu28" id="otu28" label="SANG NMY 11106">
+    </otu>
+    <otu about="#otu33" id="otu33" label="SANG NMY 11104">
+    </otu>
+    <otu about="#otu38" id="otu38" label="SANG NMY 11141">
+    </otu>
+    <otu about="#otu43" id="otu43" label="SANG DMY 16833">
+    </otu>
+    <otu about="#otu48" id="otu48" label="SANG DMY 10260">
+    </otu>
+    <otu about="#otu53" id="otu53" label="SANG BMY BFRE 09 07">
+    </otu>
+    <otu about="#otu58" id="otu58" label="SANG BMY BFRE 09 02">
+    </otu>
+    <otu about="#otu63" id="otu63" label="SANG TMY 11081">
+    </otu>
+    <otu about="#otu68" id="otu68" label="SANG DMY 11323">
+    </otu>
+    <otu about="#otu73" id="otu73" label="SANG BMY BQB 03 01">
+    </otu>
+    <otu about="#otu78" id="otu78" label="SANG BMY BKUU 09 03">
+    </otu>
+    <otu about="#otu83" id="otu83" label="SANG BMY BKUU 09 02">
+    </otu>
+    <otu about="#otu88" id="otu88" label="SANG TMY 11004">
+    </otu>
+    <otu about="#otu93" id="otu93" label="SANG DMY 16835">
+    </otu>
+    <otu about="#otu98" id="otu98" label="SANG TMY 11055">
+    </otu>
+    <otu about="#otu103" id="otu103" label="SANG DMY 10259">
+    </otu>
+    <otu about="#otu108" id="otu108" label="TRAM PtrMY 2.1 2450 cov 12.817142">
+    </otu>
+    <otu about="#otu113" id="otu113" label="TRAM PtrF018 3.24 4087 cov 8.034744">
+    </otu>
+    <otu about="#otu118" id="otu118" label="SANG TMX 11081">
+    </otu>
+    <otu about="#otu123" id="otu123" label="SANG TMX 10956">
+    </otu>
+    <otu about="#otu128" id="otu128" label="SANG TMX 11060">
+    </otu>
+    <otu about="#otu133" id="otu133" label="SANG BMX BKUU 09 03">
+    </otu>
+    <otu about="#otu138" id="otu138" label="SANG TMX 11004">
+    </otu>
+    <otu about="#otu143" id="otu143" label="TRAM PtrF018 1.35 8763 cov 5.854159">
+    </otu>
+    <otu about="#otu148" id="otu148" label="SANG BMX BNWL 09 01">
+    </otu>
+    <otu about="#otu153" id="otu153" label="Potri.T046100">
+    </otu>
+    <otu about="#otu158" id="otu158" label="TRAM PtrF018 0.70 7284 cov 17.265240">
+    </otu>
+    <otu about="#otu163" id="otu163" label="SANG TMX 11055">
+    </otu>
+    <otu about="#otu168" id="otu168" label="SANG BMX BQB 03 01">
+    </otu>
+    <otu about="#otu173" id="otu173" label="TRAM Pan018 4.57 5017 cov 7.888380">
+    </otu>
+    <otu about="#otu178" id="otu178" label="SANG BMX BKUU 09 02">
+    </otu>
+    <otu about="#otu183" id="otu183" label="Potri.018G138000">
+    </otu>
+    <otu about="#otu188" id="otu188" label="SANG BMX BFRE 09 02">
+    </otu>
+    <otu about="#otu193" id="otu193" label="SANG DMX 16835">
+    </otu>
+    <otu about="#otu198" id="otu198" label="SANG DMX 16833">
+    </otu>
+    <otu about="#otu203" id="otu203" label="SANG DMX 10258">
+    </otu>
+    <otu about="#otu208" id="otu208" label="SANG DMX 11323">
+    </otu>
+    <otu about="#otu213" id="otu213" label="SANG BMX BFRE 09 07">
+    </otu>
+    <otu about="#otu218" id="otu218" label="TRAM Ptre018 0.40 4871 cov 16.191952">
+    </otu>
+    <otu about="#otu223" id="otu223" label="TRAM Sal018 4.15 1442 cov 7.907767">
+    </otu>
+    <otu about="#otu228" id="otu228" label="TRAM Sal004 5.25 2001 cov 9.601699">
+    </otu>
+    <otu about="#otu233" id="otu233" label="TRAM Ptre004 0.3 6546 cov 4.866636">
+    </otu>
+    <otu about="#otu238" id="otu238" label="Potri.004G134000">
+    </otu>
+    <otu about="#otu243" id="otu243" label="TRAM PtrF004 3.21 7415 cov 15.667296">
+    </otu>
+    <otu about="#otu248" id="otu248" label="TRAM Pan004 1.40 8224 cov 7.833779">
+    </otu>
+    <otu about="#otu253" id="otu253" label="TRAM Aza dent met1 4.48">
+    </otu>
+    <otu about="#otu258" id="otu258" label="Mes 4.1 000183m.g">
+    </otu>
+    <otu about="#otu263" id="otu263" label="Mes 4.1 029524m.g">
+    </otu>
+    <otu about="#otu268" id="otu268" label="Rco.29983.t000207">
+    </otu>
+    <otu about="#otu273" id="otu273" label="Lus 10004295.g">
+    </otu>
+    <otu about="#otu278" id="otu278" label="Lus 10019220.g">
+    </otu>
+    <otu about="#otu283" id="otu283" label="Ath 5G49160">
+    </otu>
+  </otus>
+  <trees about="#trees411" id="trees411" label="Trees from &quot;met1_sanger_tram_pars.nex&quot;" otus="otus1">
+    <tree about="#tree647" id="tree647" label="tree2+" xsi:type="nex:FloatTree">
+      <node id="node648" label="">
+      </node>
+      <node id="node649" label="">
+      </node>
+      <node about="#node651" id="node651" label="">
+        <meta content="1.00" datatype="xsd:string" id="meta654" property="nexss:bootstrap" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node656" label="">
+      </node>
+      <node id="node658" label="Aza dent met1 4.48" otu="otu253">
+        <meta content="TRAM" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node about="#node660" id="node660" label="">
+        <meta content="1.00" datatype="xsd:string" id="meta663" property="nexss:bootstrap" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node665" label="Sal 5.25 2001" otu="otu228">
+        <meta content="004" datatype="xsd:string" id="meta01" property="nexss:lg" xsi:type="nex:LiteralMeta"/>
+        <meta content="TRAM" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node667" label="">
+      </node>
+      <node id="node669" label="">
+      </node>
+      <node id="node671" label="">
+      </node>
+      <node id="node673" label="PtrF 3.21 7415" otu="otu243">
+        <meta content="004" datatype="xsd:string" id="meta01" property="nexss:lg" xsi:type="nex:LiteralMeta"/>
+        <meta content="TRAM" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node675" label="Potri.004G134000" otu="otu238">
+        <meta content="REF" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node677" label="Ptre 0.3 6546" otu="otu233">
+        <meta content="004" datatype="xsd:string" id="meta01" property="nexss:lg" xsi:type="nex:LiteralMeta"/>
+        <meta content="TRAM" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node679" label="Pan 1.40 8224" otu="otu248">
+        <meta content="004" datatype="xsd:string" id="meta01" property="nexss:lg" xsi:type="nex:LiteralMeta"/>
+        <meta content="TRAM" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node about="#node681" id="node681" label="">
+        <meta content="1.00" datatype="xsd:string" id="meta683" property="nexss:bootstrap" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node685" label="Sal 4.15 1442" otu="otu223">
+        <meta content="018" datatype="xsd:string" id="meta01" property="nexss:lg" xsi:type="nex:LiteralMeta"/>
+        <meta content="TRAM" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node687" label="">
+      </node>
+      <node id="node689" label="">
+      </node>
+      <node id="node691" label="">
+      </node>
+      <node id="node693" label="TMY 2.1 2450" otu="otu108">
+        <meta content="TRAM" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node695" label="">
+      </node>
+      <node id="node697" label="DMY 10259" otu="otu103">
+        <meta content="Y" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node699" label="">
+      </node>
+      <node id="node701" label="TMY 11055" otu="otu98">
+        <meta content="Y" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node703" label="">
+      </node>
+      <node id="node705" label="DMY 16835" otu="otu93">
+        <meta content="Y" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node707" label="">
+      </node>
+      <node id="node709" label="">
+      </node>
+      <node id="node711" label="">
+      </node>
+      <node id="node713" label="">
+      </node>
+      <node id="node715" label="BMY BFRE 09 02" otu="otu58">
+        <meta content="Y" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node717" label="">
+      </node>
+      <node id="node719" label="">
+      </node>
+      <node id="node721" label="DMY 11323" otu="otu68">
+        <meta content="Y" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node723" label="TMY 11081" otu="otu63">
+        <meta content="Y" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node725" label="">
+      </node>
+      <node id="node728" label="">
+      </node>
+      <node id="node730" label="">
+      </node>
+      <node id="node732" label="BMY BKUU 09 02" otu="otu83">
+        <meta content="Y" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node734" label="BMY BKUU 09 03" otu="otu78">
+        <meta content="Y" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node736" label="BMY BQB 03 01" otu="otu73">
+        <meta content="Y" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node738" label="TMY 11004" otu="otu88">
+        <meta content="Y" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node740" label="BMY BFRE 09 07" otu="otu53">
+        <meta content="Y" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node742" label="">
+      </node>
+      <node id="node744" label="">
+      </node>
+      <node about="#node746" id="node746" label="">
+        <meta content="0.97" datatype="xsd:string" id="meta748" property="nexss:bootstrap" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node750" label="NMY 11141" otu="otu38">
+        <meta content="Y" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node752" label="">
+      </node>
+      <node id="node754" label="">
+      </node>
+      <node id="node756" label="NMY 11104" otu="otu33">
+        <meta content="Y" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node758" label="NMY 11106" otu="otu28">
+        <meta content="Y" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node760" label="">
+      </node>
+      <node id="node762" label="NMY 11145" otu="otu23">
+        <meta content="Y" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node764" label="">
+      </node>
+      <node id="node766" label="TMY 10956" otu="otu18">
+        <meta content="Y" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node768" label="">
+      </node>
+      <node id="node770" label="NMY 11221" otu="otu13">
+        <meta content="Y" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node772" label="NMY 11131" otu="otu8">
+        <meta content="Y" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node774" label="DMY 16833" otu="otu43">
+        <meta content="Y" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node776" label="DMY 10260" otu="otu48">
+        <meta content="Y" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node778" label="TMY 11060" otu="otu3">
+        <meta content="Y" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node780" label="">
+      </node>
+      <node id="node782" label="">
+      </node>
+      <node about="#node784" id="node784" label="">
+        <meta content="0.95" datatype="xsd:string" id="meta786" property="nexss:bootstrap" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node788" label="BMX BKUU 09 02" otu="otu178">
+        <meta content="X" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node790" label="">
+      </node>
+      <node id="node792" label="BMX BFRE 09 02" otu="otu188">
+        <meta content="X" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node794" label="Potri.018G138000" otu="otu183">
+        <meta content="REF" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node796" label="">
+      </node>
+      <node id="node798" label="">
+      </node>
+      <node id="node800" label="DMX 16835" otu="otu193">
+        <meta content="X" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node802" label="">
+      </node>
+      <node id="node804" label="DMX 16833" otu="otu198">
+        <meta content="X" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node806" label="">
+      </node>
+      <node id="node808" label="DMX 11323" otu="otu208">
+        <meta content="X" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node810" label="DMX 10258" otu="otu203">
+        <meta content="X" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node812" label="BMX BFRE 09 07" otu="otu213">
+        <meta content="X" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node814" label="">
+      </node>
+      <node about="#node816" id="node816" label="">
+        <meta content="0.96" datatype="xsd:string" id="meta818" property="nexss:bootstrap" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node820" label="">
+      </node>
+      <node id="node822" label="">
+      </node>
+      <node id="node824" label="">
+      </node>
+      <node id="node826" label="Potri.T046100" otu="otu153">
+        <meta content="REF" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node828" label="">
+      </node>
+      <node id="node830" label="">
+      </node>
+      <node id="node832" label="BMX BQB 03 01" otu="otu168">
+        <meta content="X" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node834" label="TMX 11055" otu="otu163">
+        <meta content="X" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node836" label="TF 0.70 7284" otu="otu158">
+        <meta content="X" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="018" datatype="xsd:string" id="meta01" property="nexss:lg" xsi:type="nex:LiteralMeta"/>
+        <meta content="TRAM" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node838" label="BMX BNWL 09 01" otu="otu148">
+        <meta content="X" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node840" label="TF 1.35 8763" otu="otu143">
+        <meta content="X" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="018" datatype="xsd:string" id="meta01" property="nexss:lg" xsi:type="nex:LiteralMeta"/>
+        <meta content="TRAM" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node842" label="">
+      </node>
+      <node id="node844" label="TMX 11004" otu="otu138">
+        <meta content="X" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node846" label="">
+      </node>
+      <node id="node848" label="BMX BKUU 09 03" otu="otu133">
+        <meta content="X" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node850" label="">
+      </node>
+      <node id="node852" label="">
+      </node>
+      <node id="node854" label="TMX 10956" otu="otu123">
+        <meta content="X" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node856" label="">
+      </node>
+      <node id="node858" label="TMX 11081" otu="otu118">
+        <meta content="X" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node860" label="TF 3.24 4087" otu="otu113">
+        <meta content="X" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="018" datatype="xsd:string" id="meta01" property="nexss:lg" xsi:type="nex:LiteralMeta"/>
+        <meta content="TRAM" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node862" label="TMX 11060" otu="otu128">
+        <meta content="X" datatype="xsd:string" id="meta01" property="nexss:chromosome" xsi:type="nex:LiteralMeta"/>
+        <meta content="SANG" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node864" label="Pan 4.57 5017" otu="otu173">
+        <meta content="018" datatype="xsd:string" id="meta01" property="nexss:lg" xsi:type="nex:LiteralMeta"/>
+        <meta content="TRAM" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node866" label="Ptre 0.40 4871" otu="otu218">
+        <meta content="018" datatype="xsd:string" id="meta01" property="nexss:lg" xsi:type="nex:LiteralMeta"/>
+        <meta content="TRAM" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node868" label="">
+      </node>
+      <node about="#node870" id="node870" label="">
+        <meta content="1.00" datatype="xsd:string" id="meta872" property="nexss:bootstrap" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node874" label="Lus 10019220.g" otu="otu278">
+        <meta content="REF" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node876" label="Lus 10004295.g" otu="otu273">
+        <meta content="REF" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node about="#node878" id="node878" label="">
+        <meta content="1.00" datatype="xsd:string" id="meta880" property="nexss:bootstrap" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node about="#node882" id="node882" label="">
+        <meta content="1.00" datatype="xsd:string" id="meta884" property="nexss:bootstrap" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node886" label="Mes 4.1 000183m.g" otu="otu258">
+        <meta content="REF" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node888" label="Mes 4.1 029524m.g" otu="otu263">
+        <meta content="REF" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node890" label="Rco.29983.t000207" otu="otu268">
+        <meta content="REF" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="node892" label="Ath 5G49160" otu="otu283">
+        <meta content="REF" datatype="xsd:string" id="meta01" property="nexss:sequence_type" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <edge id="edge650" length="0.18559" source="node648" target="node649"/>
+      <edge id="edge655" length="0.05786" source="node649" target="node651"/>
+      <edge id="edge657" length="0.01115" source="node651" target="node656"/>
+      <edge id="edge659" length="0.05137" source="node656" target="node658"/>
+      <edge id="edge664" length="0.02782" source="node656" target="node660"/>
+      <edge id="edge666" length="0.02497" source="node660" target="node665"/>
+      <edge id="edge668" length="0.00399" source="node660" target="node667"/>
+      <edge id="edge670" length="0.0" source="node667" target="node669"/>
+      <edge id="edge672" length="0.00317" source="node669" target="node671"/>
+      <edge id="edge674" length="0.00301" source="node671" target="node673"/>
+      <edge id="edge676" length="0.00337" source="node671" target="node675"/>
+      <edge id="edge678" length="0.00383" source="node669" target="node677"/>
+      <edge id="edge680" length="0.00703" source="node667" target="node679"/>
+      <edge id="edge684" length="0.04053" source="node651" target="node681"/>
+      <edge id="edge686" length="0.01824" source="node681" target="node685"/>
+      <edge id="edge688" length="0.00652" source="node681" target="node687"/>
+      <edge id="edge690" length="0.0" source="node687" target="node689"/>
+      <edge id="edge692" length="0.00243" source="node689" target="node691"/>
+      <edge id="edge694" length="0.00324" source="node691" target="node693"/>
+      <edge id="edge696" length="7.9E-4" source="node691" target="node695"/>
+      <edge id="edge698" length="0.0" source="node695" target="node697"/>
+      <edge id="edge700" length="0.0" source="node695" target="node699"/>
+      <edge id="edge702" length="0.0" source="node699" target="node701"/>
+      <edge id="edge704" length="0.0" source="node699" target="node703"/>
+      <edge id="edge706" length="0.0" source="node703" target="node705"/>
+      <edge id="edge708" length="0.0" source="node703" target="node707"/>
+      <edge id="edge710" length="0.0" source="node707" target="node709"/>
+      <edge id="edge712" length="0.0" source="node709" target="node711"/>
+      <edge id="edge714" length="0.0" source="node711" target="node713"/>
+      <edge id="edge716" length="8.0E-4" source="node713" target="node715"/>
+      <edge id="edge718" length="0.0" source="node713" target="node717"/>
+      <edge id="edge720" length="8.0E-4" source="node717" target="node719"/>
+      <edge id="edge722" length="0.0" source="node719" target="node721"/>
+      <edge id="edge724" length="0.0" source="node719" target="node723"/>
+      <edge id="edge726" length="0.0" source="node717" target="node725"/>
+      <edge id="edge729" length="8.0E-4" source="node725" target="node728"/>
+      <edge id="edge731" length="0.0" source="node728" target="node730"/>
+      <edge id="edge733" length="0.0" source="node730" target="node732"/>
+      <edge id="edge735" length="0.0" source="node730" target="node734"/>
+      <edge id="edge737" length="0.0" source="node728" target="node736"/>
+      <edge id="edge739" length="0.0" source="node725" target="node738"/>
+      <edge id="edge741" length="0.0" source="node711" target="node740"/>
+      <edge id="edge743" length="0.0" source="node709" target="node742"/>
+      <edge id="edge745" length="0.0" source="node742" target="node744"/>
+      <edge id="edge749" length="0.00322" source="node744" target="node746"/>
+      <edge id="edge751" length="0.0" source="node746" target="node750"/>
+      <edge id="edge753" length="0.0" source="node746" target="node752"/>
+      <edge id="edge755" length="8.0E-4" source="node752" target="node754"/>
+      <edge id="edge757" length="0.0" source="node754" target="node756"/>
+      <edge id="edge759" length="0.0" source="node754" target="node758"/>
+      <edge id="edge761" length="8.0E-4" source="node752" target="node760"/>
+      <edge id="edge763" length="0.0" source="node760" target="node762"/>
+      <edge id="edge765" length="0.0" source="node760" target="node764"/>
+      <edge id="edge767" length="0.0" source="node764" target="node766"/>
+      <edge id="edge769" length="0.0" source="node764" target="node768"/>
+      <edge id="edge771" length="8.0E-4" source="node768" target="node770"/>
+      <edge id="edge773" length="8.0E-4" source="node768" target="node772"/>
+      <edge id="edge775" length="0.0" source="node744" target="node774"/>
+      <edge id="edge777" length="0.0" source="node742" target="node776"/>
+      <edge id="edge779" length="0.0" source="node707" target="node778"/>
+      <edge id="edge781" length="8.0E-4" source="node689" target="node780"/>
+      <edge id="edge783" length="0.0" source="node780" target="node782"/>
+      <edge id="edge787" length="0.0016" source="node782" target="node784"/>
+      <edge id="edge789" length="0.0" source="node784" target="node788"/>
+      <edge id="edge791" length="0.0" source="node784" target="node790"/>
+      <edge id="edge793" length="0.0" source="node790" target="node792"/>
+      <edge id="edge795" length="8.0E-4" source="node790" target="node794"/>
+      <edge id="edge797" length="0.0" source="node782" target="node796"/>
+      <edge id="edge799" length="0.0016" source="node796" target="node798"/>
+      <edge id="edge801" length="0.0" source="node798" target="node800"/>
+      <edge id="edge803" length="0.0" source="node798" target="node802"/>
+      <edge id="edge805" length="0.0" source="node802" target="node804"/>
+      <edge id="edge807" length="0.0" source="node802" target="node806"/>
+      <edge id="edge809" length="0.0" source="node806" target="node808"/>
+      <edge id="edge811" length="0.0" source="node806" target="node810"/>
+      <edge id="edge813" length="0.0016" source="node796" target="node812"/>
+      <edge id="edge815" length="8.0E-4" source="node780" target="node814"/>
+      <edge id="edge819" length="0.00322" source="node814" target="node816"/>
+      <edge id="edge821" length="0.0" source="node816" target="node820"/>
+      <edge id="edge823" length="0.0" source="node820" target="node822"/>
+      <edge id="edge825" length="0.0" source="node822" target="node824"/>
+      <edge id="edge827" length="0.0" source="node824" target="node826"/>
+      <edge id="edge829" length="0.0" source="node824" target="node828"/>
+      <edge id="edge831" length="0.0" source="node828" target="node830"/>
+      <edge id="edge833" length="0.0" source="node830" target="node832"/>
+      <edge id="edge835" length="0.0" source="node830" target="node834"/>
+      <edge id="edge837" length="0.0" source="node828" target="node836"/>
+      <edge id="edge839" length="0.0" source="node822" target="node838"/>
+      <edge id="edge841" length="0.0" source="node820" target="node840"/>
+      <edge id="edge843" length="0.0" source="node816" target="node842"/>
+      <edge id="edge845" length="0.0" source="node842" target="node844"/>
+      <edge id="edge847" length="0.0" source="node842" target="node846"/>
+      <edge id="edge849" length="0.0" source="node846" target="node848"/>
+      <edge id="edge851" length="0.0" source="node846" target="node850"/>
+      <edge id="edge853" length="0.0" source="node850" target="node852"/>
+      <edge id="edge855" length="0.0" source="node852" target="node854"/>
+      <edge id="edge857" length="0.0" source="node852" target="node856"/>
+      <edge id="edge859" length="0.0" source="node856" target="node858"/>
+      <edge id="edge861" length="8.0E-4" source="node856" target="node860"/>
+      <edge id="edge863" length="0.0" source="node850" target="node862"/>
+      <edge id="edge865" length="0.00326" source="node814" target="node864"/>
+      <edge id="edge867" length="0.00402" source="node687" target="node866"/>
+      <edge id="edge869" length="0.01562" source="node649" target="node868"/>
+      <edge id="edge873" length="0.31335" source="node868" target="node870"/>
+      <edge id="edge875" length="0.02085" source="node870" target="node874"/>
+      <edge id="edge877" length="0.01417" source="node870" target="node876"/>
+      <edge id="edge881" length="0.06471" source="node868" target="node878"/>
+      <edge id="edge885" length="0.11032" source="node878" target="node882"/>
+      <edge id="edge887" length="0.01134" source="node882" target="node886"/>
+      <edge id="edge889" length="0.02017" source="node882" target="node888"/>
+      <edge id="edge891" length="0.09383" source="node878" target="node890"/>
+      <edge id="edge893" length="0.30838" source="node648" target="node892"/>
+    </tree>
+  </trees>
+</nex:nexml>
