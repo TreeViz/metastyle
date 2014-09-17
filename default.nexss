@@ -47,6 +47,10 @@ node[sequence_type>=91][sequence_type<=100] {
 	font-size: 200%;
 }
 
+node[cdao:has_Support_Value>=0.9] {
+	border: 10px;
+}
+
 node[bootstrap>=0.91][sequence_type<=1.0] {
 	border: 10px;
 	font-style: italic;
