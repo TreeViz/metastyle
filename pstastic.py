@@ -52,14 +52,41 @@ def test_node_against_selector(node, selector):
     # in the context of a live tree (vs. a DOM)
     return True
 
+TREE_STYLE_PROPERTIES = ("layout",)
+# See the full list at 
+# http://pythonhosted.org/ete2/reference/reference_treeview.html#treestyle
+
+NODE_STYLE_PROPERTIES = ("color", "background-color", "size", "shape",)
+# See the full list at 
+# http://pythonhosted.org/ete2/reference/reference_treeview.html#ete2.NodeStyle
+
 def apply_node_rule(rule, node_style, node):
     for style in rule.declarations:
-        print(style)
-    node_style["shape"] = "sphere"
-    node_style["fgcolor"] = "orange"
-    node_style["hz_line_type"] = 2
-    node_style["hz_line_color"] = "#cc99cc"
-    node_style["size"] = 10
+        # N.B. name is always normalized lower-case
+        # Translate TSS/CSS property names into ETE properties
+        if style.name not in NODE_STYLE_PROPERTIES:
+            continue
+
+        # TODO: handle dynamic (data-driven) values in all cases!
+        if style.name == "color":
+            node_style["fgcolor"] = style.value.as_css()
+        elif style.name == "background-color":
+            node_style["bgcolor"] = style.value.as_css()
+        else:
+            # by default, use the same name as in TSS
+            try:
+                setattr(node_style, style.name, style.value.as_css())
+            except:
+                print("Invalid property for node: %s" % style.name);
+                pass
+
+        # TODO: consider style.priority? ('important')
+
+    # node_style["shape"] = "sphere"
+    # node_style["hz_line_type"] = 2
+    # node_style["hz_line_color"] = "#cc99cc"
+    # node_style["size"] = 10
+
     return node_style, node
 
 def gather_tss_stylesheets(tree):
@@ -125,11 +152,24 @@ def apply_stylesheet(stylesheet, tree_style, node_rules):
             # TODO: interpret its selector to find targets
             # see https://pythonhosted.org/tinycss/parsing.html
 
-            # TODO: modify the current TreeStyle to reflect its declarations
+            # Some rules should modify the current TreeStyle
+            if r.selector.as_css() in ("canvas", "tree", "scale"):
+                for style in r.declarations:
+                    if style.name not in TREE_STYLE_PROPERTIES:
+                        continue
+                    if style.name == "layout":
+                        its_value = style.value.as_css()
+                        if its_value == "rectangular":
+                            tree_style.mode = "r"
+                        elif its_value == "circular":
+                            tree_style.mode = "c"
+                    else:
+                        setattr(tree_style, style.name, style.value.as_css())
+
             #tree_style.mode = 'c'  # circular
             #tree_style.show_leaf_name = False
             #tree_style.show_branch_length = True
-
+                
     return tree_style, node_rules
 
 # render a series of SVG files (one for each tree)

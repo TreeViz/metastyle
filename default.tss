@@ -70,11 +70,11 @@ chromosome.X {
 }
 
 sequence_type.SANG {
-	color: bold;
+	font-style: bold;
 }
 
 sequence_type.TRAM {
-	color: italic;
+	font-style: italic;
 }
 
 
@@ -89,7 +89,3 @@ colored_branch {
 clade {
     collapsed: true;
 }
-
-clade node {
-    color: #f00;
-]
