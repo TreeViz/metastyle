@@ -1,58 +1,67 @@
-#TSS Specification
+#nexss specification
 
-##TSS namespace
-TSS has the xmlns namespace xmlns:tss="http://www.phylotastic.org/tss"
+**NOTE: Are we calling this "nexss", "TSS", or "TreeSS"?**
+
+## Introduction
+**Concept:** To design a style sheet that can be easily formatted by the user to create publishable quality phylogenetic trees that have a meta-tag that would include the tree and full annotations and style sheets. Someone can then share not only the tree and data but also the style. People can then version control tree quality images.
+
+The idea is based on cascading style sheets, where the "tree" provides semantic content, but the manner in which that content is displayed is controlled by the style sheet. The most common tree file format is based on the Newick descriptor, but this format is too limiting for detailed semantic markup. Therefore, while the style sheet concept described herein can certainly be applied to trees stored in Newick format (or those formats that embed Newick trees, such as Nexus), the amount of styling available to Newick trees is limited. For full flexibility of display properties, trees would have to be stored in a more extendable format, such as NeXML.
+
+##nexss namespace
+nexss has the xmlns namespace xmlns:nexss="http://www.phylotastic.org/nexss"
+
 
 ##NeXML Annotations
 
 Annotations to nodes and edges are specified in the NeXML file as meta tags, with the following general format:
 
-<code><meta id="meta1" property="tss:prop_name" content="prop_value" xsi:type="nex:LiteralMeta" datatype="xsd:string"/></code>
+<code><meta id="meta1" property="nexss:prop&#95;name" content="prop&#95;value" xsi:type="nex:LiteralMeta" datatype="xsd:string"/></code>
 
 Some specific examples 
 
-> <code><meta id="meta2" property="tss:taxonomic_level" content="family" xsi:type="nex:LiteralMeta" datatype="xsd:string"/></code>
+<code><meta id="meta2" property="nexss:taxonomic&#95;level" content="family" xsi:type="nex:LiteralMeta" tatype="xsd:string"/></code>
 
-> <code><meta id="meta3" property="tss:allele_freq" content="[70,10,20]" xsi:type="nex:LiteralMeta" datatype="xsd:string"/></code>
+<code><meta id="meta3" property="nexss:allele&#95;freq" content="[70,10,20]" xsi:type="nex:LiteralMeta" datatype="xsd:string"/></code>
 
-> <code><meta id="meta4" property="tss:trophic_level" content="carnivore" xsi:type="nex:LiteralMeta" datatype="xsd:string"/></code>
+<code><meta id="meta4" property="nexss:trophic&#95;level" content="carnivore" xsi:type="nex:LiteralMeta" datatype="xsd:string"/></code>
 
-> <code><meta id="meta5" property="tss:bootstrap" content="70" xsi:type="nex:LiteralMeta" datatype="xsd:string"/></code>
+<code><meta id="meta5" property="nexss:bootstrap" content="70" xsi:type="nex:LiteralMeta" datatype="xsd:string"/></code>
 
-> <code><meta id="meta6" property="tss:extinct" content="" xsi:type="nex:LiteralMeta" datatype="xsd:string"/></code>
+<code><meta id="meta6" property="nexss:extinct" content="" xsi:type="nex:LiteralMeta" datatype="xsd:string"/></code>
 
-To meet notational standards, the id should be unique for every annotation, but is not used as part of the styling. The xsi:type is required, but is also not used and should always be xsi:type=”nex:LiteralMeta”.  The datatype is also required, but for simplicity it is always datatype=”xsd:string” (strictly speaking, not all content will be strings, but we’ll let the viewer decide that as necessary). The property value should begin with “tss” to indicate it is a potential styling annotation. The name of the property, which will be used in the tss sheet to indicate classes comes after the colon. Strictly speaking there should be an additional file generated with the NeXML annotations which defines each property, although this is not actually used as part of the styling. Content can be text, number, or an array (specified by []). Content is also optional if one just wants to add an unspecified tag, such as the property listed as extinct. There is no restriction on what sort of content can be annotated to a node or an edge, but some properties only logically belong to one or another and the specific rendering options vary depending on whether the property is on a node or an edge (see below).
+To meet notational standards, the id should be unique for every annotation, but is not used as part of the styling. The <code>xsi:type</code> is required, but is also not used and should always be <code>xsi:type="nex:LiteralMeta"</code>. The datatype is also required, but for simplicity it is always <code>datatype="xsd:string"</code> (strictly speaking, not all content will be strings, but we’ll let the viewer decide that as necessary). The property value should begin with "nexss" to indicate it is a potential styling annotation. The name of the property, which will be used in the nexss sheet to indicate classes comes after the colon. Strictly speaking there should be an additional file generated with the NeXML annotations which defines each property, although this is not actually used as part of the styling. Content can be text, number, or an array (specified by []). Content is also optional if one just wants to add an unspecified tag, such as the property listed as extinct in the final example above. There is no restriction on what sort of content can be annotated to a node or an edge, but some properties only logically belong to one or another and the specific rendering options vary depending on whether the property is on a node or an edge (see below).
 
-Within the tss, a specific annotation is referred to by its property name (without the css). To refer to only a specific value of a property, use . notation. Thus
+Within the nexss, a specific annotation is referred to by its property name (without the nexss). To refer to only a specific value of a property, use . notation. Thus
 
-> <code>trophic_level</code>
+<code>trophic_level</code>
 
 would refer to any node/edge annotated with a trophic_level, while
 
-> <code>trophic_level.herbivore</code>
+<code>trophic_level.herbivore</code>
 
 would refer to only those with trophic levels whose content is “herbivore”. For numeric values for which one wants to specify a range of content, use the following notation
 
-> <code>bootstrap[min=0][max=50]</code>
+<code>bootstrap[min=0][max=50]</code>
 
 to specify bootstrap properties with values between 0 and 50 (inclusive).
 
-The tss file itself is set up exactly like a css file to allow existing css parsers to work on it. While much of the tss is the same as in css, some of it is unique to drawing trees. It is up to the tree renderer to know how to use the results, but the tokenization should be handled by any css parser without modification.
+The nexss file itself is set up exactly like a css file to allow existing css parsers to work on it. While much of the nexss is the same as in css, some of it is unique to drawing trees. It is up to the tree renderer to know how to use the results, but the tokenization can be handled by any css parser without modification.
 
-Below are described the tss components and properties.
+Below are described the nexss components and properties.
 
 ##General Components
-###Canvas
-The canvas represents the rendering box for the tree. This is functionally similar to the body of an html document.
+These are components which apply globally to the rendering of a tree, and would apply equally well to trees stored in any format (Newick, NeXML, etc.).
 
-<pre><code>
-canvas {     
+###Figure
+The figure represents the rendering box for the tree. This is functionally similar to the body of an html document.
+
+<pre>figure {     
   background-color: white;
      /* one might consider supporting other background elements, such as 
         images */
   height: 100%;
   width: 100%;
-     /* the size of the canvas in which the tree will be drawn. For many
+     /* the size of the figure in which the tree will be drawn. For many
         viewers the default is the window size, but this would only 
         specification of both larger and smaller areas as necessary. Allowable 
         values should be interpreted through general css parameters, including 
@@ -64,8 +73,7 @@ canvas {
     /* These set the default font properties for the tree. There are no 
        special parameters, but should support all font options normally 
        available for CSS */
- }
-</code></pre>
+ }</pre>
 
 ###Tree
 The tree represents the entire drawn tree and contains default properties for the rendering of the tree as a whole
@@ -86,7 +94,7 @@ tree {
 
   tip-orientation: right
     /* describes the direction the tree will be drawn, specifically which side 
-       of the canvas should have the tips. Has no meaning for radial and polar 
+       of the figure should have the tips. Has no meaning for radial and polar 
        trees. Valid options are: left | right | top | bottom */
 
   scaled: true; 
@@ -106,7 +114,7 @@ scale {
        false */
 
   font-family, font-size, etc.
-    /* options to override the default fonts set by the canvas /*
+    /* options to override the default fonts set by the figure /*
 
   border-color: black;
   border-size: 1px;
@@ -129,7 +137,7 @@ scale {
 
 
 ##Specific Annotated Components
-Everything else in the tss file refers to specific annotations of nodes or edges. The options are detailed below.
+Everything else in the nexss file refers to specific annotations of nodes or edges. The options are detailed below.
 
 Some general properties and parameters will apply to many features. The first of these is the (potential) alignment of the styled element. Where the item should be rendered relative to the annotated element is controlled by the “align” parameter. Because directions on a tree vary relative to the direction it is drawn, we are using the terms “root” and “tip” to specify alignments on the root side or tip side of an object, and “left” and “right” to indicate the left or right side of the object WHEN FACING THE TIP (as opposed to the actual screen). “Center” specifies the center of the element.
 
@@ -152,17 +160,17 @@ When align is left or right for annotated edges, an additional parameter “edge
 In addition to a few specialized parameters, tree renderers will need to recognize existing css definitions for things such as colors, borders, fonts, and opacity.
 
 ##Labels
-Labels for edges and nodes may come from multiple places. First, if the node is an OTU, it may have a label in the OTU block of the NeXML file which specifies a name (e.g., the species name). Specific annotations may contain content which can be used as a label. Finally, the text for a label can be specified based in the tss itself.
+Labels for edges and nodes may come from multiple places. First, if the node is an OTU, it may have a label in the OTU block of the NeXML file which specifies a name (e.g., the species name). Specific annotations may contain content which can be used as a label. Finally, the text for a label can be specified based in the nexss itself.
 
-To label an edge or node with text based on a specific annotation, use the “text” parameter. Text can either be specified with a literal string in quotes, or be the content of the annotation by using VALUE, or be the label associated with the element by using LABEL. Generally, only OTU’s will make use of the LABEL element. The relative alignment of the text to the annotated element is controlled using the align (and if applicable, edge-align) parameters. Other aspects of the text, such as color, font, etc., use standard css formatting. If not specified, the default font properties are those of the canvas (e.g., by default most tree renderers will label tips with the OTU labels using the default canvas font). Some specific examples of controlling labels with tss:
+To label an edge or node with text based on a specific annotation, use the “text” parameter. Text can either be specified with a literal string in quotes, or be the content of the annotation by using VALUE, or be the label associated with the element by using LABEL. Generally, only OTU’s will make use of the LABEL element. The relative alignment of the text to the annotated element is controlled using the align (and if applicable, edge-align) parameters. Other aspects of the text, such as color, font, etc., use standard css formatting. If not specified, the default font properties are those of the figure (e.g., by default most tree renderers will label tips with the OTU labels using the default figure font). Some specific examples of controlling labels with nexss:
 
 ####Example: labeling nodes with the specified property content
 ***NeXML annotation:***
-<pre><code>&lt;meta id="meta1" property="tss:clade_b" content="Clade Ruelliae" 
+<pre><code>&lt;meta id="meta1" property="nexss:clade_b" content="Clade Ruelliae" 
    xsi:type="nex:LiteralMeta" datatype="xsd:string"/&gt;
 </code></pre>
 
-***tss:***
+***nexss:***
 <pre><code>clade_b {
   text: VALUE;
   font-family: Helvetica, sans-serif;
@@ -176,10 +184,10 @@ To label an edge or node with text based on a specific annotation, use the “te
 #### Example: labeling nodes with custom text for a specific property content
 ***NeXML annotation:***
 
-<pre><code>&lt;meta id="meta1" property="tss:labeled_clade" content="ruelliae" xsi:type="nex:LiteralMeta"
+<pre><code>&lt;meta id="meta1" property="nexss:labeled_clade" content="ruelliae" xsi:type="nex:LiteralMeta"
    datatype="xsd:string"/&gt;
 </code></pre>
-***tss:***
+***nexss:***
 <pre><code>labeled_clade.ruelliae {
   text: "Clade Ruelliae";
   color: #00135F;
@@ -189,9 +197,9 @@ To label an edge or node with text based on a specific annotation, use the “te
 
 ####Example: labeling edges with bootstrap values above 95% with an *
 ***NeXML annotation:***
-<pre><code>&lt;meta id="meta1" property="tss:bootstrap" content="98" xsi:type="nex:LiteralMeta"
+<pre><code>&lt;meta id="meta1" property="nexss:bootstrap" content="98" xsi:type="nex:LiteralMeta"
    datatype="xsd:string"/></code></pre>&gt;
-***tss:***
+***nexss:***
 <pre><code>bootstrap[min=95][max=100] {
   text: "*";
   font-size: 300%;
@@ -201,9 +209,9 @@ To label an edge or node with text based on a specific annotation, use the “te
 
 ####Example: labeling edges with bootstrap values below 50% with specific text
 ***NeXML annotation:***
-<pre><code>&lt;meta id="meta1" property="tss:boostrap" content="47" xsi:type="nex:LiteralMeta"
+<pre><code>&lt;meta id="meta1" property="nexss:boostrap" content="47" xsi:type="nex:LiteralMeta"
    datatype="xsd:string"/&gt;</code></pre>
-***tss:***
+***nexss:***
 <pre><code>bootstrap[min=1][max=50] {
   text: "<50";
   font-size: 300%;
@@ -213,8 +221,8 @@ To label an edge or node with text based on a specific annotation, use the “te
 
 ####Example: labeling edges with their bootstrap values 
 ***NeXML annotation:***
-<pre><code>&lt;meta id="meta1" property="tss:boostrap" content="86" xsi:type="nex:LiteralMeta" datatype="xsd:string"/&gt;</code></pre>
-***tss:***
+<pre><code>&lt;meta id="meta1" property="nexss:boostrap" content="86" xsi:type="nex:LiteralMeta" datatype="xsd:string"/&gt;</code></pre>
+***nexss:***
 <pre><code>bootstrap[min=1][max=50] {
   text: VALUE;
   font-size: 300%;
@@ -224,9 +232,9 @@ To label an edge or node with text based on a specific annotation, use the “te
 
 ####Example: changing the color of OTU labels based on an annotation 
 ***NeXML annotation:***
-<pre><code>&lt;meta id="meta1" property="tss:trophic_level" content="herbivore"
+<pre><code>&lt;meta id="meta1" property="nexss:trophic_level" content="herbivore"
    xsi:type="nex:LiteralMeta" datatype="xsd:string"/&gt;</code></pre>
-***tss:***
+***nexss:***
 <pre><code>trophic_level_herbivore {
   text: LABEL;
   color: red;
@@ -237,10 +245,10 @@ The rendering of the edge itself can be specified for specific annotation by spe
 
 ####Example: styling edges with bootstrap values above 95%
 ***NeXML annotation:***
-<pre><code>&lt;meta id="meta1" property="tss:bootstrap" content="98" xsi:type="nex:LiteralMeta" 
+<pre><code>&lt;meta id="meta1" property="nexss:bootstrap" content="98" xsi:type="nex:LiteralMeta" 
   datatype="xsd:string"/&gt;</code></pre>
 
-***tss:***
+***nexss:***
 <pre><code>bootstrap[min=95][max=100] {
   border-width: 4px;
   border-color: red;
@@ -248,10 +256,10 @@ The rendering of the edge itself can be specified for specific annotation by spe
 
 ####Example: styling edges with different content
 ***NeXML annotation:***
-<pre><code>&lt;meta id="meta1" property="tss:trophic_level" content="herbivore" 
+<pre><code>&lt;meta id="meta1" property="nexss:trophic_level" content="herbivore" 
   xsi:type="nex:LiteralMeta" datatype="xsd:string"/&gt;</code></pre>
 
-***tss:***
+***nexss:***
 <pre><code>trophic_level.herbivore {
   border-color: green;
 }
@@ -261,10 +269,10 @@ trophic_level.carnivore {
 
 ####Example: styling edges which have a property
 ***NeXML annotation:***
-<pre><code>&lt;meta id="meta1" property="tss:extinct" content="" xsi:type="nex:LiteralMeta" 
+<pre><code>&lt;meta id="meta1" property="nexss:extinct" content="" xsi:type="nex:LiteralMeta" 
   datatype="xsd:string"/&gt;</code></pre>
 
-***tss:***
+***nexss:***
 <pre><code>extinct {
   border-color: silver;
   border-style: dotted;
@@ -277,10 +285,10 @@ To draw a pie chart, use the special style parameter called pie&#95;chart, whose
 The below commands would specify that a pie chart drawn from the allele&#95;freq annotation should be drawn, centered on the annotated element, with red, green and blue used as the colors for the pie slices, which in the meta annotation example have %’s of 70, 10, and 20 respectively.
 
 ***NeXML annotation:***
-<pre><code>&lt;meta id="meta1" property="tss:allele_freq" content="[70,10,20]"
+<pre><code>&lt;meta id="meta1" property="nexss:allele_freq" content="[70,10,20]"
    xsi:type="nex:LiteralMeta" datatype="xsd:string"/&gt;</code></pre>
 
-***tss:***
+***nexss:***
 <pre><code>allele_freq {
   pie_chart: VALUE;
   category_colors: (red,green,blue);
@@ -292,10 +300,10 @@ Images and icons can be added to a node or edge by using the image parameter and
 
 #### Example: adding images next to nodes based on specific content
 ***NeXML annotation:***
-<pre><code>&lt;meta id="meta1" property="tss:trophic_level" content="herbivore"
+<pre><code>&lt;meta id="meta1" property="nexss:trophic_level" content="herbivore"
    xsi:type="nex:LiteralMeta" datatype="xsd:string"/&gt;</code></pre>
 
-***tss:***
+***nexss:***
 <pre><code>trophic_level.herbivore {
   image: "path\plant.png";
   align: tip;
@@ -307,9 +315,9 @@ trophic_level.carnivore {
 
 ####Example: adding images next to edges based on an annotated property
 ***NeXML annotation:***
-<pre><code>&lt;meta id="meta1" property="tss:extinct" content="" xsi:type="nex:LiteralMeta" datatype="xsd:string"/&gt;</code></pre>
+<pre><code>&lt;meta id="meta1" property="nexss:extinct" content="" xsi:type="nex:LiteralMeta" datatype="xsd:string"/&gt;</code></pre>
 
-***tss:***
+***nexss:***
 <pre><code>extinct {
   image: "path\skull.gif";
   align: right;
@@ -321,10 +329,10 @@ Symbols are best displayed by leveraging the ability to add text labels consisti
 
 ####Example: adding red circles to nodes representing gene duplication events
 ***NeXML annotation:***
-<pre><code>&lt;meta id="meta1" property="tss:split_type" content="duplication" 
+<pre><code>&lt;meta id="meta1" property="nexss:split_type" content="duplication" 
   xsi:type="nex:LiteralMeta" datatype="xsd:string"/&gt;</code></pre>
 
-***tss:***
+***nexss:***
 <pre><code>split_type.duplication {
   text: "●";
   font-size: 500%;
@@ -334,12 +342,12 @@ Symbols are best displayed by leveraging the ability to add text labels consisti
 
 ####Example: adding tick marks and crosses to edges representing character change and reversal
 ***NeXML annotation:***
-<pre><code>&lt;meta id="meta1" property="tss:char1change" content="forward"
+<pre><code>&lt;meta id="meta1" property="nexss:char1change" content="forward"
    xsi:type="nex:LiteralMeta" datatype="xsd:string"/&gt;
-&lt;meta id="meta2" property="tss:char1change" content="reverse" 
+&lt;meta id="meta2" property="nexss:char1change" content="reverse" 
    xsi:type="nex:LiteralMeta" datatype="xsd:string"/&gt;</code></pre>
 
-***tss:***
+***nexss:***
 <pre><code>char1change.forward {
   text: "▌";
   font-size: 500%;
@@ -358,10 +366,10 @@ To specify that a specific node should be collapsed, set the collapsed parameter
 
 ####Example: labeling nodes with custom text for a specific property value
 ***NeXML annotation:***
-<pre><code>&lt;meta id="meta1" property="tss:labeled_clade" content="Ruelliae"
+<pre><code>&lt;meta id="meta1" property="nexss:labeled_clade" content="Ruelliae"
    xsi:type="nex:LiteralMeta" datatype="xsd:string"/&gt;</code></pre>
 
-***tss:***
+***nexss:***
 <pre><code>labeled_clade.ruelliae {
   collapsed: true;
   text: VALUE;
@@ -374,10 +382,10 @@ To specify that a confidence interval around a node (e.g., representing a range 
 
 ####Example: labeling nodes with custom text for a specific property value
 ***NeXML annotation:***
-<pre><code>&lt;meta id="meta1" property="tss:conf_int" content="(50,70)" xsi:type="nex:LiteralMeta"
+<pre><code>&lt;meta id="meta1" property="nexss:conf_int" content="(50,70)" xsi:type="nex:LiteralMeta"
    datatype="xsd:string"/&gt;</code></pre>
 
-***tss:***
+***nexss:***
 <pre><code>conf_int {
   bar: VALUE;
   align: center;
