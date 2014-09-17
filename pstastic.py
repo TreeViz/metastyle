@@ -20,11 +20,38 @@ argparser.add_argument(
 )
 argparser.add_argument(
     '-o', '--output',
-    nargs='?',
+    nargs=1,
     default='output.svg',
     help='The name of the output file. Must have a .svg, .png or .pdf extension.'
 )
+argparser.add_argument(
+    '-ow', '--width',
+    nargs=1,
+    default=[None],
+    type=int,
+    help='The width of the output image'
+)
+argparser.add_argument(
+    '-oh', '--height',
+    nargs=1,
+    default=[None],
+    type=int,
+    help='The height of the output image'
+)
+argparser.add_argument(
+    '--dpi',
+    nargs=1,
+    default=[300],
+    type=int,
+    help='The dots-per-inch (DPI) in the output file.'
+)
 args = argparser.parse_args()
+
+# Change single-list items into single items.
+args.output = args.output[0]
+args.dpi = args.dpi[0]
+args.width = args.width[0]
+args.height = args.height[0]
 
 nexml = Nexml()
 nexml.build_from_file(sys.argv[1])
@@ -219,7 +246,14 @@ for trees in nexml.get_trees():
         if tree_index > 1:
             output_filename = "%s%d%s" % (output_basename, tree_index, output_extension)
         
-        tree.render(output_filename, tree_style=ts)
+        if args.width and args.height:
+            tree.render(output_filename, tree_style=ts, w=args.width, h=args.height, dpi=args.dpi)
+        elif args.width:
+            tree.render(output_filename, tree_style=ts, w=args.width, dpi=args.dpi)
+        elif args.height:
+            tree.render(output_filename, tree_style=ts, h=args.height, dpi=args.dpi)
+        else:
+            tree.render(output_filename, tree_style=ts, dpi=args.dpi)
 
         # let's try the interactive QT viewer
         tree.show(tree_style=ts)
