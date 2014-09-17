@@ -1,0 +1,53 @@
+canvas {
+	background-color: yellow;
+	width: 500px;
+	height: 500px;
+	font: 12pt "Helvetica",serif;
+}
+
+tree {
+	border: 2px black solid;
+	layout: rectangular;
+	tip-orientation: right;
+	scaled: true;
+}
+
+scale {
+	visible: false;
+}
+
+trophic_level.herbivore {
+	color: green;
+}
+
+trophic_level.carnivore {
+	color: red;
+}
+
+posterior_prob[min=91][max=100] {
+	border: 10px;
+	font-style: italic;
+	font-size: 200%;
+}
+
+bootstrap[min=91][max=100] {
+	border: 10px;
+	font-style: italic;
+	font-size: 200%;
+}
+
+environment.benthic {
+	border-color: blue;
+}
+
+environment.pelagic {
+	border-color: yellow;
+}
+
+environment.pelagic {
+	border-color: red;
+}
+
+extinct[true] {
+	font-style: italic;
+}
