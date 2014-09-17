@@ -1,17 +1,31 @@
 from ete2 import Nexml, TreeStyle, NodeStyle
+
+import argparse
 import tinycss
 import sys
 import os
 
-if len(sys.argv) < 2:
-    print("Command line argument required: NeXML file")
-    exit(-1)
+argparser = argparse.ArgumentParser(
+    description='Produce publication-quality phylogenetic trees using NexSS stylesheets'
+)
+argparser.add_argument(
+    'source',
+    nargs=1,
+    help='Input NeXML file to process'
+)
+argparser.add_argument(
+    'stylesheet',
+    nargs='*',
+    help='NexSS stylesheet to format the NeXML file with'
+)
+argparser.add_argument(
+    '-o', '--output',
+    nargs='?',
+    default='output.svg',
+    help='The name of the output file. Must have a .svg, .png or .pdf extension.'
+)
+args = argparser.parse_args()
 
-custom_stylesheet = None
-if len(sys.argv) > 2:
-    if sys.argv[2]:
-        custom_stylesheet = sys.argv[2]
-    
 nexml = Nexml()
 nexml.build_from_file(sys.argv[1])
 
@@ -92,8 +106,8 @@ def apply_node_rule(rule, node_style, node):
 def gather_tss_stylesheets(tree):
     sheets = []
     # if a stylesheet was provided, this is all we should use
-    if custom_stylesheet:
-        sheets.append(custom_stylesheet)
+    if args.stylesheet:
+        sheets.extend(args.stylesheet)
         return sheets
 
     # TODO: add any default stylesheet for this tool?
@@ -171,14 +185,24 @@ def apply_stylesheet(stylesheet, tree_style, node_rules):
             #tree_style.show_branch_length = True
                 
     return tree_style, node_rules
+        
+# Figure out the file basename in case we have multiple trees.
+(output_basename, output_extension) = os.path.splitext(args.output)
 
-# render a series of SVG files (one for each tree)
+# render a series of output files (one for each tree)
+tree_index = 0
 for trees in nexml.get_trees():
-    tree_index = 0
     for tree in trees.get_tree():
         tree_index += 1
         ts = build_tree_style(tree)
-        tree.render("output%d.svg" % tree_index, tree_style=ts)
+
+
+        # Only use suffixes if there is more than one tree.
+        output_filename = "%s%s" % (output_basename, output_extension)
+        if tree_index > 1:
+            output_filename = "%s%d%s" % (output_basename, tree_index, output_extension)
+        
+        tree.render(output_filename, tree_style=ts)
 
         # let's try the interactive QT viewer
         tree.show(tree_style=ts)
