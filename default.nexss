@@ -1,12 +1,13 @@
 canvas {
-        background-color: white;
-        width: 500px;
-        height: 500px;
-        font: 12pt "Helvetica",serif;
+	background-color: white;
+	width: 500px;
+	height: 500px;
+	font: 12pt "Helvetica",serif;
 }
+
 tree {
 	border: 2px black solid;
-	layout: circular;
+	layout: rectangular;
 	tip-orientation: right;
 	scaled: true;
 }
@@ -89,3 +90,4 @@ colored_branch {
 clade {
     collapsed: true;
 }
+
