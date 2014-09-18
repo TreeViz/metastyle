@@ -122,7 +122,8 @@ def test_node_against_selector(node, selector):
                     for e in context_elements:
                         new_context_elements.extend(e.get_descendants())
                 else:
-                    print("Unexpected IDENT for element name: %s" % token.value)
+                    # ignore other element names for now
+                    report_unsupported_element_selector(token.value)
             elif waiting_for_class_name:
                 # test for matching classname
                 new_context_elements = []
@@ -130,7 +131,6 @@ def test_node_against_selector(node, selector):
                     if e.nexml_node.anyAttributes_.has_key( 'class'):
                         if e.nexml_node.anyAttributes_['class'] == token.value:
                             new_context_elements.append(e)
-                print("Classname selectors not supported for nodes")
             else:
                 print("Unexpected IDENT in selector: %s" % token.value)
 
@@ -165,18 +165,25 @@ NODE_STYLE_PROPERTIES = ("color", "background-color", "size", "shape",)
 # http://pythonhosted.org/ete2/reference/reference_treeview.html#ete2.NodeStyle
 
 
-# Report unsupported style properties *just once*
+# Report unsupported style properties, etc. *just once*
+
 unsupported_tree_styles = []
 def report_unsupported_tree_style(name):
     if name not in unsupported_tree_styles:
-        print("ETE does not support '%s' in TreeStyle" % name)
+        print("ETE TreeStyle does not provide '%s'" % name)
         unsupported_tree_styles.append(name)
 
 unsupported_node_styles = []
 def report_unsupported_node_style(name):
     if name not in unsupported_node_styles:
-        print("ETE does not support '%s' in NodeStyle" % name)
+        print("ETE NodeStyle does not provide '%s'" % name)
         unsupported_node_styles.append(name)
+
+unsupported_element_selectors = []
+def report_unsupported_element_selector(name):
+    if name not in unsupported_element_selectors:
+        print("ETE does not support element selector '%s'" % name)
+        unsupported_element_selectors.append(name)
 
 
 def apply_node_rule(rule, node_style, node):
@@ -304,40 +311,55 @@ def compare_property(element, test_container):
     # Split this token to get property name, operator, and value;
     # compare to this element's properties (including typical
     # metadata) and return the result
-    if len(test_container.content) != 3:
-        print("Unexpected test structure")
-        pprint(test_container)
-        return False
-    test_property = test_container.content[0].value
-    test_operator = test_container.content[1].value
-    test_value = test_container.content[2].value
+    
+    # find the operator (DELIM) and concat the rest
+    test_property = ''
+    test_operator = None
+    test_value = None
+    for token in test_container.content:
+        if token.type == u'DELIM':
+            test_operator = token.value
+        elif test_operator is None:
+            # keep adding to the property name
+            test_property = "%s%s" % (test_property, token.value,)
+        else:
+            if test_value is None:
+                test_value = token.value
+            else:
+                # keep adding to the test value (ASSUMES a string)
+                test_value = "%s%s" % (test_value, token.value,)
+        
     el_value = get_property_or_meta(element, test_property)
     if el_value is None:
         return False
     else:
-        # TODO: use the operator and value to work it out
-        if test_operator == '=':
-            # test for equality
-            return el_value == test_value
-        elif test_operator == '!=':
-            # test for inequality
-            return el_value != test_value
-        # value comparisons (alpha, numeric?)
-        elif test_operator == '>':
-            return el_value > test_value
-        elif test_operator == '<':
-            return el_value < test_value
-        elif test_operator == '>=':
-            return el_value >= test_value
-        elif test_operator == '<=':
-            return el_value <= test_value
-        # string comparisons (startswith, endswith, anywhere)
-        elif test_operator == '^=':
-            return el_value.startswith(test_value)
-        elif test_operator == '$=':
-            return el_value.endswith(test_value)
-        elif test_operator == '*=':
-            return el_value.find(test_value) != -1
+        if test_operator is None:
+            # match on the mere existence of this property
+            return True
+        else:
+            # use the operator and value to work it out
+            if test_operator == '=':
+                # test for equality
+                return el_value == test_value
+            elif test_operator == '!=':
+                # test for inequality
+                return el_value != test_value
+            # value comparisons (alpha, numeric?)
+            elif test_operator == '>':
+                return el_value > test_value
+            elif test_operator == '<':
+                return el_value < test_value
+            elif test_operator == '>=':
+                return el_value >= test_value
+            elif test_operator == '<=':
+                return el_value <= test_value
+            # string comparisons (startswith, endswith, anywhere)
+            elif test_operator == '^=':
+                return el_value.startswith(test_value)
+            elif test_operator == '$=':
+                return el_value.endswith(test_value)
+            elif test_operator == '*=':
+                return el_value.find(test_value) != -1
 
 def get_property_or_meta(element, property_name):
     # check first for an attribute by this name
