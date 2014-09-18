@@ -169,8 +169,8 @@ def test_node_against_selector(node, selector):
     return False
 
 
-TREE_ONLY_SELECTOR_TOKENS = ("figure", "tree", "scale")
-TREE_STYLE_PROPERTIES = ("layout","border",)
+TREE_ONLY_SELECTOR_TOKENS = ("figure","tree","scale",)
+TREE_STYLE_PROPERTIES = ("layout","border","scaled","visible",)
 # See the full list at 
 # http://pythonhosted.org/ete2/reference/reference_treeview.html#treestyle
 
@@ -336,6 +336,20 @@ def apply_stylesheet(stylesheet, tree_style, node_rules):
                             tree_style.show_border = False
                         else:
                             tree_style.show_border = True
+                    elif style.name == "scaled":
+                        # determines whether we show branch lengths or not
+                        its_value = style.value.as_css()
+                        if its_value == "true":
+                            tree_style.force_topology = False
+                        else:
+                            # show all branches as equal length
+                            tree_style.force_topology = True
+                    elif r.selector.as_css() == 'scale' and style.name == "visible":
+                        its_value = style.value.as_css()
+                        if its_value == "false":
+                            tree_style.show_scale = False
+                        else:
+                            tree_style.show_scale = True
                     else:
                         setattr(tree_style, style.name, style.value.as_css())
 
