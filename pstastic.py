@@ -106,8 +106,8 @@ def test_node_against_selector(node, selector):
     waiting_for_class_name = False
 
     for token in selector:
-        pprint("NEW context_elements:")
-        pprint(context_elements)
+        #pprint("NEW context_elements:")
+        #pprint(context_elements)
 
         if token.type == u'S':  # string
             # ASSUME this is whitespace?
@@ -124,9 +124,12 @@ def test_node_against_selector(node, selector):
                 else:
                     print("Unexpected IDENT for element name: %s" % token.value)
             elif waiting_for_class_name:
-                # test for matching classname? no, these are
-                # NOT PRESERVED from NeXML to ETE TreeNodes
-                ##context_elements = [e for e in context_elements if e['class'] == token.value] 
+                # test for matching classname
+                new_context_elements = []
+                for e in context_elements:
+                    if e.nexml_node.anyAttributes_.has_key( 'class'):
+                        if e.nexml_node.anyAttributes_['class'] == token.value:
+                            new_context_elements.append(e)
                 print("Classname selectors not supported for nodes")
             else:
                 print("Unexpected IDENT in selector: %s" % token.value)
@@ -313,20 +316,42 @@ def compare_property(element, test_container):
         return False
     else:
         # TODO: use the operator and value to work it out
-        return True
+        if test_operator == '=':
+            # test for equality
+            return el_value == test_value
+        elif test_operator == '!=':
+            # test for inequality
+            return el_value != test_value
+        # value comparisons (alpha, numeric?)
+        elif test_operator == '>':
+            return el_value > test_value
+        elif test_operator == '<':
+            return el_value < test_value
+        elif test_operator == '>=':
+            return el_value >= test_value
+        elif test_operator == '<=':
+            return el_value <= test_value
+        # string comparisons (startswith, endswith, anywhere)
+        elif test_operator == '^=':
+            return el_value.startswith(test_value)
+        elif test_operator == '$=':
+            return el_value.endswith(test_value)
+        elif test_operator == '*=':
+            return el_value.find(test_value) != -1
 
 def get_property_or_meta(element, property_name):
     # check first for an attribute by this name
     if getattr(element, property_name, None):
         return getattr(element, property_name, None)
     # ...then for a child META element
-    for child in element.get_children():
-        #import pdb; pdb.set_trace()
-        if child.name == 'meta':
-            # TODO: can we get META tags here?!
-            pass
-    # TODO: ...then for a distant META element that points to this element
-    return False
+    for metatag in element.nexml_node.meta:
+        # ASSUMES there's just one matching metatag!
+        if metatag.property == property_name:
+            # TODO: normalize to lower-case?
+            return metatag.content
+    # TODO: ...finally, check for a distant META tag that 
+    # points to this element?
+    return None
 
 # Figure out the file basename in case we have multiple trees.
 (output_basename, output_extension) = os.path.splitext(args.output)
