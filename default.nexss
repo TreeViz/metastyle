@@ -41,7 +41,7 @@ posterior_prob[min=91][max=100] {
 	font-size: 200%;
 }
 
-node[nexss:sequence_type>=91][nexss:sequence_type<=100] {
+node[nexss:bootstrap>=91][nexss:bootstrap<=100] {
 	border: 10px;
 	font-style: italic;
 	font-size: 200%;
