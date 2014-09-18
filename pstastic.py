@@ -1,5 +1,5 @@
 from ete2 import Nexml, TreeStyle, NodeStyle
-
+from pprint import pprint
 import argparse
 import tinycss
 import sys
@@ -89,10 +89,70 @@ def build_tree_style(tree):
     return ts
 
 def test_node_against_selector(node, selector):
-    # TODO: Here we can interpret our selectors 
-    # in the context of a live tree (vs. a DOM)
+    # Interpret a selector in the context of a live tree (vs. a DOM)
+    # and return True if this node matches (or False). 
+    #
+    # We'll optimistically hope that this node is a match, but walk 
+    # the series of tokens looking for a reason to fail it.
+
+    # keep track of the most recently specified context element(s), since we
+    # will often test their properties
+    context_elements = [ node.get_tree_root() ]
+
+    # wait for descendant name after a whitespace token
+    waiting_for_descendant_element_name = True
+
+    # wait for a class (attribute) name after a '.' token
+    waiting_for_class_name = False
+
+    for token in selector:
+        pprint("NEW context_elements:")
+        pprint(context_elements)
+
+        if token.type == u'S':  # string
+            # ASSUME this is whitespace?
+            waiting_for_descendant_element_name = True
+            waiting_for_class_name = False
+
+        elif token.type == u'IDENT': # element or classname
+            if waiting_for_descendant_element_name:
+                if token.value == 'node':
+                    # gather all descendant nodes
+                    new_context_elements = []
+                    for e in context_elements:
+                        new_context_elements.extend(e.get_descendants())
+                else:
+                    print("Unexpected IDENT for element name: %s" % token.value)
+            elif waiting_for_class_name:
+                # test for matching classname? no, these are
+                # NOT PRESERVED from NeXML to ETE TreeNodes
+                ##context_elements = [e for e in context_elements if e['class'] == token.value] 
+                print("Classname selectors not supported for nodes")
+            else:
+                print("Unexpected IDENT in selector: %s" % token.value)
+
+        elif token.type == u'[': # property test
+            # compare this property or metadata
+            context_elements = [e for e in context_elements 
+                if compare_property(e,token)]
+            
+            pass
+
+        elif token.type == u'DELIM':
+            if token.value == '.':
+                waiting_for_class_name = True
+                waiting_for_descendant_element_name = False
+            else:
+                print("Unsupported DELIM in selector: %s" % token.value)
+
+        else:
+            print("Unexpected token type (%s) in selector: %s" % 
+                (token.type, token.value))
+    
     return True
 
+
+TREE_ONLY_SELECTOR_TOKENS = ("canvas", "tree", "scale")
 TREE_STYLE_PROPERTIES = ("layout","border",)
 # See the full list at 
 # http://pythonhosted.org/ete2/reference/reference_treeview.html#treestyle
@@ -210,7 +270,7 @@ def apply_stylesheet(stylesheet, tree_style, node_rules):
             # see https://pythonhosted.org/tinycss/parsing.html
 
             # Some rules should modify the current TreeStyle
-            if r.selector.as_css() in ("canvas", "tree", "scale"):
+            if r.selector.as_css() in TREE_ONLY_SELECTOR_TOKENS:
                 for style in r.declarations:
                     if style.name not in TREE_STYLE_PROPERTIES:
                         report_unsupported_tree_style(style.name)
@@ -237,6 +297,37 @@ def apply_stylesheet(stylesheet, tree_style, node_rules):
                 
     return tree_style, node_rules
         
+def compare_property(element, test_container):
+    # Split this token to get property name, operator, and value;
+    # compare to this element's properties (including typical
+    # metadata) and return the result
+    if len(test_container.content) != 3:
+        print("Unexpected test structure")
+        pprint(test_container)
+        return False
+    test_property = test_container.content[0].value
+    test_operator = test_container.content[1].value
+    test_value = test_container.content[2].value
+    el_value = get_property_or_meta(element, test_property)
+    if el_value is None:
+        return False
+    else:
+        # TODO: use the operator and value to work it out
+        return True
+
+def get_property_or_meta(element, property_name):
+    # check first for an attribute by this name
+    if getattr(element, property_name, None):
+        return getattr(element, property_name, None)
+    # ...then for a child META element
+    for child in element.get_children():
+        #import pdb; pdb.set_trace()
+        if child.name == 'meta':
+            # TODO: can we get META tags here?!
+            pass
+    # TODO: ...then for a distant META element that points to this element
+    return False
+
 # Figure out the file basename in case we have multiple trees.
 (output_basename, output_extension) = os.path.splitext(args.output)
 
