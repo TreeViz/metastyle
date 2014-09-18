@@ -155,7 +155,7 @@ def test_node_against_selector(node, selector):
     return True
 
 
-TREE_ONLY_SELECTOR_TOKENS = ("canvas", "tree", "scale")
+TREE_ONLY_SELECTOR_TOKENS = ("figure", "tree", "scale")
 TREE_STYLE_PROPERTIES = ("layout","border",)
 # See the full list at 
 # http://pythonhosted.org/ete2/reference/reference_treeview.html#treestyle
