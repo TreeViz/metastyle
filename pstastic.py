@@ -94,6 +94,7 @@ def test_node_against_selector(node, selector):
     #
     # We'll optimistically hope that this node is a match, but walk 
     # the series of tokens looking for a reason to fail it.
+    ##pprint("TESTING SELECTOR %s" % selector.as_css())
 
     # keep track of the most recently specified context element(s), since we
     # will often test their properties
@@ -106,9 +107,6 @@ def test_node_against_selector(node, selector):
     waiting_for_class_name = False
 
     for token in selector:
-        #pprint("NEW context_elements:")
-        #pprint(context_elements)
-
         if token.type == u'S':  # string
             # ASSUME this is whitespace?
             waiting_for_descendant_element_name = True
@@ -121,9 +119,11 @@ def test_node_against_selector(node, selector):
                     new_context_elements = []
                     for e in context_elements:
                         new_context_elements.extend(e.get_descendants())
+                    context_elements = new_context_elements
                 else:
-                    # ignore other element names for now
+                    # fail on other element names for now
                     report_unsupported_element_selector(token.value)
+                    context_elements = []
             elif waiting_for_class_name:
                 # test for matching classname
                 new_context_elements = []
@@ -131,6 +131,7 @@ def test_node_against_selector(node, selector):
                     if e.nexml_node.anyAttributes_.has_key( 'class'):
                         if e.nexml_node.anyAttributes_['class'] == token.value:
                             new_context_elements.append(e)
+                context_elements = new_context_elements
             else:
                 print("Unexpected IDENT in selector: %s" % token.value)
 
@@ -151,8 +152,21 @@ def test_node_against_selector(node, selector):
         else:
             print("Unexpected token type (%s) in selector: %s" % 
                 (token.type, token.value))
+
+        if len(context_elements) == 0:
+            ##pprint("No more context_elements after token: %s" % token)
+            return False
+        else: 
+            ##pprint("%i context_elements, after token: %s" % (len(context_elements), token,))
+            pass
     
-    return True
+    # check to see if this node is (or is descended from) the final context_elements
+    if node in context_elements:
+        return True
+    for test_ancestor in node.get_ancestors():
+        if test_ancestor in context_elements:
+            return True
+    return False
 
 
 TREE_ONLY_SELECTOR_TOKENS = ("figure", "tree", "scale")
@@ -207,7 +221,7 @@ def apply_node_rule(rule, node_style, node):
             for a_value in style.value:
                 if a_value.type == u'DIMENSION':
                     # disregard units for now (TODO)
-                    node_style["vt_line_width"] = a_value.value
+                    node_style["hz_line_width"] = a_value.value
                 elif a_value.type == u'S':
                     # assume this is whitespace, ignore it
                     pass
@@ -216,14 +230,13 @@ def apply_node_rule(rule, node_style, node):
                     if a_value.value == 'solid':
                         node_style["hz_line_type"] = 0
                     elif a_value.value == 'dashed':
-                        node_style["vt_line_type"] = 1
                         node_style["hz_line_type"] = 1
                     elif a_value.value == 'dotted':
-                        node_style["vt_line_type"] = 2
                         node_style["hz_line_type"] = 2
                     else:
                         # apply as a color, and hope for the best
-                        node_style["vt_line_color"] = 2
+                        node_style["hz_line_color"] = a_value.value
+                        node_style["vt_line_color"] = a_value.value
         else:
             # by default, use the same name as in TSS
             try:
@@ -341,20 +354,28 @@ def compare_property(element, test_container):
     test_property = ''
     test_operator = None
     test_value = None
+    test_value_type = "string"
     for token in test_container.content:
         if token.type == u'DELIM':
-            test_operator = token.value
+            if test_operator is None:
+                test_operator = token.value
+            else:
+                # keep adding to the operator (concatenate things like '>=')
+                test_operator = "%s%s" % (test_operator, token.value,)
         elif test_operator is None:
             # keep adding to the property name
             test_property = "%s%s" % (test_property, token.value,)
         else:
             if test_value is None:
                 test_value = token.value
+                test_value_type = token.type
             else:
                 # keep adding to the test value (ASSUMES a string)
                 test_value = "%s%s" % (test_value, token.value,)
+                test_value_type = u"CONCAT_STRING"
         
     el_value = get_property_or_meta(element, test_property)
+
     if el_value is None:
         return False
     else:
@@ -362,6 +383,29 @@ def compare_property(element, test_container):
             # match on the mere existence of this property
             return True
         else:
+
+            ##pprint("%s - %s" % (test_value_type, test_value,))
+            # convert strings as needed for comparison
+            if test_value_type == u'INTEGER':
+                try:
+                    recast_value = int(el_value)
+                    el_value = recast_value
+                except ValueError:
+                    try:
+                        recast_value = float(el_value)
+                        el_value = recast_value
+                    except ValueError:
+                        print("Expected an integer, but found %s" % el_value);
+            elif test_value_type == u'NUMBER':  # a fractional number like 0.45
+                try:
+                    recast_value = float(el_value)
+                    el_value = recast_value
+                except ValueError:
+                    print("Expected a float, but found %s" % el_value);
+            else:  # u'INDENT', u'CONCAT_STRING' should remain as strings
+                # TODO: special handling for boolean IDENT (true)?
+                pass
+
             # use the operator and value to work it out
             if test_operator == '=':
                 # test for equality
