@@ -24,7 +24,7 @@ foreach(@nexml){
 	if($_=~/<otu id\=.*?label="(.*?)"/g){
 		my $otu=$1;
 		print metaNeXML $_;
-		print metaNeXML "\t\t<meta xsi:type=\"$type[4]\" property=\"external:data\" content=\"$meta_size{$otu}\"/>\n";
+		print metaNeXML "\t\t<meta xsi:type=\"nex:LiteralMeta\" property=\"$type[4]\" content=\"$meta_size{$otu}\"/>\n";
 	}else{
 		print metaNeXML $_;
 	}
