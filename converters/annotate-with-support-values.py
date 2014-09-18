@@ -64,8 +64,9 @@ def main():
     output_options.add_argument("-o", "--output-filepath",
             action="store",
             type=str,
+            default="-",
             metavar="FILEPATH",
-            help="Name of output file (use '-' for standard output; defaults to input filename sans terminal extension + '.nexml'.")
+            help="Name of output file (defaults to standard output)")
 
     args = parser.parse_args()
 
