@@ -16,38 +16,38 @@ scale {
 	visible: false;
 }
 
-trophic_level.herbivore {
+node[nexss:trophic_level=herbivore] {
 	color: green;
 }
 
-trophic_level.carnivore {
+node[nexss:trophic_level=carnivore] {
 	color: red;
 }
 
-posterior_prob[min=91][max=100] {
+node[nexss:posterior_prob>=91][nexss:posterior_prob<=100] {
 	border: 10px;
 	font-style: italic;
 	font-size: 200%;
 }
 
-bootstrap[min=91][max=100] {
+node[nexss:bootstrap>=91][nexss:bootstrap<=100] {
 	border: 10px;
 	font-style: italic;
 	font-size: 200%;
 }
 
-environment.benthic {
-	border-color: blue;
+node[nexss:environment=benthic] {
+	border: blue;
 }
 
-environment.pelagic {
-	border-color: yellow;
+node[nexss:environment=pelagic ] {
+	border: yellow;
 }
 
-environment.pelagic {
-	border-color: red;
+node[nexss:environment=limnetic ] {
+	border: red;
 }
 
-extinct[true] {
+node[nexss:extinct=true] {
 	font-style: italic;
 }
