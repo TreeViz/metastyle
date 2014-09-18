@@ -105,7 +105,7 @@ def build_tree_style(tree):
 
 def get_proper_node_label(node):
     # TODO: Always resolve from OTUs? or use "natural" labels or IDs?
-    return "hello (TODO)"
+    return node.name
 
 def test_node_against_selector(node, selector):
     # Interpret a selector in the context of a live tree (vs. a DOM)
