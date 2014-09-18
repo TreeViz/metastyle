@@ -95,3 +95,7 @@ clade {
     collapsed: true;
 }
 
+/* Here's a baroque selector, for testing purposes */
+tree node[nexss:ingroupClade=true][id=234] node.collapsed {
+    color: green;
+}
