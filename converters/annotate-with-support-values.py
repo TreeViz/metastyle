@@ -48,11 +48,11 @@ def main():
             metavar="SCHEMA",
             default="newick",
             choices=["nexus", "newick"],
-            help="input data format (default: '%(default)s')")
+            help="input data format: 'newick' or 'nexus' (default: '%(default)s')")
     source_options.add_argument("-s", "--support-values",
             type=str,
             default="labels",
-            choices=["labels", "comment", "beast-posterior"],
+            choices=["labels", "comment", "beast-posterior", "mrbayes-prob"],
             help="Source of support values in input tree(s) (default: '%(default)s')")
     source_options.add_argument("--preserve-undescores",
             action="store_true",
@@ -70,7 +70,7 @@ def main():
 
     args = parser.parse_args()
 
-    if args.support_values == "beast-posterior":
+    if args.support_values == "beast-posterior" or args.support_values == "mrbayes-prob":
         extract_comment_metadata = True
     else:
         extract_comment_metadata = False
@@ -95,14 +95,25 @@ def main():
             except ValueError:
                 support_value = None
         elif args.support_values == "beast-posterior":
-            beast_annote = node.annotations.find(name="posterior")
-            if beast_annote is not None:
+            source_annote = node.annotations.find(name="posterior")
+            if source_annote is not None:
                 try:
-                    support_value = float(beast_annote.value)
+                    support_value = float(source_annote.value)
                 except ValueError:
                     support_value = None
             else:
                 support_value = None
+        elif args.support_values == "mrbayes-prob":
+            source_annote = node.annotations.find(name="prob")
+            if source_annote is not None:
+                try:
+                    support_value = float(source_annote.value)
+                except ValueError:
+                    support_value = None
+            else:
+                support_value = None
+        else:
+            raise ValueError(args.support_values)
         if support_value is not None:
             node.annotations.add_new("support", support_value)
     if args.output_filepath == "-":
