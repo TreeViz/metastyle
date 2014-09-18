@@ -1,4 +1,5 @@
-from ete2 import Nexml, TreeStyle, NodeStyle
+from ete2 import Nexml, TreeStyle, NodeStyle, TextFace
+from ete2 import add_face_to_node
 from pprint import pprint
 import argparse
 import tinycss
@@ -77,16 +78,34 @@ def build_tree_style(tree):
     # Use a layout function to test each node against TSS selectors?
     def apply_tss(node):
         node_style = NodeStyle()
+
+        # gather label text and styles separately; we'll need to add this 
+        # using a TextFace after all styles have been considered
+        label_specs = {}
+        label_specs['text'] = get_proper_node_label(node)
+
         for rule in node_rules:
             # Test this node against each selector
             if test_node_against_selector(node, rule.selector):
-                node_style, node = apply_node_rule(rule, node_style, node)
+                node_style, node = apply_node_rule(rule, node_style, node, label_specs)
         node.set_style(node_style);
+
+        # assign the final label with appropriate style
+        if node.is_leaf():
+            label_face = TextFace(**label_specs)
+            node.add_face(label_face, 0)
+        
         return node
 
     # apply this layout function to each node as it's rendered
     ts.layout_fn = apply_tss
+    # suppress default node-labeling behavior (so we can style labels!)
+    ts.show_leaf_name = False
     return ts
+
+def get_proper_node_label(node):
+    # TODO: Always resolve from OTUs? or use "natural" labels or IDs?
+    return "hello (TODO)"
 
 def test_node_against_selector(node, selector):
     # Interpret a selector in the context of a live tree (vs. a DOM)
@@ -120,6 +139,9 @@ def test_node_against_selector(node, selector):
                     for e in context_elements:
                         new_context_elements.extend(e.get_descendants())
                     context_elements = new_context_elements
+                elif token.value in TREE_ONLY_SELECTOR_TOKENS:
+                    # respect these and apply font styles, etc
+                    pass
                 else:
                     # fail on other element names for now
                     report_unsupported_element_selector(token.value)
@@ -174,7 +196,7 @@ TREE_STYLE_PROPERTIES = ("layout","border","scaled","visible",)
 # See the full list at 
 # http://pythonhosted.org/ete2/reference/reference_treeview.html#treestyle
 
-NODE_STYLE_PROPERTIES = ("color", "background-color", "size", "shape", "border")
+NODE_STYLE_PROPERTIES = ("color","background-color","size","shape","border","font",)
 # See the full list at 
 # http://pythonhosted.org/ete2/reference/reference_treeview.html#ete2.NodeStyle
 
@@ -199,8 +221,7 @@ def report_unsupported_element_selector(name):
         print("ETE does not support element selector '%s'" % name)
         unsupported_element_selectors.append(name)
 
-
-def apply_node_rule(rule, node_style, node):
+def apply_node_rule(rule, node_style, node, label_specs):
     for style in rule.declarations:
         # N.B. name is always normalized lower-case
         # Translate TSS/CSS property names into ETE properties
@@ -211,6 +232,8 @@ def apply_node_rule(rule, node_style, node):
         # TODO: handle dynamic (data-driven) values in all cases!
         if style.name == "color":
             node_style["fgcolor"] = style.value.as_css()
+            # apply this with label text! but how to retrieve it?
+            label_specs['fgcolor'] = style.value.as_css()
         elif style.name == "background-color":
             node_style["bgcolor"] = style.value.as_css()
         elif style.name == "border":
@@ -237,6 +260,19 @@ def apply_node_rule(rule, node_style, node):
                         # apply as a color, and hope for the best
                         node_style["hz_line_color"] = a_value.value
                         node_style["vt_line_color"] = a_value.value
+        elif style.name == "font":
+            # examine value, apply any/all styles found
+            for a_value in style.value:
+                if a_value.type == u'DIMENSION':
+                    # disregard units for now (TODO)
+                    label_specs['fsize'] = a_value.value
+                elif a_value.type == u'S':
+                    # assume this is whitespace, ignore it
+                    pass
+                elif a_value.type == u'IDENT':
+                    # apply as a font name and hope for the best
+                    label_specs['ftype'] = a_value.value
+                    # TODO: expect color names here as well?
         else:
             # by default, use the same name as in TSS
             try:
@@ -468,12 +504,17 @@ for trees in nexml.get_trees():
         tree_index += 1
         ts = build_tree_style(tree)
 
+        # let's try the interactive QT viewer
+        tree.show(tree_style=ts)
+        
+        # BEWARE! Each time we call .render() or .show(), new labels will be created :-/
+        ##tree.show(tree_style=ts)
 
         # Only use suffixes if there is more than one tree.
         output_filename = "%s%s" % (output_basename, output_extension)
         if tree_index > 1:
             output_filename = "%s%d%s" % (output_basename, tree_index, output_extension)
-        
+
         if args.width and args.height:
             tree.render(output_filename, tree_style=ts, w=args.width, h=args.height, dpi=args.dpi)
         elif args.width:
@@ -482,7 +523,4 @@ for trees in nexml.get_trees():
             tree.render(output_filename, tree_style=ts, h=args.height, dpi=args.dpi)
         else:
             tree.render(output_filename, tree_style=ts, dpi=args.dpi)
-
-        # let's try the interactive QT viewer
-        tree.show(tree_style=ts)
 
