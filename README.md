@@ -17,5 +17,5 @@ existing tree-visualization features of [ETE](https://pypi.python.org/pypi/ete2/
 easy_install pip
 pip install tinycss
 
-python pstastic.py nexml/testtree.xml nexml/default.nexss
+python pstastic.py examples/met1.xml default.nexss
 ```
