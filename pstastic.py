@@ -160,7 +160,7 @@ TREE_STYLE_PROPERTIES = ("layout","border",)
 # See the full list at 
 # http://pythonhosted.org/ete2/reference/reference_treeview.html#treestyle
 
-NODE_STYLE_PROPERTIES = ("color", "background-color", "size", "shape",)
+NODE_STYLE_PROPERTIES = ("color", "background-color", "size", "shape", "border")
 # See the full list at 
 # http://pythonhosted.org/ete2/reference/reference_treeview.html#ete2.NodeStyle
 
@@ -199,6 +199,31 @@ def apply_node_rule(rule, node_style, node):
             node_style["fgcolor"] = style.value.as_css()
         elif style.name == "background-color":
             node_style["bgcolor"] = style.value.as_css()
+        elif style.name == "border":
+            # for now, apply these styles to vertical edges only
+            # TODO: revisit our expectations, and possibly more tree-wise property names
+
+            # examine value, apply any/all styles found
+            for a_value in style.value:
+                if a_value.type == u'DIMENSION':
+                    # disregard units for now (TODO)
+                    node_style["vt_line_width"] = a_value.value
+                elif a_value.type == u'S':
+                    # assume this is whitespace, ignore it
+                    pass
+                elif a_value.type == u'IDENT':
+                    # ETE offers just a few line types: 0 solid, 1 dashed, 2 dotted
+                    if a_value.value == 'solid':
+                        node_style["hz_line_type"] = 0
+                    elif a_value.value == 'dashed':
+                        node_style["vt_line_type"] = 1
+                        node_style["hz_line_type"] = 1
+                    elif a_value.value == 'dotted':
+                        node_style["vt_line_type"] = 2
+                        node_style["hz_line_type"] = 2
+                    else:
+                        # apply as a color, and hope for the best
+                        node_style["vt_line_color"] = 2
         else:
             # by default, use the same name as in TSS
             try:
