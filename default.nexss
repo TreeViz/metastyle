@@ -41,7 +41,7 @@ posterior_prob[min=91][max=100] {
 	font-size: 200%;
 }
 
-node[sequence_type>=91][sequence_type<=100] {
+node[nexss:sequence_type>=91][nexss:sequence_type<=100] {
 	border: 10px;
 	font-style: italic;
 	font-size: 200%;
@@ -51,7 +51,7 @@ node[cdao:has_Support_Value>=0.9] {
 	border: 10px;
 }
 
-node[bootstrap>=0.91][bootstrap<=1.0] {
+node[nexss:bootstrap>=0.91][nexss:bootstrap<=1.0] {
 	border: 10px;
 	font-style: italic;
 	font-size: 200%;
@@ -66,19 +66,19 @@ node[bootstrap>=0.91][bootstrap<=1.0] {
         <meta content="SANG" datatype="xsd:string" id="meta01" property="tss:sequence_type" xsi:type="nex:LiteralMeta"/>
       </node>
  */
-node[chromosome=Y] {  /* or node[nexss:chromosome=Y]  ? */
+node[nexss:chromosome=Y] {
 	color: blue;
 }
 
-node[chromosome=X] {
+node[nexss:chromosome=X] {
 	color: red;
 }
 
-node[sequence_type=SANG] {
+node[nexss:sequence_type=SANG] {
 	font-style: bold;
 }
 
-node[sequence_type=TRAM] {
+node[nexss:sequence_type=TRAM] {
 	font-style: italic;
 }
 
