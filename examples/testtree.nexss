@@ -1,4 +1,4 @@
-canvas {
+figure {
 	background-color: yellow;
 	width: 500px;
 	height: 500px;
@@ -40,11 +40,11 @@ node[nexss:environment=benthic] {
 	border: blue;
 }
 
-node[nexss:environment=pelagic ] {
+node[nexss:environment=pelagic] {
 	border: yellow;
 }
 
-node[nexss:environment=limnetic ] {
+node[nexss:environment=limnetic] {
 	border: red;
 }
 
