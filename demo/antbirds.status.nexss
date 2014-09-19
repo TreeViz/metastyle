@@ -22,7 +22,7 @@ scale {
    make bootstrp labels > 50  skinny  */
 
 node[dendropy:support>=90][dendropy:support<=100] {
-	border: 9px;
+	border: 10px;
 	font-style: italic;
 	font-size: 200%;
 }
@@ -39,12 +39,37 @@ node[dendropy:support>=50][dendropy:support<=79] {
 	font-size: 500%;
 }
 
+/*   Another bird tree perhaps?
+  make bird taxa that are some sort of threatened red
+   critically endangered
+   endangered
+   vulnerable
+   near threatened  */
+
+
+node[nexss:iucnStatus = 'critically endangered'] {
+      color:red;
+}
+node[nexss:iucnStatus = 'endangered'] {
+      color:red;
+}
+
+node[nexss:iucnStatus = 'near threatened'] {
+      color:red;
+}
+
+node[nexss:iucnStatus = 'vulnerable'] {
+      color:red;
+}
+
+
+
 /* 
    number of habitats
    = 0  grey  -- we do not have data for
    = 1  red -- only live in one habitat = specialist?
    >= 2  green -- generalist
-*/
+
 
 node[nexss:habitatCount=0] {
       color:grey;
@@ -58,24 +83,7 @@ node[nexss:habitatCount>=2] {
       color:green;
 }
 
-/*   Another bird tree perhaps?
-  make bird taxa that are some sort of threatened red
-   critically endangered
-   endangered
-   vulnerable
-   near threatened  */
+*/
 
-node[nexss:iucnStatus = 'critically endangered'] {
-      background-color: red;
-}
-node[nexss:iucnStatus = 'endangered'] {
-      background-color: orange;
-}
-node[nexss:iucnStatus = 'near threatened'] {
-      background-color: yellow;
-}
-node[nexss:iucnStatus = 'vulnerable'] {
-      background-color: yellow;
-}
 
 

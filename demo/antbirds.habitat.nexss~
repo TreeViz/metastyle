@@ -22,7 +22,7 @@ scale {
    make bootstrp labels > 50  skinny  */
 
 node[dendropy:support>=90][dendropy:support<=100] {
-	border: 9px;
+	border: 10px;
 	font-style: italic;
 	font-size: 200%;
 }
