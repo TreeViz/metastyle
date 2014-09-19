@@ -1,7 +1,7 @@
 phylostylotastic
 ================
 
-Styled publication of NeXML/NeXSON trees
+Styled publication of NeXML/NeXSON trees. [See the project wiki for more information.](https://github.com/OpenTreeOfLife/phylostylotastic/wiki)
 
 This is a proof-of-concept implementation, applying TSS styles to the
 existing tree-visualization features of [ETE](https://pypi.python.org/pypi/ete2/).
@@ -17,7 +17,11 @@ existing tree-visualization features of [ETE](https://pypi.python.org/pypi/ete2/
 easy_install pip
 pip install tinycss
 
+# Open a demo file in an interactive view, using a local stylesheet
 python pstastic.py examples/met1.xml default.nexss
+
+# Render the styled tree file to an output file (png, pdf, svg)
+python pstastic.py -o met1.png examples/met1.xml default.nexss
 ```
 
 #### ETE gotchas and limitations
