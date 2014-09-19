@@ -23,6 +23,12 @@ argparser.add_argument(
     dest='flag_all',
     help='Display every annotation'
 )
+argparser.add_argument(
+    '--fullnames', '-fn',
+    action='store_true',
+    dest='flag_fullnames',
+    help='Display full(y resolved) names for properties'
+)
 args = argparser.parse_args()
 
 # Load NeXML files.
@@ -87,10 +93,15 @@ def record_property(name, value, proptype):
 for node_id in metadata_order:
     if args.flag_all:
         print(" - " + node_id)
+
     for meta in metadata[node_id]:
-        record_property(meta.prefixed_name, meta.value, meta.datatype_hint)
+        name = meta.prefixed_name
+        if args.flag_fullnames:
+            name = meta.namespace + meta.name
+
+        record_property(name, meta.value, meta.datatype_hint)
         if args.flag_all:
-            print("    - %s: %s (%s)" % (meta.prefixed_name, meta.value, meta.datatype_hint))
+            print("    - %s: %s (%s)" % (name, meta.value, meta.datatype_hint))
     if args.flag_all:
         print("")
 
