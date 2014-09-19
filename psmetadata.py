@@ -17,6 +17,12 @@ argparser.add_argument(
     nargs=1,
     help='Input NeXML file to process'
 )
+argparser.add_argument(
+    '--all', '-a',
+    action='store_true',
+    dest='flag_all',
+    help='Display every annotation'
+)
 args = argparser.parse_args()
 
 # Load NeXML files.
@@ -31,9 +37,11 @@ metadata = dict()
 
 def search_for_meta_nodes(node):
     # Check for meta elements and display them.
-    for annotation in node.annotations:
-        node_id = str(node.__class__.__name__) + " " + node.oid
+    node_id = str(node.__class__.__name__) + " " + node.oid
 
+    # print " - annotations: %d" % len(node.annotations)
+
+    for annotation in node.annotations:
         if node_id in metadata:
             metadata[node_id].append(annotation)
         else:
@@ -54,14 +62,14 @@ for tree_list in ds.tree_lists:
     for tree in tree_list:
         search_for_meta_nodes(tree)
 
+        for node in tree.nodes():
+            search_for_meta_nodes(node)
+
 # Display everything.
-property_names = []
 property_values = dict()
 property_types = dict()
 
 def record_property(name, value, proptype):
-    property_names.append(name)
-
     if name not in property_values:
         property_values[name] = dict()
     if value not in property_values[name]:
@@ -70,14 +78,51 @@ def record_property(name, value, proptype):
 
     if name not in property_types:
         property_types[name] = dict()
-    if value not in property_types[name]:
-        property_types[name][value] = 0
-    property_types[name][value] += 1
+    if proptype is not None:
+        if proptype not in property_types[name]:
+            property_types[name][proptype] = 0
+        property_types[name][proptype] += 1
 
+# Process every record.
 for node_id in metadata_order:
-    print(" - " + node_id)
+    if args.flag_all:
+        print(" - " + node_id)
     for meta in metadata[node_id]:
-        record_property(meta.name, meta.value, meta.datatype_hint)
-        print("    - %s: %s (%s)" % (meta.name, meta.value, meta.datatype_hint))
+        record_property(meta.prefixed_name, meta.value, meta.datatype_hint)
+        if args.flag_all:
+            print("    - %s: %s (%s)" % (meta.prefixed_name, meta.value, meta.datatype_hint))
+    if args.flag_all:
+        print("")
 
-pprint(property_values)
+# Display summary.
+print("Metadata summary:")
+for pname in property_values.keys():
+    types = property_types[pname].keys()
+    if len(types) == 0:
+        types = ['no type information']
+
+    values = sorted(property_values[pname].keys(), key=lambda k: property_values[pname][k], reverse = True)
+
+    print(" - " + pname + " (" + ', '.join(sorted(types)) + "): ")
+
+    count = 0
+    count_unique = 0
+    count_entries = 0
+    for value in values:
+
+        display_value = value
+        if display_value is None or display_value.strip() == "":
+            display_value = "(blank)"
+
+        count += 1
+        if count <= 10:
+            print("    - " + display_value + " [%d]" % (property_values[pname][value]))
+        elif count == len(values):
+            print("    ... (%d entries with %d unique values)" % (count_entries, count_unique))
+            print("    - " + display_value + " [%d]" % (property_values[pname][value]))
+        else:
+            count_unique += 1
+            count_entries += property_values[pname][value]
+
+    print("")
+
