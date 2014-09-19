@@ -36,9 +36,9 @@ We apparently can't rotate trees cleanly in ETE. That is, the entire diagram is 
 
 ```css
 figure {
-	background-color: white;
-	width: 500px;
-	height: 500px;
+    background-color: white;
+    width: 500px;
+    height: 500px;
 }
 ```
 Sadly, None of these seem to be available through ETE's `TreeStyle`. It seems to reckon width and height based on the tree and scale.
@@ -46,10 +46,21 @@ Sadly, None of these seem to be available through ETE's `TreeStyle`. It seems to
 Font names can't be "chained" for ETE. If you ask for this:
 ```css
 figure {
-	background-color: white;
-	font: 12pt "Helvetica",serif;
+    background-color: white;
+    font: 12pt "Helvetica",serif;
 }
-```css
+```
 ... all text will appear as the generic serif font, ignoring "Helvetica". The interpreter will instead be optimistic and apply the first (preferred) font name found.
 
-
+Dimensions can't be expressed as percentages. If you ask for this, it will be ignored:
+```css
+node[nexss:bootstrap>=0.91][nexss:bootstrap<=1.0] {
+    font-size: 200%;
+}
+```
+Use simple numbers instead, or `px` (but the units will be ignored):
+```css
+node[nexss:bootstrap>=0.91][nexss:bootstrap<=1.0] {
+    font-size: 30px;
+}
+```
