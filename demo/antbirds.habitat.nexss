@@ -47,15 +47,15 @@ node[dendropy:support>=50][dendropy:support<=79] {
 */
 
 node[nexss:habitatCount=0] {
-      color:grey
+      color:grey;
 }
 
 node[nexss:habitatCount=1] {
-      color:red
+      color:red;
 }
 
 node[nexss:habitatCount>=2] {
-      color:green
+      color:green;
 }
 
 /*   Another bird tree perhaps?
@@ -66,7 +66,7 @@ node[nexss:habitatCount>=2] {
    near threatened  */
 
 node[nexss:iucnStatus = 'critically endangered'][nexss:iucnStatus = 'endangered'][nexss:iucnStatus = 'near threatened'][nexss:iucnStatus = 'vulnerable'] {
-      color:red
+      color:red;
 }
 
 
