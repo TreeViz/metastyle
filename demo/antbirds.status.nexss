@@ -47,18 +47,22 @@ node[dendropy:support>=50][dendropy:support<=79] {
    near threatened  */
 
 
-node[nexss:iucnStatus = 'critically endangered'] {
+node {
+      color:#555;
+}
+
+node[nexss:iucnStatus=critically endangered] {
       color:red;
 }
-node[nexss:iucnStatus = 'endangered'] {
+node[nexss:iucnStatus=endangered] {
       color:red;
 }
 
-node[nexss:iucnStatus = 'near threatened'] {
+node[nexss:iucnStatus=near threatened] {
       color:red;
 }
 
-node[nexss:iucnStatus = 'vulnerable'] {
+node[nexss:iucnStatus=vulnerable] {
       color:red;
 }
 
