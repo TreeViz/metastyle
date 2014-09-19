@@ -176,8 +176,6 @@ def test_node_against_selector(node, selector):
             # compare this property or metadata
             context_elements = [e for e in context_elements 
                 if compare_property(e,token)]
-            
-            pass
 
         elif token.type == u'DELIM':
             if token.value == '.':
@@ -200,9 +198,12 @@ def test_node_against_selector(node, selector):
     # check to see if this node is (or is descended from) the final context_elements
     if node in context_elements:
         return True
-    for test_ancestor in node.get_ancestors():
-        if test_ancestor in context_elements:
-            return True
+
+    # Let's make inheritance explicit; this causes too many surprises
+    ##for test_ancestor in node.get_ancestors():
+    ##    if test_ancestor in context_elements:
+    ##        return True
+
     return False
 
 
@@ -210,19 +211,18 @@ TREE_ONLY_SELECTOR_TOKENS = ("figure","tree","scale",)
 TREE_STYLE_PROPERTIES = (
     "layout","border","scaled","visible",
 )
+# See the full list at 
+# http://pythonhosted.org/ete2/reference/reference_treeview.html#treestyle
 TREE_STYLE_PROPERTIES_PASSED_TO_NODES = (
     "background-color","font","font-style","font-size","font-family",  
 )
-# See the full list at 
-# http://pythonhosted.org/ete2/reference/reference_treeview.html#treestyle
 
 NODE_STYLE_PROPERTIES = (
     "color","background-color","size","shape","border",
     "font","font-style","font-size","font-family"
 )
-# See the full list at 
+# See the full list of ETE's styling options at
 # http://pythonhosted.org/ete2/reference/reference_treeview.html#ete2.NodeStyle
-
 
 # Report unsupported style properties, etc. *just once*
 
@@ -250,19 +250,28 @@ def report_unsupported_operator(name):
         print("ETE does not support this operator in selectors: '%s'" % name)
         unsupported_operators.append(name)
 
+unsupported_percent_reported = False
+def report_unsupported_percent(css):
+    global unsupported_percent_reported
+    if unsupported_percent_reported == False:
+        print("ETE does not support percent values: '%s'" % css)
+        unsupported_percent_reported = True
+
 multiple_font_names_reported = False
 def report_multiple_font_names(css):
     global multiple_font_names_reported
-    if multiple_font_names_reported == False:    
+    if multiple_font_names_reported == False:
         print("ETE does not support chained font names (will try the first one): '%s'" % css)
-        multiple_font_names_reported = True    
+        multiple_font_names_reported = True
 
 def apply_node_rule(rule, node_style, node, label_specs):
     for style in rule.declarations:
         # N.B. name is always normalized lower-case
         # Translate TSS/CSS property names into ETE properties
         if style.name not in NODE_STYLE_PROPERTIES:
-            report_unsupported_node_style(style.name)
+            # some tree styles are "passed through" and do no harm
+            if style.name not in TREE_STYLE_PROPERTIES:
+                report_unsupported_node_style(style.name)
             continue
 
         # TODO: handle dynamic (data-driven) values in all cases!
@@ -296,11 +305,30 @@ def apply_node_rule(rule, node_style, node, label_specs):
                         # apply as a color, and hope for the best
                         node_style["hz_line_color"] = a_value.value
                         node_style["vt_line_color"] = a_value.value
+        elif style.name == "font-style":
+            for a_value in style.value:
+                if (a_value.value == "italic"):
+                    label_specs['fstyle'] = "italic"
+                    pass
+                elif (a_value.value == "bold"):
+                    label_specs['penwidth'] = 4
+                else:
+                    print("Unsupported font-style: %s" % a_value.value)
+        elif style.name == "font-size":
+            for a_value in style.value:
+                if a_value.type == u'PERCENTAGE':
+                    report_unsupported_percent(style.value.as_css())
+                elif a_value.type == u'DIMENSION':
+                    # disregard units for now (TODO)
+                    label_specs['fsize'] = a_value.value
+        #elif style.name == "font-style":
         elif style.name == "font":
             # examine value, apply any/all styles found
             font_name_already_applied = False
             for a_value in style.value:
-                if a_value.type == u'DIMENSION':
+                if a_value.type == u'PERCENTAGE':
+                    report_unsupported_percent(style.value.as_css())
+                elif a_value.type == u'DIMENSION':
                     # disregard units for now (TODO)
                     label_specs['fsize'] = a_value.value
                 elif a_value.type == u'S':
@@ -317,10 +345,9 @@ def apply_node_rule(rule, node_style, node, label_specs):
         else:
             # by default, use the same name as in TSS
             try:
-                setattr(node_style, style.name, style.value.as_css())
-            except:
-                print("Invalid property for node: %s" % style.name);
-                pass
+                node_style[style.name] = style.value.as_css()
+            except ValueError:
+                report_unsupported_node_style(style.name)
 
         # TODO: consider style.priority? ('important')
 
@@ -476,8 +503,6 @@ def compare_property(element, test_container):
             # match on the mere existence of this property
             return True
         else:
-
-            ##pprint("%s - %s" % (test_value_type, test_value,))
             # convert strings as needed for comparison
             if test_value_type == u'INTEGER':
                 try:
