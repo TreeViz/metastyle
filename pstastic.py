@@ -75,6 +75,8 @@ def build_tree_style(tree):
             tree_style=ts,
             node_rules=node_rules)
 
+    otu_collections = tree.nexml_project.get_otus()
+
     # Use a layout function to test each node against TSS selectors?
     def apply_tss(node):
         node_style = NodeStyle()
@@ -82,7 +84,7 @@ def build_tree_style(tree):
         # gather label text and styles separately; we'll need to add this 
         # using a TextFace after all styles have been considered
         label_specs = {}
-        label_specs['text'] = get_proper_node_label(node)
+        label_specs['text'] = get_proper_node_label(node, otu_collections)
 
         for rule in node_rules:
             # Test this node against each selector
@@ -103,8 +105,20 @@ def build_tree_style(tree):
     ts.show_leaf_name = False
     return ts
 
-def get_proper_node_label(node):
-    # TODO: Always resolve from OTUs? or use "natural" labels or IDs?
+def get_associated_otu(node, otu_collections):
+    associated_otu_id = node.nexml_node.otu
+    if associated_otu_id:
+        for taxa in otu_collections:
+            for taxon in taxa.otu:
+                if taxon.id == associated_otu_id:
+                    return taxon
+    return None
+
+def get_proper_node_label(node, otu_collections):
+    # Always resolve using an OTU label if one is associated
+    its_otu = get_associated_otu(node, otu_collections)
+    if its_otu:
+        return its_otu.label
     return node.name
 
 def test_node_against_selector(node, selector):
