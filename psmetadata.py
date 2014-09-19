@@ -37,7 +37,8 @@ argparser.add_argument(
 args = argparser.parse_args()
 
 # Load NeXML files.
-ds = dendropy.DataSet.get_from_path(args.source[0], 'nexml', attach_taxon_set=True)
+ds = dendropy.DataSet.get_from_path(args.source[0], 'nexml')
+ds.attach_taxon_set()
 
 #
 # SECTION 1: Look for Meta nodes (http://www.nexml.org/nexml/html/doc/schema-1/meta/annotations/#Meta)
