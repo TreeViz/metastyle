@@ -242,6 +242,13 @@ def report_unsupported_operator(name):
         print("ETE does not support this operator in selectors: '%s'" % name)
         unsupported_operators.append(name)
 
+multiple_font_names_reported = False
+def report_multiple_font_names(css):
+    global multiple_font_names_reported
+    if multiple_font_names_reported == False:    
+        print("ETE does not support chained font names (will try the first one): '%s'" % css)
+        multiple_font_names_reported = True    
+
 def apply_node_rule(rule, node_style, node, label_specs):
     for style in rule.declarations:
         # N.B. name is always normalized lower-case
@@ -283,16 +290,21 @@ def apply_node_rule(rule, node_style, node, label_specs):
                         node_style["vt_line_color"] = a_value.value
         elif style.name == "font":
             # examine value, apply any/all styles found
+            font_name_already_applied = False
             for a_value in style.value:
                 if a_value.type == u'DIMENSION':
                     # disregard units for now (TODO)
                     label_specs['fsize'] = a_value.value
                 elif a_value.type == u'S':
-                    # assume this is whitespace, ignore it
+                    # ignore whitespace
                     pass
-                elif a_value.type == u'IDENT':
-                    # apply as a font name and hope for the best
-                    label_specs['ftype'] = a_value.value
+                elif a_value.type in (u'STRING', u'IDENT',):
+                    # apply the first font name and hope for the best
+                    if font_name_already_applied:
+                        report_multiple_font_names(style.value.as_css())
+                    else:
+                        label_specs['ftype'] = a_value.value
+                        font_name_already_applied = True
                     # TODO: expect color names here as well?
         else:
             # by default, use the same name as in TSS
@@ -443,7 +455,7 @@ def compare_property(element, test_container):
             else:
                 # keep adding to the test value (ASSUMES a string)
                 test_value = "%s%s" % (test_value, token.value,)
-                test_value_type = u"CONCAT_STRING"
+                test_value_type = u"STRING"
         
     el_value = get_property_or_meta(element, test_property)
 
@@ -473,7 +485,7 @@ def compare_property(element, test_container):
                     el_value = recast_value
                 except ValueError:
                     print("Expected a float, but found %s" % el_value);
-            else:  # u'INDENT', u'CONCAT_STRING' should remain as strings
+            else:  # u'INDENT', u'STRING' should remain as strings
                 # TODO: special handling for boolean IDENT (true)?
                 pass
 

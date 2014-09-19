@@ -43,5 +43,13 @@ figure {
 ```
 Sadly, None of these seem to be available through ETE's `TreeStyle`. It seems to reckon width and height based on the tree and scale.
 
+Font names can't be "chained" for ETE. If you ask for this:
+```css
+figure {
+	background-color: white;
+	font: 12pt "Helvetica",serif;
+}
+```css
+... all text will appear as the generic serif font, ignoring "Helvetica". The interpreter will instead be optimistic and apply the first (preferred) font name found.
 
 
