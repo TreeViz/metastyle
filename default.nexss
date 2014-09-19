@@ -36,6 +36,15 @@ node[nexss:chromosome=Y] {
 	color: blue;
 }
 
+/* This rule demonstrates explicit inheritance (ie, apply these 
+ * styles to all nodes within a clade)
+/*
+node[id=node681] node {
+    color: purple;
+    font-style: italic;
+}
+*/
+
 node[nexss:chromosome=X] {
 	color: red;
         background-color: #ffc;
