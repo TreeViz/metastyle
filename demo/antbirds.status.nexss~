@@ -39,6 +39,35 @@ node[dendropy:support>=50][dendropy:support<=79] {
 	font-size: 500%;
 }
 
+/*   Another bird tree perhaps?
+  make bird taxa that are some sort of threatened red
+   critically endangered
+   endangered
+   vulnerable
+   near threatened  */
+
+
+node {
+      color:pink;
+}
+
+node[nexss:iucnStatus=critically endangered] {
+      color:red;
+}
+node[nexss:iucnStatus=endangered] {
+      color:red;
+}
+
+node[nexss:iucnStatus=near threatened] {
+      color:red;
+}
+
+node[nexss:iucnStatus=vulnerable] {
+      color:red;
+}
+
+
+
 /* 
    number of habitats
    = 0  grey  -- we do not have data for
@@ -60,26 +89,5 @@ node[nexss:habitatCount>=2] {
 
 */
 
-/*   Another bird tree perhaps?
-  make bird taxa that are some sort of threatened red
-   critically endangered
-   endangered
-   vulnerable
-   near threatened  */
-
-node[nexss:iucnStatus = 'critically endangered'] {
-      color:red;
-}
-node[nexss:iucnStatus = 'endangered'] {
-      color:red;
-}
-
-node[nexss:iucnStatus = 'near threatened'] {
-      color:red;
-}
-
-node[nexss:iucnStatus = 'vulnerable'] {
-      color:red;
-}
 
 

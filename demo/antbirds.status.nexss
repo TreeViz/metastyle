@@ -48,7 +48,7 @@ node[dendropy:support>=50][dendropy:support<=79] {
 
 
 node {
-      color:#555;
+      color:grey;
 }
 
 node[nexss:iucnStatus=critically endangered] {
