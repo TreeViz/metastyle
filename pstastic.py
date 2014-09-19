@@ -235,6 +235,12 @@ def report_unsupported_element_selector(name):
         print("ETE does not support element selector '%s'" % name)
         unsupported_element_selectors.append(name)
 
+unsupported_operators = []
+def report_unsupported_operator(name):
+    if name not in unsupported_operators:
+        print("ETE does not support this operator in selectors: '%s'" % name)
+        unsupported_operators.append(name)
+
 def apply_node_rule(rule, node_style, node, label_specs):
     for style in rule.declarations:
         # N.B. name is always normalized lower-case
@@ -493,6 +499,8 @@ def compare_property(element, test_container):
                 return el_value.endswith(test_value)
             elif test_operator == '*=':
                 return el_value.find(test_value) != -1
+            else:
+                report_unsupported_operator(test_operator)
 
 def get_property_or_meta(element, property_name):
     # check first for an attribute by this name
