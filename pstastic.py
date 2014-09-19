@@ -23,7 +23,7 @@ argparser.add_argument(
     '-o', '--output',
     nargs=1,
     default='output.svg',
-    help='The name of the output file. Must have a .svg, .png or .pdf extension.'
+    help='The name of the output file. Must have a .svg, .png or .pdf extension. (If not specified, we show an interactive view.)'
 )
 argparser.add_argument(
     '-ow', '--width',
@@ -53,9 +53,10 @@ args.output = args.output[0]
 args.dpi = args.dpi[0]
 args.width = args.width[0]
 args.height = args.height[0]
+args.source = args.source[0]
 
 nexml = Nexml()
-nexml.build_from_file(sys.argv[1])
+nexml.build_from_file(args.source)
 
 def build_tree_style(tree):
     # use our simple TSS cascade to prepare an ETE TreeStyle object
@@ -526,23 +527,24 @@ for trees in nexml.get_trees():
         tree_index += 1
         ts = build_tree_style(tree)
 
-        # let's try the interactive QT viewer
-        tree.show(tree_style=ts)
-        
         # BEWARE! Each time we call .render() or .show(), new labels will be created :-/
         ##tree.show(tree_style=ts)
 
-        # Only use suffixes if there is more than one tree.
-        output_filename = "%s%s" % (output_basename, output_extension)
-        if tree_index > 1:
-            output_filename = "%s%d%s" % (output_basename, tree_index, output_extension)
-
-        if args.width and args.height:
-            tree.render(output_filename, tree_style=ts, w=args.width, h=args.height, dpi=args.dpi)
-        elif args.width:
-            tree.render(output_filename, tree_style=ts, w=args.width, dpi=args.dpi)
-        elif args.height:
-            tree.render(output_filename, tree_style=ts, h=args.height, dpi=args.dpi)
+        if not args.output or args.output == 'o':
+            # let's try the interactive QT viewer
+            tree.show(tree_style=ts)
         else:
-            tree.render(output_filename, tree_style=ts, dpi=args.dpi)
+            # Only use suffixes if there is more than one tree.
+            output_filename = "%s%s" % (output_basename, output_extension)
+            if tree_index > 1:
+                output_filename = "%s%d%s" % (output_basename, tree_index, output_extension)
+
+            if args.width and args.height:
+                tree.render(output_filename, tree_style=ts, w=args.width, h=args.height, dpi=args.dpi)
+            elif args.width:
+                tree.render(output_filename, tree_style=ts, w=args.width, dpi=args.dpi)
+            elif args.height:
+                tree.render(output_filename, tree_style=ts, h=args.height, dpi=args.dpi)
+            else:
+                tree.render(output_filename, tree_style=ts, dpi=args.dpi)
 
