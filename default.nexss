@@ -19,7 +19,7 @@ scale {
 node[nexss:bootstrap>=91][nexss:bootstrap<=100] {
 	border: 10px;
 	font-style: italic;
-	font-size: 200%;
+	font-size: 18px;
 }
 
 node[cdao:has_Support_Value>=0.9] {
@@ -29,7 +29,7 @@ node[cdao:has_Support_Value>=0.9] {
 node[nexss:bootstrap>=0.91][nexss:bootstrap<=1.0] {
 	border: 10px;
 	font-style: italic;
-	font-size: 200%;
+	font-size: 24px;
 }
 
 node[nexss:chromosome=Y] {
@@ -44,6 +44,7 @@ node[nexss:chromosome=X] {
 node[nexss:sequence_type=SANG] {
 	font-style: bold;
         background-color: #dff;
+	font-size: 14px;
 }
 
 node[nexss:sequence_type=TRAM] {
