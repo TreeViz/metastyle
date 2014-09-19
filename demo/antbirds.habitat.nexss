@@ -65,8 +65,17 @@ node[nexss:habitatCount>=2] {
    vulnerable
    near threatened  */
 
-node[nexss:iucnStatus = 'critically endangered'][nexss:iucnStatus = 'endangered'][nexss:iucnStatus = 'near threatened'][nexss:iucnStatus = 'vulnerable'] {
-      color:red;
+node[nexss:iucnStatus = 'critically endangered'] {
+      background-color: red;
+}
+node[nexss:iucnStatus = 'endangered'] {
+      background-color: orange;
+}
+node[nexss:iucnStatus = 'near threatened'] {
+      background-color: yellow;
+}
+node[nexss:iucnStatus = 'vulnerable'] {
+      background-color: yellow;
 }
 
 
