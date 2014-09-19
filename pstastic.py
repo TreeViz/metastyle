@@ -554,6 +554,9 @@ def get_property_or_meta(element, property_name):
     # check first for an attribute by this name
     if getattr(element, property_name, None):
         return getattr(element, property_name, None)
+    # ...then for an attribute on the NeXML node
+    if getattr(element.nexml_node, property_name, None):
+        return getattr(element.nexml_node, property_name, None)
     # ...then for a child META element
     for metatag in element.nexml_node.meta:
         # ASSUMES there's just one matching metatag!
