@@ -207,11 +207,19 @@ def test_node_against_selector(node, selector):
 
 
 TREE_ONLY_SELECTOR_TOKENS = ("figure","tree","scale",)
-TREE_STYLE_PROPERTIES = ("layout","border","scaled","visible",)
+TREE_STYLE_PROPERTIES = (
+    "layout","border","scaled","visible",
+)
+TREE_STYLE_PROPERTIES_PASSED_TO_NODES = (
+    "background-color","font","font-style","font-size","font-family",  
+)
 # See the full list at 
 # http://pythonhosted.org/ete2/reference/reference_treeview.html#treestyle
 
-NODE_STYLE_PROPERTIES = ("color","background-color","size","shape","border","font",)
+NODE_STYLE_PROPERTIES = (
+    "color","background-color","size","shape","border",
+    "font","font-style","font-size","font-family"
+)
 # See the full list at 
 # http://pythonhosted.org/ete2/reference/reference_treeview.html#ete2.NodeStyle
 
@@ -390,7 +398,9 @@ def apply_stylesheet(stylesheet, tree_style, node_rules):
             if r.selector.as_css() in TREE_ONLY_SELECTOR_TOKENS:
                 for style in r.declarations:
                     if style.name not in TREE_STYLE_PROPERTIES:
-                        report_unsupported_tree_style(style.name)
+                        # some properties will be implicitly used in NodeStyle
+                        if style.name not in TREE_STYLE_PROPERTIES_PASSED_TO_NODES:
+                            report_unsupported_tree_style(style.name)
                         continue
                     if style.name == "layout":
                         its_value = style.value.as_css()

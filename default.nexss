@@ -38,10 +38,12 @@ node[nexss:chromosome=Y] {
 
 node[nexss:chromosome=X] {
 	color: red;
+        background-color: #ffc;
 }
 
 node[nexss:sequence_type=SANG] {
 	font-style: bold;
+        background-color: #dff;
 }
 
 node[nexss:sequence_type=TRAM] {
