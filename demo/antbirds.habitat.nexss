@@ -1,0 +1,73 @@
+figure {
+	background-color: white;
+	width: 500px;
+	height: 500px;
+	font: 12pt "Helvetica",serif;
+}
+
+tree {
+	border: 2px black solid;
+	layout: rectangular;
+	tip-orientation: right;
+	scaled: true;
+}
+
+scale {
+	visible: false;
+}
+
+/*
+/* tree example bootstrap labels
+   make bootstrp labels > 90  widest branch size 
+   make bootstrp labels > 80  middle size
+   make bootstrp labels > 50  skinny  */
+
+node[dendropy:support=>90][dendropy:support<=100] {
+	border: 10px;
+	font-style: italic;
+	font-size: 200%;
+}
+
+node[dendropy:support=>80][dendropy:support<=89] {
+	border: 10px;
+	font-style: italic;
+	font-size: 100%;
+}
+
+node[dendropy:support=>50][dendropy:support<=79] {
+	border: 10px;
+	font-style: italic;
+	font-size: 500%;
+}
+
+/* 
+   number of habitats
+   = 0  grey  -- we do not have data for
+   = 1  red -- only live in one habitat = specialist?
+   => 2  green -- generalist
+*/
+
+node[nexss:habitatCount=0] {
+      color:grey
+}
+
+node[nexss:habitatCount=1] {
+      color:red
+}
+
+node[nexss:habitatCount=>2] {
+      color:green
+}
+
+/*   Another bird tree perhaps?
+  make bird taxa that are some sort of threatened red
+   critically endangered
+   endangered
+   vulnerable
+   near threatened  */
+
+node[nexss:iucnStatus = 'critically endangered'][nexss:iucnStatus = 'endangered'][nexss:iucnStatus = 'near threatened'][nexss:iucnStatus = 'vulnerable'] {
+      color:red
+}
+
+
