@@ -29,6 +29,11 @@ argparser.add_argument(
     dest='flag_fullnames',
     help='Display full(y resolved) names for properties'
 )
+argparser.add_argument(
+    '--ladderize', '-l',
+    nargs='?',
+    help='Write out a left-ladderized version of this NeXML file'
+)
 args = argparser.parse_args()
 
 # Load NeXML files.
@@ -137,3 +142,11 @@ for pname in property_values.keys():
 
     print("")
 
+# Write out a ladderized file.
+if args.ladderize:
+    for tree_list in ds.tree_lists:
+        for tree in tree_list:
+            tree.ladderize(ascending=False)
+    fh_ladder = open(args.ladderize, "w")
+    ds.write(fh_ladder, schema='nexml')
+    fh_ladder.close()
