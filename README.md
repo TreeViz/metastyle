@@ -15,14 +15,7 @@ existing tree-visualization features of [ETE](https://pypi.python.org/pypi/ete2/
 Installation instructions for ETE are [here (for linux and Mac OS X)](https://pypi.python.org/pypi/ete2/#download-and-install). 
 For Mac users who prefer [Homebrew](https://github.com/Homebrew/homebrew), @gaurav suggests these steps instead:
 ```bash
-brew install qt
-brew install sip
- 
-# ... download and unzip PyQt4 source code...
-
-python configure-ng.py
-make
-make install
+brew install qt sip pyqt
 ```
 
 #### Quick start
