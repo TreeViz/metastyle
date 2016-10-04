@@ -2,7 +2,7 @@
 
 ## Adaptive radiation illustration from educational web site
 
-This example is from University of California Museum of Paleontology's (http://evolution.berkeley.edu).[Understanding Evolution](http://evolution.berkeley.edu). It illustrates 
+This example is from University of California Museum of Paleontology's [Understanding Evolution](http://evolution.berkeley.edu). It illustrates 
 * time scale with tick marks and values
    * units
    * zero point registered to tips
