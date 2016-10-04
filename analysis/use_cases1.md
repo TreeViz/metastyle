@@ -16,3 +16,8 @@ This example is from University of California Museum of Paleontology's [Understa
 ![Adaptive radiation](adapt_rad.gif "Illustration of adaptive radiation")
 
 ## another example
+
+## scrap and notes
+
+* I like this: http://epidemic.bio.ed.ac.uk/how_to_read_a_phylogeny
+* p. 2 of this http://www.calvin.edu/~rpruim/talks/SC11/2011-06/SC11-Calvin-Rendon/bioinformatics.Day2/D2.1.Reading%20Phylogenetic%20Trees.pdf .  find source on berkeley site.  use this.  
