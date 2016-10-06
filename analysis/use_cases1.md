@@ -17,7 +17,7 @@ This example is from University of California Museum of Paleontology's [Understa
 
 ## Illustrating parallelisms in insect cardenolide resistance
 
-This is a fully loaded example. The highlighted insect species consume plants such as milkweed that produce compounds toxic or noxious to most animals.  The yellow species actually sequester cardenolides, which makes them noxious to predators.  
+This is a fully loaded example. The highlighted insect species consume plants such as milkweed that produce compounds toxic or noxious to most animals.  The yellow species actually sequester cardenolides, which makes them noxious to predators.  Cardenolides bind to  ATP-alpha-1, and these insects tend to have changes in ATP-alpha-1 that confer resistance by disrupting binding.  The columns in bold are ones that have been implicated in site-directed mutagenesis in cardenolide-binding. 
 
 * phylogeny at left is a straightforward rectangular tree 
    * it has meaningful branch lengths but no scale
