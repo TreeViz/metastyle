@@ -15,7 +15,29 @@ This example is from University of California Museum of Paleontology's [Understa
 
 ![Adaptive radiation](adapt_rad.gif "Illustration of adaptive radiation")
 
-## another example
+## Illustrating parallelisms in insect cardenolide resistance
+
+This is a fully loaded example. The highlighted insect species consume plants such as milkweed that produce compounds toxic or noxious to most animals.  The yellow species actually sequester cardenolides, which makes them noxious to predators.  
+
+* phylogeny at left is a straightforward rectangular tree 
+   * it has meaningful branch lengths but no scale
+   * there are green dots to indicate specific nodes
+* character matrix is in the center
+   * some rows are highlighted
+   * columns are distinguished by grey vs. black font
+   * individual char-states may have red letters to indicate parallel changes
+* above the character matrix are character descriptors 
+   * position, in vertically aligned text
+   * reference character-state
+* below the character matrix is another block of character descriptors
+   * changes parallel among cardenolide-consuming insects
+   * changes that are unique
+* to the right of the char matrix is a column of common names (nice touch)
+* at the extreme right are two sets of brackets
+   * taxon brackets showing insect orders (species-tree concept)
+   * ortholog brackets distinguishing ATP1A1 from ATPalpha1 (gene-tree concept)
+
+![Parallelism](zhen_cardenolides.png "Parallelisms in insect cardenolide resistance")
 
 ## scrap and notes
 
