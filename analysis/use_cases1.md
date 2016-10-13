@@ -43,3 +43,4 @@ This is a fully loaded example. The highlighted insect species consume plants su
 
 * I like this: http://epidemic.bio.ed.ac.uk/how_to_read_a_phylogeny
 * p. 2 of this http://www.calvin.edu/~rpruim/talks/SC11/2011-06/SC11-Calvin-Rendon/bioinformatics.Day2/D2.1.Reading%20Phylogenetic%20Trees.pdf .  find source on berkeley site.  use this.  
+* There's a [collection of "wish-list" images](https://github.com/OpenTreeOfLife/tree-illustrator/tree/master/wishlist-images) in the Tree Illustrator repo (some shown above).
