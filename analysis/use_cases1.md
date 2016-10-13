@@ -39,6 +39,14 @@ This is a fully loaded example. The highlighted insect species consume plants su
 
 ![Parallelism](zhen_cardenolides.png "Parallelisms in insect cardenolide resistance")
 
+## Branch coloring to show dynamic properties
+
+This can be used to illustrate BAMM analysis, rates of speciation, continuous traits, etc.
+
+![BAMM analysis](https://github.com/OpenTreeOfLife/tree-illustrator/blob/master/wishlist-images/bamm_gallery_example.png "BAMM analysis")
+
+![Continuous character](https://github.com/OpenTreeOfLife/tree-illustrator/blob/master/wishlist-images/contMap-example.png "ContMap example")
+
 ## scrap and notes
 
 * I like this: http://epidemic.bio.ed.ac.uk/how_to_read_a_phylogeny
