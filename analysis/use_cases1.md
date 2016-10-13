@@ -47,6 +47,12 @@ This can be used to illustrate BAMM analysis, rates of speciation, continuous tr
 
 ![Continuous character](https://github.com/OpenTreeOfLife/tree-illustrator/blob/master/wishlist-images/contMap-example.png "ContMap example")
 
+## Geologic time scale alongside tree
+
+This shows tree nodes alongside a standard table of geologic time scale (GTS). We might offer a few GTS alternatives, if there's no clear consensus.
+
+![Geological timeline](https://github.com/OpenTreeOfLife/tree-illustrator/blob/master/wishlist-images/MPN_example.png "GTS example")
+
 ## scrap and notes
 
 * I like this: http://epidemic.bio.ed.ac.uk/how_to_read_a_phylogeny
