@@ -1,0 +1,370 @@
+#NEXUS
+[written Fri Sep 19 15:00:32 EDT 2014 by Mesquite  version 3.0 (build 644) at 0587390370.wireless.umich.net/35.2.221.162]
+
+BEGIN TAXA;
+	TITLE ;
+	DIMENSIONS NTAX=199;
+	TAXLABELS
+		Myrmotherula_brachyura Myrmotherula_sclateri Myrmotherula_ambigua Cercomacra_manu Cercomacra_melanaria Cercomacra_cinerascens Cercomacra_nigricans Cercomacra_carbonaria Cercomacra_brasiliana Drymophila_squamata Drymophila_genei Drymophila_devillei Drymophila_caudata Hypocnemis_cantator Hypocnemis_hypoxantha Drymophila_ochropyga Myrmeciza_hemimelaena Myrmeciza_castanea Cercomacra_parkeri Cercomacra_serva Cercomacra_tyrannina Cercomacra_nigrescens Cercomacra_laeta Drymophila_rubricollis Drymophila_ferruginea Phaenostictus_mcleannani Pithys_albifrons Pithys_castaneus Willisornis_poecilinotus Rhegmatorhina_melanosticta Rhegmatorhina_hoffmannsi Rhegmatorhina_gymnops Gymnopithys_salvini Gymnopithys_lunulatus Gymnopithys_rufigula Gymnopithys_leucaspis Phlegopsis_erythroptera Phlegopsis_borbae Phlegopsis_nigromaculata Sclateria_naevia Schistocichla_schistacea Schistocichla_saturata Schistocichla_leucostigma Myrmeciza_hyperythra Myrmeciza_loricata Myrmeciza_squamosa Myrmeciza_ferruginea Hypocnemoides_maculicauda Hylophylax_punctulatus Hylophylax_naevius Hylophylax_naevioides Myrmeciza_exsul Myrmeciza_laemosticta Myrmeciza_nigricauda Myrmeciza_berlepschi Myrmeciza_griseiceps Rhopornis_ardesiacus Percnostola_lophotes Myrmoborus_myotherinus Myrmoborus_leucophrys Gymnocichla_nudiceps Pyriglena_leucoptera Pyriglena_leuconota Percnostola_rufifrons Myrmeciza_goeldii Myrmeciza_melanoceps Myrmeciza_immaculata Myrmeciza_fortis Myrmeciza_longipes Myrmotherula_hauxwelli Thamnomanes_saturninus Thamnomanes_ardesiacus Thamnomanes_caesius Thamnomanes_schistogynus Thamnophilus_bernardi Thamnophilus_atrinucha Thamnophilus_bridgesi Thamnophilus_melanothorax Thamnophilus_nigriceps Thamnophilus_praecox Thamnophilus_nigrocinereus Thamnophilus_cryptoleucus Thamnophilus_ambiguus Thamnophilus_sticturus Thamnophilus_pelzelni Thamnophilus_stictocephalus Thamnophilus_punctatus Thamnophilus_caerulescens Thamnophilus_unicolor Thamnophilus_aethiops Thamnophilus_aroyae Thamnophilus_melanonotus Thamnophilus_amazonicus Thamnophilus_insignis Thamnophilus_divisorius Thamnophilus_schistaceus Thamnophilus_murinus Thamnophilus_doliatus Thamnophilus_multistriatus Thamnophilus_tenuepunctatus Thamnophilus_palliatus Thamnophilus_zarumae Thamnophilus_ruficapillus Thamnophilus_torquatus Herpsilochmus_longirostris Herpsilochmus_axillaris Herpsilochmus_rufimarginatus Herpsilochmus_motacilloides Herpsilochmus_parkeri Herpsilochmus_atricapillus Herpsilochmus_dorsimaculatus Herpsilochmus_stictocephalus Dysithamnus_mentalis Dysithamnus_plumbeus Dysithamnus_puncticeps Sakesphorus_cristatus Sakesphorus_canadensis Sakesphorus_luctuosus Megastictus_margaritatus Dichrozona_cincta Hypoedaleus_guttatus Batara_cinerea Mackenziaena_severa Mackenziaena_leachii Frederickena_viridis Frederickena_unduligera Cymbilaimus_sanctaemariae Cymbilaimus_lineatus Taraba_major Pygiptila_stellaris Thamnistes_anabatinus Myrmornis_torquata Conopophaga_peruviana Conopophaga_lineata Conopophaga_aurita Pittasoma_michleri Pittasoma_rufopileatum Chamaeza_campanisona Chamaeza_nobilis Chamaeza_meruloides Chamaeza_mollisima Formicarius_colma Formicarius_nigricapillus Formicarius_analis Hylopezus_ochroleucus Grallaricula_flavirostris Grallaricula_lineifrons Hylopezus_berlepschi Hylopezus_fulviventris Myrmothera_simplex Myrmothera_campanisona Grallaricula_nana Grallaria_rufula Grallaria_blakei Grallaria_andicolus Grallaria_dignissima Grallaria_eludens Grallaria_hypoleuca Grallaria_ruficapilla Grallaria_watkinsi Grallaria_nuchalis Grallaria_ridgelyi Grallaria_squamigera Grallaria_varia Grallaria_guatimalensis Terenura_humeralis Terenura_sharpei Terenura_callinota Microrhopias_quixensis Myrmorchilus_strigilatus Myrmeciza_atrothorax Myrmeciza_pelzelni Epinecrophylla_ornata Epinecrophylla_gutturalis Epinecrophylla_haematonota Epinecrophylla_spodionota Epinecrophylla_erythrura Epinecrophylla_leucophthalma Epinecrophylla_fulviventris Neoctantes_niger Myrmotherula_menetriesii Myrmotherula_assimilis Myrmotherula_longipennis Myrmotherula_axillaris Myrmotherula_iheringi Formicivora_melanogaster Formicivora_grisea Formicivora_rufa Myrmotherula_schisticolor Myrmotherula_grisea Myrmotherula_behni Myrmochanes_hemileucus Myrmotherula_cherriei Myrmotherula_surinamensis Myrmotherula_multostriata Myrmotherula_pacifica Myrmotherula_longicauda Myrmotherula_klagesi Myrmotherula_ignota 
+	;
+	IDS d4380759696 d4380759632 d4380759760 d4380759888 d4380760016 d4380760144 d4380760208 d4380760336 d4380760464 d4380760592 d4380760720 d4380760848 d4380760912 d4380760976 d4380761040 d4380761104 d4380761168 d4380761296 d4380761424 d4380761552 d4380761616 d4380761680 d4380761744 d4380761872 d4380762000 d4380762064 d4380819600 d4380819728 d4380819856 d4380819920 d4380819984 d4380820112 d4380820240 d4380820368 d4380820496 d4380820560 d4380820688 d4380820816 d4380820944 d4380821072 d4380821136 d4380821264 d4380821328 d4380821456 d4380821584 d4380821712 d4380821840 d4380821904 d4380821968 d4380822096 d4380822224 d4380822352 d4380822416 d4380822544 d4380822608 d4380822736 d4380822864 d4380822992 d4380823120 d4380823248 d4380823376 d4380823504 d4380856464 d4380856592 d4380856720 d4380856784 d4380856912 d4380856976 d4380857104 d4380857232 d4380857296 d4380857360 d4380857488 d4380857616 d4380857744 d4380857808 d4380857936 d4380858064 d4380858192 d4380858320 d4380858448 d4380858576 d4380858704 d4380858832 d4380858960 d4380859088 d4380859216 d4380859344 d4380859472 d4380859600 d4380859728 d4380859856 d4380859984 d4380860048 d4380860176 d4380860304 d4380885072 d4380885200 d4380885328 d4380885456 d4380885584 d4380885712 d4380885840 d4380885968 d4380886096 d4380886224 d4380886352 d4380886480 d4380886608 d4380886672 d4380886800 d4380886928 d4380887056 d4380887120 d4380887184 d4380887312 d4380887440 d4380887568 d4380887696 d4380887824 d4380887952 d4380888080 d4380888144 d4380888272 d4380888336 d4380888400 d4380888528 d4380888656 d4380888784 d4380888912 d4380889040 d4380909648 d4380909712 d4380909840 d4380909904 d4380910032 d4380910096 d4380910160 d4380910224 d4380910352 d4380910480 d4380910544 d4380910608 d4380910672 d4380910736 d4380910864 d4380910928 d4380911056 d4380911184 d4380911312 d4380911440 d4380911568 d4380911632 d4380911760 d4380911824 d4380911888 d4380911952 d4380912016 d4380912144 d4380912208 d4380912272 d4380912400 d4380912464 d4380912528 d4380912592 d4380912720 d4380912784 d4380912912 d4380912976 d4380913040 d4380913104 d4380913232 d4380913360 d4380913488 d4380913552 d4380942416 d4380942544 d4380942672 d4380942800 d4380942928 d4380942992 d4380943120 d4380943184 d4380943312 d4380943440 d4380943568 d4380943696 d4380943824 d4380943952 d4380944016 d4380944080 d4380944208 d4380944272 d4380944336 d4380944464 d4380944592 d4380944720 d4380944848 d4380944976 ;
+	BLOCKID d4378778448;
+
+END;
+
+
+BEGIN TREES;
+	Title ;
+	LINK Taxa = ;
+	TRANSLATE
+[0] 		1 Myrmotherula_brachyura,
+[1] 		2 Myrmotherula_sclateri,
+[2] 		3 Myrmotherula_ambigua,
+[3] 		4 Cercomacra_manu,
+[4] 		5 Cercomacra_melanaria,
+[5] 		6 Cercomacra_cinerascens,
+[6] 		7 Cercomacra_nigricans,
+[7] 		8 Cercomacra_carbonaria,
+[8] 		9 Cercomacra_brasiliana,
+[9] 		10 Drymophila_squamata,
+[10] 		11 Drymophila_genei,
+[11] 		12 Drymophila_devillei,
+[12] 		13 Drymophila_caudata,
+[13] 		14 Hypocnemis_cantator,
+[14] 		15 Hypocnemis_hypoxantha,
+[15] 		16 Drymophila_ochropyga,
+[16] 		17 Myrmeciza_hemimelaena,
+[17] 		18 Myrmeciza_castanea,
+[18] 		19 Cercomacra_parkeri,
+[19] 		20 Cercomacra_serva,
+[20] 		21 Cercomacra_tyrannina,
+[21] 		22 Cercomacra_nigrescens,
+[22] 		23 Cercomacra_laeta,
+[23] 		24 Drymophila_rubricollis,
+[24] 		25 Drymophila_ferruginea,
+[25] 		26 Phaenostictus_mcleannani,
+[26] 		27 Pithys_albifrons,
+[27] 		28 Pithys_castaneus,
+[28] 		29 Willisornis_poecilinotus,
+[29] 		30 Rhegmatorhina_melanosticta,
+[30] 		31 Rhegmatorhina_hoffmannsi,
+[31] 		32 Rhegmatorhina_gymnops,
+[32] 		33 Gymnopithys_salvini,
+[33] 		34 Gymnopithys_lunulatus,
+[34] 		35 Gymnopithys_rufigula,
+[35] 		36 Gymnopithys_leucaspis,
+[36] 		37 Phlegopsis_erythroptera,
+[37] 		38 Phlegopsis_borbae,
+[38] 		39 Phlegopsis_nigromaculata,
+[39] 		40 Sclateria_naevia,
+[40] 		41 Schistocichla_schistacea,
+[41] 		42 Schistocichla_saturata,
+[42] 		43 Schistocichla_leucostigma,
+[43] 		44 Myrmeciza_hyperythra,
+[44] 		45 Myrmeciza_loricata,
+[45] 		46 Myrmeciza_squamosa,
+[46] 		47 Myrmeciza_ferruginea,
+[47] 		48 Hypocnemoides_maculicauda,
+[48] 		49 Hylophylax_punctulatus,
+[49] 		50 Hylophylax_naevius,
+[50] 		51 Hylophylax_naevioides,
+[51] 		52 Myrmeciza_exsul,
+[52] 		53 Myrmeciza_laemosticta,
+[53] 		54 Myrmeciza_nigricauda,
+[54] 		55 Myrmeciza_berlepschi,
+[55] 		56 Myrmeciza_griseiceps,
+[56] 		57 Rhopornis_ardesiacus,
+[57] 		58 Percnostola_lophotes,
+[58] 		59 Myrmoborus_myotherinus,
+[59] 		60 Myrmoborus_leucophrys,
+[60] 		61 Gymnocichla_nudiceps,
+[61] 		62 Pyriglena_leucoptera,
+[62] 		63 Pyriglena_leuconota,
+[63] 		64 Percnostola_rufifrons,
+[64] 		65 Myrmeciza_goeldii,
+[65] 		66 Myrmeciza_melanoceps,
+[66] 		67 Myrmeciza_immaculata,
+[67] 		68 Myrmeciza_fortis,
+[68] 		69 Myrmeciza_longipes,
+[69] 		70 Myrmotherula_hauxwelli,
+[70] 		71 Thamnomanes_saturninus,
+[71] 		72 Thamnomanes_ardesiacus,
+[72] 		73 Thamnomanes_caesius,
+[73] 		74 Thamnomanes_schistogynus,
+[74] 		75 Thamnophilus_bernardi,
+[75] 		76 Thamnophilus_atrinucha,
+[76] 		77 Thamnophilus_bridgesi,
+[77] 		78 Thamnophilus_melanothorax,
+[78] 		79 Thamnophilus_nigriceps,
+[79] 		80 Thamnophilus_praecox,
+[80] 		81 Thamnophilus_nigrocinereus,
+[81] 		82 Thamnophilus_cryptoleucus,
+[82] 		83 Thamnophilus_ambiguus,
+[83] 		84 Thamnophilus_sticturus,
+[84] 		85 Thamnophilus_pelzelni,
+[85] 		86 Thamnophilus_stictocephalus,
+[86] 		87 Thamnophilus_punctatus,
+[87] 		88 Thamnophilus_caerulescens,
+[88] 		89 Thamnophilus_unicolor,
+[89] 		90 Thamnophilus_aethiops,
+[90] 		91 Thamnophilus_aroyae,
+[91] 		92 Thamnophilus_melanonotus,
+[92] 		93 Thamnophilus_amazonicus,
+[93] 		94 Thamnophilus_insignis,
+[94] 		95 Thamnophilus_divisorius,
+[95] 		96 Thamnophilus_schistaceus,
+[96] 		97 Thamnophilus_murinus,
+[97] 		98 Thamnophilus_doliatus,
+[98] 		99 Thamnophilus_multistriatus,
+[99] 		100 Thamnophilus_tenuepunctatus,
+[100] 		101 Thamnophilus_palliatus,
+[101] 		102 Thamnophilus_zarumae,
+[102] 		103 Thamnophilus_ruficapillus,
+[103] 		104 Thamnophilus_torquatus,
+[104] 		105 Herpsilochmus_longirostris,
+[105] 		106 Herpsilochmus_axillaris,
+[106] 		107 Herpsilochmus_rufimarginatus,
+[107] 		108 Herpsilochmus_motacilloides,
+[108] 		109 Herpsilochmus_parkeri,
+[109] 		110 Herpsilochmus_atricapillus,
+[110] 		111 Herpsilochmus_dorsimaculatus,
+[111] 		112 Herpsilochmus_stictocephalus,
+[112] 		113 Dysithamnus_mentalis,
+[113] 		114 Dysithamnus_plumbeus,
+[114] 		115 Dysithamnus_puncticeps,
+[115] 		116 Sakesphorus_cristatus,
+[116] 		117 Sakesphorus_canadensis,
+[117] 		118 Sakesphorus_luctuosus,
+[118] 		119 Megastictus_margaritatus,
+[119] 		120 Dichrozona_cincta,
+[120] 		121 Hypoedaleus_guttatus,
+[121] 		122 Batara_cinerea,
+[122] 		123 Mackenziaena_severa,
+[123] 		124 Mackenziaena_leachii,
+[124] 		125 Frederickena_viridis,
+[125] 		126 Frederickena_unduligera,
+[126] 		127 Cymbilaimus_sanctaemariae,
+[127] 		128 Cymbilaimus_lineatus,
+[128] 		129 Taraba_major,
+[129] 		130 Pygiptila_stellaris,
+[130] 		131 Thamnistes_anabatinus,
+[131] 		132 Myrmornis_torquata,
+[132] 		133 Conopophaga_peruviana,
+[133] 		134 Conopophaga_lineata,
+[134] 		135 Conopophaga_aurita,
+[135] 		136 Pittasoma_michleri,
+[136] 		137 Pittasoma_rufopileatum,
+[137] 		138 Chamaeza_campanisona,
+[138] 		139 Chamaeza_nobilis,
+[139] 		140 Chamaeza_meruloides,
+[140] 		141 Chamaeza_mollisima,
+[141] 		142 Formicarius_colma,
+[142] 		143 Formicarius_nigricapillus,
+[143] 		144 Formicarius_analis,
+[144] 		145 Hylopezus_ochroleucus,
+[145] 		146 Grallaricula_flavirostris,
+[146] 		147 Grallaricula_lineifrons,
+[147] 		148 Hylopezus_berlepschi,
+[148] 		149 Hylopezus_fulviventris,
+[149] 		150 Myrmothera_simplex,
+[150] 		151 Myrmothera_campanisona,
+[151] 		152 Grallaricula_nana,
+[152] 		153 Grallaria_rufula,
+[153] 		154 Grallaria_blakei,
+[154] 		155 Grallaria_andicolus,
+[155] 		156 Grallaria_dignissima,
+[156] 		157 Grallaria_eludens,
+[157] 		158 Grallaria_hypoleuca,
+[158] 		159 Grallaria_ruficapilla,
+[159] 		160 Grallaria_watkinsi,
+[160] 		161 Grallaria_nuchalis,
+[161] 		162 Grallaria_ridgelyi,
+[162] 		163 Grallaria_squamigera,
+[163] 		164 Grallaria_varia,
+[164] 		165 Grallaria_guatimalensis,
+[165] 		166 Terenura_humeralis,
+[166] 		167 Terenura_sharpei,
+[167] 		168 Terenura_callinota,
+[168] 		169 Microrhopias_quixensis,
+[169] 		170 Myrmorchilus_strigilatus,
+[170] 		171 Myrmeciza_atrothorax,
+[171] 		172 Myrmeciza_pelzelni,
+[172] 		173 Epinecrophylla_ornata,
+[173] 		174 Epinecrophylla_gutturalis,
+[174] 		175 Epinecrophylla_haematonota,
+[175] 		176 Epinecrophylla_spodionota,
+[176] 		177 Epinecrophylla_erythrura,
+[177] 		178 Epinecrophylla_leucophthalma,
+[178] 		179 Epinecrophylla_fulviventris,
+[179] 		180 Neoctantes_niger,
+[180] 		181 Myrmotherula_menetriesii,
+[181] 		182 Myrmotherula_assimilis,
+[182] 		183 Myrmotherula_longipennis,
+[183] 		184 Myrmotherula_axillaris,
+[184] 		185 Myrmotherula_iheringi,
+[185] 		186 Formicivora_melanogaster,
+[186] 		187 Formicivora_grisea,
+[187] 		188 Formicivora_rufa,
+[188] 		189 Myrmotherula_schisticolor,
+[189] 		190 Myrmotherula_grisea,
+[190] 		191 Myrmotherula_behni,
+[191] 		192 Myrmochanes_hemileucus,
+[192] 		193 Myrmotherula_cherriei,
+[193] 		194 Myrmotherula_surinamensis,
+[194] 		195 Myrmotherula_multostriata,
+[195] 		196 Myrmotherula_pacifica,
+[196] 		197 Myrmotherula_longicauda,
+[197] 		198 Myrmotherula_klagesi,
+[198] 		199 Myrmotherula_ignota;
+	TREE '+' = (1:0.0208338561106[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],199:0.015630903208[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],((((((((70:0.07338938774[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],((72:0.0239662696643[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],71:0.0263234543062[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])100:0.021875861145,(73:0.0169093124245[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],74:0.017842095632[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])100:0.0287433359819)98:0.00742280148335)90:0.00835522764446,(((127:0.070840256791[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],(128:0.0448701495316[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],129:0.0440317614348[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:3' ])54:0.0030074986063)100:0.0116613377063,(((123:0.0348671181365[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],124:0.0376000382707[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])100:0.0152615646017,(126:0.0326220572331[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],125:0.0354205755462[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])100:0.00964499441606)98:0.00850911443805,(122:0.0525785983555[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],121:0.0470520347178[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])100:0.0098594433202)94:0.00355798934304)99:0.02021111405,((119:0.0568950754699[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],120:0.0723508972443[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])16:0.0021857685164,(((118:0.0248541873345[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:3' ],117:0.0200827703923[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:3' ])100:0.0454935657157,((115:0.0575157710621[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],116:0.0490954330182[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ])66:0.0142049641293,((113:0.0292237201252[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:3' ],114:0.0313188096634[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])100:0.0225321088984,((((112:0.0328218187418[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],111:0.0294882094507[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])93:0.00590825268602,(110:0.0182149398985[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],(109:0.00201076831019[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],108:0.00179130051716[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:3' ])100:0.0218257937827)100:0.00746873842001)100:0.0113312474801,107:0.0320228180071[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ])81:0.00409077591901,(105:0.0348949697065[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],106:0.0347533537313[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])100:0.00837683544119)100:0.0194250218551)84:0.00642088930787)60:0.00671416554403)50:0.00112937260004,(((((((((89:0.0261221770222[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],(90:0.0209497074461[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],91:0.016372136493[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ])100:0.00853775982705)62:0.00333254613108,88:0.0246421534761[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:3' ])99:0.00415131290388,((83:0.019481653529[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],(85:0.00470863614834[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],84:0.00957011372202[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])100:0.00745086439589)100:0.0126933763747,(86:0.0119823314714[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:3' ],87:0.016213201894[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:3' ])100:0.0118959031363)100:0.00963124539845)70:0.00273304727466,(81:0.00295396149206[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:5' ],82:0.0050158064532[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:3' ])100:0.0330854013709)80:0.00238040161706,(78:0.040022420374[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],(80:0.00987669482837[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],79:0.0156757016272[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])76:0.00255519191372)41:0.0200826311273)39:0.00511805833499,(92:0.0417308424355[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],((95:0.0351220809651[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],94:0.0284484382005[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])84:0.00716559936437,93:0.0314810101483[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ])46:0.00469092893511)25:0.00265571497651)86:0.00713296389905,(97:0.0382983043033[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],96:0.0444767344811[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])99:0.0138748329947)71:0.00191010139788,(75:0.0377800802145[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],(77:0.0335744247833[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:3' ],76:0.0230603237998[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])100:0.0149516928741)99:0.0146998972439)71:0.00394554099593,(((102:0.0247036053144[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],((101:0.00434858929897[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],100:0.00313726838146[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:4' ])100:0.0108680884877,99:0.0216213720024[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])95:0.00931065720071)100:0.00836216019323,(103:0.0143092467936[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],104:0.0128642354283[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:3' ])100:0.0188095744337)53:0.0011324631783,98:0.0235899444065[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ])100:0.021889648108)90:0.0187455586521)91:0.00849784602116)18:0.00129744345928)41:0.00159086755968)85:0.00536153404325,((((((((7:0.00518483548389[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:3' ],8:0.00222468798036[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:4' ])100:0.0126727115848,6:0.0191796551203[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])100:0.0150624081142,5:0.0294636681293[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])100:0.00883763629356,9:0.0406437665886[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ])97:0.00983334613493,4:0.0411215253434[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ])96:0.026105251301,((25:0.0412105516615[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],24:0.0341355832529[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])72:0.0145685428719,(((((13:0.019109982366[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],12:0.0299306097477[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ])100:0.025786311911,(14:0.0478303065416[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],15:0.0488177333446[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])72:0.00665012366847)17:0.000213466088537,(11:0.0443867950567[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],10:0.0458686440755[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])28:0.00304858121852)65:0.00617562959377,16:0.0301839791999[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])16:0.00000328698727315,((17:0.0224036477202[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],18:0.0262766953497[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ])100:0.0407177703868,((19:0.0368610174544[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],(22:0.0476468601284[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],(20:0.0280881814111[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:3' ],21:0.022846878929[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])54:0.00190193735815)61:0.00348828975517)47:0.0021972378166,23:0.0315214492446[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ])97:0.0233385750739)77:0.00707232519046)17:0.00351105864086)38:0.00106952728983)70:0.00668825031024,(((27:0.0196522155713[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],28:0.0315206047659[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])100:0.0391601741947,26:0.0546823488905[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ])98:0.0057792172237,(((((32:0.00454071115337[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],31:0.00594168720576[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ])100:0.00541660276592,30:0.0143089528443[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])100:0.010013572077,((34:0.0217152501454[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],33:0.0180781673446[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])100:0.0139950096784,(35:0.00229218018762[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],36:0.0031428819207[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])100:0.0222496497018)50:0.00313539157015)100:0.030437772474,(37:0.0275641415194[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],(39:0.0160272746714[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],38:0.0242687903903[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])100:0.0165601964739)100:0.014813872498)82:0.00249546803116,29:0.0508154584308[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])74:0.00347524149614)98:0.0141811982963)76:0.00581292527971,((((((53:0.0305700733523[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:3' ],(54:0.0270913843612[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],55:0.0265322017115[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ])56:0.00293448718675)100:0.0282257728457,56:0.0638047531708[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ])81:0.00768996566573,52:0.0692294300632[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ])99:0.0138584262483,((47:0.0507464670891[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],(45:0.0152356394154[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],46:0.022873804387[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])100:0.0230105570965)100:0.0270591828435,(48:0.0556817610314[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],(49:0.0494473896973[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],(51:0.0326741080218[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:3' ],50:0.0273741211942[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])100:0.0106344853036)100:0.0150244416405)99:0.00591532571931)69:0.00286916420324)44:0.00108764247525,((((58:0.0289137290314[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],(60:0.0263762194421[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],59:0.029566931284[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:3' ])98:0.00943514503413)100:0.0139197600063,(61:0.0402937584645[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],((63:0.0145643435878[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],62:0.0157948432291[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])100:0.025519261125,(64:0.032898986513[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],((68:0.0161732024974[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],67:0.0147162709614[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])100:0.0168203548493,(66:0.0192174295047[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],65:0.0137995537687[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])100:0.0186423793224)73:0.00213224696343)93:0.00482645382368)77:0.00598262189433)98:0.00864288138033)94:0.0111047448264,57:0.0387658431434[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])36:0.00546992342562,69:0.0650227244374[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])37:0.00663666588638)14:0.00197856394291,(40:0.0507937395406[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],((43:0.0356137574014[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:3' ],44:0.0391349048672[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ])100:0.0105071551176,(42:0.0394222462626[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],41:0.0509750595408[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])100:0.00671965903722)99:0.00650904641676)100:0.0142382360488)36:0.00619238848043)36:0.00197654784959)52:0.00343418473393,((((179:0.0484082049325[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],(((174:0.0253588779857[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],(175:0.017187528914[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],176:0.0203340088456[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])100:0.0127872481412)100:0.0168921663747,(177:0.0368370247299[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],178:0.0233084306476[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])100:0.018879061245)59:0.00189696068621,173:0.0476153728211[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])83:0.00592844267415)100:0.0110705745183,180:0.0654092391972[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ])100:0.0100750097728,(169:0.0724037189576[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:4' ],((171:0.0496234294097[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],172:0.0560230322227[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])100:0.0209504764802,170:0.0693402858083[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])62:0.00183523457194)84:0.00313947647782)94:0.00353721734109,(((131:0.0567170310055[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],130:0.0531986267207[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])100:0.0261537193483,132:0.0892929003791[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:3' ])100:0.0107346829933,(((167:0.00681317849214[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:3' ],168:0.00793157254337[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])99:0.0116205696033,166:0.0207977775278[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])100:0.0732673821088,((((((((149:0.025029720039[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],148:0.0215954633119[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])78:0.0203446323796,(150:0.0117109451729[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],151:0.0255221098177[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])100:0.0324618667552)64:0.0156189612703,147:0.0490146576063[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])75:0.0142965875514,152:0.0733579449926[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])53:0.00256255927114,(145:0.0862477675403[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],146:0.0635560736617[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])62:0.0113912148693)100:0.036421796277,(((165:0.0674194600154[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],164:0.0322748979702[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])96:0.0127551335825,163:0.0468378306784[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])100:0.024627175445,((155:0.0285930880183[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],((162:0.0685522048875[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],((161:0.045024682124[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],(160:0.0403511754867[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],159:0.0232924448509[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])98:0.0171235612135)62:0.00656578640183,158:0.106245577472[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])56:0.00901564438272)66:0.00392998986851,(157:0.0142883334444[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],156:0.0432881863389[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])99:0.038357773474)77:0.0075451507218)98:0.0164973542587,(153:0.0575717377533[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],154:0.0532664019005[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])92:0.0199834074157)94:0.0175693867544)100:0.0151880763953)100:0.0305376114077,(((143:0.0280332605918[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],144:0.0142001299082[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])100:0.0253356110828,142:0.0532267979748[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])100:0.0477040805722,(138:0.0682279863926[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],((140:0.0428028693278[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],139:0.0144894572077[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])64:0.00000328698727315,141:0.070429121095[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])33:0.00694376096971)100:0.0598883879089)100:0.0450775223965)100:0.0155070585089,(((134:0.0264819120378[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],135:0.0433747352722[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])97:0.032288691044,133:0.0280966755376[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])100:0.0223981479743,(136:0.0594601391652[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],137:0.0323401557022[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ])100:0.0566355294514)100:0.0446479625572)100:0.050285279083)71:0.00322394858184)82:0.0120665702135)67:0.00398561793421)100:0.00915863739895,((181:0.0491892362771[%taxoncolor = on  , 'nexss:habitatCount' = 'string:0' ],182:0.0679676687431[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ])97:0.00884788806604,(((185:0.0639577734993[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],((187:0.031208710476[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],188:0.0235826305804[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:3' ])74:0.00378701845648,186:0.0240749244552[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])100:0.0222055696738)64:0.0082637023595,(184:0.0397156074848[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:5' ],183:0.0463019867306[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])74:0.00703085038698)53:0.00164241204133,(189:0.0399294016662[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],(190:0.0111604547749[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],191:0.00683464795172[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ])100:0.0227740458633)100:0.0395626529856)64:0.00255684904382)100:0.00748846616282)100:0.0203064512567,((196:0.0359222932569[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ],195:0.0233689531281[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:2' ])100:0.0219429824989,(192:0.0464529947031[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:3' ],(193:0.018830083006[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:3' ],194:0.00501047519289[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:4' ])97:0.0150877005785)82:0.00936867797069)93:0.00518785134879)99:0.00915755487131,(198:0.0162441783562[%taxoncolor = 11  , 'nexss:habitatCount' = 'string:3' ],197:0.019631771589[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])100:0.0362987340374)100:0.0186150168034,(3:0.0299233870224[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ],2:0.026352996833[%taxoncolor = 5  , 'nexss:habitatCount' = 'string:1' ])100:0.00634080392082)100:0.0201282296444);
+
+END;
+
+
+Begin MESQUITE;
+		MESQUITESCRIPTVERSION 2;
+		TITLE AUTO;
+		tell ProjectCoordinator;
+		timeSaved 1411153233129;
+		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			setID 0 6196955941043152819 d4378778448;
+		endTell;
+		getWindow;
+		tell It;
+			suppress;
+			setResourcesState false false 10;
+			setPopoutState 400;
+			setExplanationSize 0;
+			setAnnotationSize 0;
+			setFontIncAnnot 0;
+			setFontIncExp 0;
+			setSize 700 572;
+			setLocation 8 22;
+			setFont SanSerif;
+			setFontSize 10;
+			getToolPalette;
+			tell It;
+			endTell;
+			desuppress;
+		endTell;
+		getEmployee  #mesquite.trees.BasicTreeWindowCoord.BasicTreeWindowCoord;
+		tell It;
+			makeTreeWindow #6196955941043152819  #mesquite.trees.BasicTreeWindowMaker.BasicTreeWindowMaker;
+			tell It;
+				suppressEPCResponse;
+				setTreeSource  #mesquite.trees.StoredTrees.StoredTrees;
+				tell It;
+					setTreeBlock 1;
+					toggleUseWeights off;
+				endTell;
+				setAssignedID 886.1411153098899.4110570616276882013;
+				getTreeWindow;
+				tell It;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 690 500;
+					setLocation 8 22;
+					setFont SanSerif;
+					setFontSize 10;
+					getToolPalette;
+					tell It;
+					endTell;
+					setActive;
+					getTreeDrawCoordinator #mesquite.trees.BasicTreeDrawCoordinator.BasicTreeDrawCoordinator;
+				tell It;
+					suppress;
+					setTreeDrawer  #mesquite.trees.StyledSquareTree.StyledSquareTree;
+					tell It;
+						setNodeLocs #mesquite.trees.NodeLocsStandard.NodeLocsStandard;
+						tell It;
+							branchLengthsToggle on;
+							toggleScale off;
+							toggleBroadScale off;
+							toggleCenter on;
+							toggleEven off;
+							setFixedTaxonDistance 0;
+						endTell;
+						setEdgeWidth 2;
+						setStemWidth 2;
+						orientRight;
+					endTell;
+					setBackground White;
+					setBranchColor Black;
+					showNodeNumbers off;
+					showBranchColors on;
+					labelBranchLengths off;
+					centerBrLenLabels on;
+					showBrLensUnspecified on;
+					showBrLenLabelsOnTerminals on;
+					setBrLenLabelColor 0 0 255;
+					setNumBrLenDecimals 6;
+					desuppress;
+					getEmployee #mesquite.trees.BasicDrawTaxonNames.BasicDrawTaxonNames;
+					tell It;
+						setFont Helvetica;
+						setFontSize 12;
+						setColor Black;
+						toggleColorPartition off;
+						toggleColorAssigned on;
+						toggleShadePartition off;
+						toggleShowFootnotes on;
+						toggleNodeLabels on;
+						toggleCenterNodeNames off;
+						toggleShowNames on;
+						namesAngle ?;
+					endTell;
+				endTell;
+					setTreeNumber 1;
+					setDrawingSizeMode 0;
+					toggleLegendFloat on;
+					scale 0;
+					toggleTextOnTree off;
+					showWindow;
+				endTell;
+				desuppressEPCResponse;
+				getEmployee #mesquite.trees.ColorBranches.ColorBranches;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.ornamental.BranchNotes.BranchNotes;
+				tell It;
+					setAlwaysOn off;
+				endTell;
+				getEmployee #mesquite.ornamental.ColorTreeByPartition.ColorTreeByPartition;
+				tell It;
+					colorByPartition off;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocDoubles.DrawTreeAssocDoubles;
+				tell It;
+					setOn on;
+					toggleShow consensusFrequency;
+					setDigits 4;
+					writeAsPercentage off;
+					toggleCentred off;
+					toggleHorizontal on;
+					toggleWhiteEdges on;
+					setFontSize 10;
+					setOffset 0  0;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocStrings.DrawTreeAssocStrings;
+				tell It;
+					setOn on;
+					toggleCentred on;
+					toggleHorizontal on;
+					setFontSize 10;
+					setOffset 0  0;
+				endTell;
+				getEmployee #mesquite.trees.TreeInfoValues.TreeInfoValues;
+				tell It;
+					panelOpen false;
+				endTell;
+			endTell;
+		endTell;
+		endTell;
+end;
+
+

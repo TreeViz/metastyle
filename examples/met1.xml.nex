@@ -1,0 +1,228 @@
+#NEXUS
+[written Fri Sep 19 17:27:50 EDT 2014 by Mesquite  version 3.0 (build 644) at daisieh.local/172.20.1.120]
+
+BEGIN TAXA;
+	TITLE Taxa;
+	DIMENSIONS NTAX=57;
+	TAXLABELS
+		SANG_TMY_11060 SANG_NMY_11131 SANG_NMY_11221 SANG_TMY_10956 SANG_NMY_11145 SANG_NMY_11106 SANG_NMY_11104 SANG_NMY_11141 SANG_DMY_16833 SANG_DMY_10260 SANG_BMY_BFRE_09_07 SANG_BMY_BFRE_09_02 SANG_TMY_11081 SANG_DMY_11323 SANG_BMY_BQB_03_01 SANG_BMY_BKUU_09_03 SANG_BMY_BKUU_09_02 SANG_TMY_11004 SANG_DMY_16835 SANG_TMY_11055 SANG_DMY_10259 TRAM_PtrMY_2.1_2450_cov_12.817142 TRAM_PtrF018_3.24_4087_cov_8.034744 SANG_TMX_11081 SANG_TMX_10956 SANG_TMX_11060 SANG_BMX_BKUU_09_03 SANG_TMX_11004 TRAM_PtrF018_1.35_8763_cov_5.854159 SANG_BMX_BNWL_09_01 Potri.T046100 TRAM_PtrF018_0.70_7284_cov_17.265240 SANG_TMX_11055 SANG_BMX_BQB_03_01 TRAM_Pan018_4.57_5017_cov_7.888380 SANG_BMX_BKUU_09_02 Potri.018G138000 SANG_BMX_BFRE_09_02 SANG_DMX_16835 SANG_DMX_16833 SANG_DMX_10258 SANG_DMX_11323 SANG_BMX_BFRE_09_07 TRAM_Ptre018_0.40_4871_cov_16.191952 TRAM_Sal018_4.15_1442_cov_7.907767 TRAM_Sal004_5.25_2001_cov_9.601699 TRAM_Ptre004_0.3_6546_cov_4.866636 Potri.004G134000 TRAM_PtrF004_3.21_7415_cov_15.667296 TRAM_Pan004_1.40_8224_cov_7.833779 TRAM_Aza_dent_met1_4.48 Mes_4.1_000183m.g Mes_4.1_029524m.g Rco.29983.t000207 Lus_10004295.g Lus_10019220.g Ath_5G49160 
+	;
+	IDS otu3 otu8 otu13 otu18 otu23 otu28 otu33 otu38 otu43 otu48 otu53 otu58 otu63 otu68 otu73 otu78 otu83 otu88 otu93 otu98 otu103 otu108 otu113 otu118 otu123 otu128 otu133 otu138 otu143 otu148 otu153 otu158 otu163 otu168 otu173 otu178 otu183 otu188 otu193 otu198 otu203 otu208 otu213 otu218 otu223 otu228 otu233 otu238 otu243 otu248 otu253 otu258 otu263 otu268 otu273 otu278 otu283 ;
+	BLOCKID otus1;
+
+END;
+
+
+BEGIN TREES;
+	Title 'Trees from "met1_sanger_tram_pars.nex"';
+	LINK Taxa = Taxa;
+	TRANSLATE
+[0] 		1 SANG_TMY_11060,
+[1] 		2 SANG_NMY_11131,
+[2] 		3 SANG_NMY_11221,
+[3] 		4 SANG_TMY_10956,
+[4] 		5 SANG_NMY_11145,
+[5] 		6 SANG_NMY_11106,
+[6] 		7 SANG_NMY_11104,
+[7] 		8 SANG_NMY_11141,
+[8] 		9 SANG_DMY_16833,
+[9] 		10 SANG_DMY_10260,
+[10] 		11 SANG_BMY_BFRE_09_07,
+[11] 		12 SANG_BMY_BFRE_09_02,
+[12] 		13 SANG_TMY_11081,
+[13] 		14 SANG_DMY_11323,
+[14] 		15 SANG_BMY_BQB_03_01,
+[15] 		16 SANG_BMY_BKUU_09_03,
+[16] 		17 SANG_BMY_BKUU_09_02,
+[17] 		18 SANG_TMY_11004,
+[18] 		19 SANG_DMY_16835,
+[19] 		20 SANG_TMY_11055,
+[20] 		21 SANG_DMY_10259,
+[21] 		22 TRAM_PtrMY_2.1_2450_cov_12.817142,
+[22] 		23 TRAM_PtrF018_3.24_4087_cov_8.034744,
+[23] 		24 SANG_TMX_11081,
+[24] 		25 SANG_TMX_10956,
+[25] 		26 SANG_TMX_11060,
+[26] 		27 SANG_BMX_BKUU_09_03,
+[27] 		28 SANG_TMX_11004,
+[28] 		29 TRAM_PtrF018_1.35_8763_cov_5.854159,
+[29] 		30 SANG_BMX_BNWL_09_01,
+[30] 		31 Potri.T046100,
+[31] 		32 TRAM_PtrF018_0.70_7284_cov_17.265240,
+[32] 		33 SANG_TMX_11055,
+[33] 		34 SANG_BMX_BQB_03_01,
+[34] 		35 TRAM_Pan018_4.57_5017_cov_7.888380,
+[35] 		36 SANG_BMX_BKUU_09_02,
+[36] 		37 Potri.018G138000,
+[37] 		38 SANG_BMX_BFRE_09_02,
+[38] 		39 SANG_DMX_16835,
+[39] 		40 SANG_DMX_16833,
+[40] 		41 SANG_DMX_10258,
+[41] 		42 SANG_DMX_11323,
+[42] 		43 SANG_BMX_BFRE_09_07,
+[43] 		44 TRAM_Ptre018_0.40_4871_cov_16.191952,
+[44] 		45 TRAM_Sal018_4.15_1442_cov_7.907767,
+[45] 		46 TRAM_Sal004_5.25_2001_cov_9.601699,
+[46] 		47 TRAM_Ptre004_0.3_6546_cov_4.866636,
+[47] 		48 Potri.004G134000,
+[48] 		49 TRAM_PtrF004_3.21_7415_cov_15.667296,
+[49] 		50 TRAM_Pan004_1.40_8224_cov_7.833779,
+[50] 		51 TRAM_Aza_dent_met1_4.48,
+[51] 		52 Mes_4.1_000183m.g,
+[52] 		53 Mes_4.1_029524m.g,
+[53] 		54 Rco.29983.t000207,
+[54] 		55 Lus_10004295.g,
+[55] 		56 Lus_10019220.g,
+[56] 		57 Ath_5G49160;
+	TREE 'tree2++' = ((((54:0.09383,(52:0.01134,53:0.02017):0.11032):0.06471,(56:0.02085,55:0.01417):0.31335):0.01562,(((44:0.00402[%'nexss:sequence_type' = 'string:TRAM' ],((22:0.00324[%'nexss:sequence_type' = 'string:TRAM' ],((((1:0.0[%taxoncolor = 14  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:Y' ],((11:0.0[%taxoncolor = 14  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:Y' ],(12:0.0008[%taxoncolor = 14  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:Y' ],((18:0.0[%taxoncolor = 14  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:Y' ],((16:0.0[%taxoncolor = 14  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:Y' ],17:0.0[%taxoncolor = 14  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:Y' ]):0.0,15:0.0[%taxoncolor = 14  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:Y' ]):0.0008):0.0,(13:0.0[%taxoncolor = 14  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:Y' ],14:0.0[%taxoncolor = 14  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:Y' ]):0.0008):0.0):0.0):0.0,(10:0.0[%taxoncolor = 14  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:Y' ],(9:0.0[%taxoncolor = 14  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:Y' ],(8:0.0[%taxoncolor = 14  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:Y' ],((7:0.0[%taxoncolor = 14  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:Y' ],6:0.0[%taxoncolor = 14  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:Y' ]):0.0008,((4:0.0[%taxoncolor = 14  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:Y' ],(2:0.0008[%taxoncolor = 14  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:Y' ],3:0.0008[%taxoncolor = 14  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:Y' ]):0.0):0.0,5:0.0[%taxoncolor = 14  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:Y' ]):0.0008):0.0):0.00322):0.0):0.0):0.0):0.0,19:0.0[%taxoncolor = 14  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:Y' ]):0.0,20:0.0[%taxoncolor = 14  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:Y' ]):0.0,21:0.0[%taxoncolor = 14  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:Y' ]):0.00079):0.00243,((35:0.00326[%'nexss:sequence_type' = 'string:TRAM' ],((((26:0.0[%taxoncolor = 5  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:X' ],((24:0.0[%taxoncolor = 5  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:X' ],23:0.0008[%taxoncolor = 5  , 'nexss:sequence_type' = 'string:TRAM'  , 'nexss:chromosome' = 'string:X' ]):0.0,25:0.0[%taxoncolor = 5  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:X' ]):0.0):0.0,27:0.0[%taxoncolor = 5  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:X' ]):0.0,28:0.0[%taxoncolor = 5  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:X' ]):0.0,((((32:0.0[%taxoncolor = 5  , 'nexss:sequence_type' = 'string:TRAM'  , 'nexss:chromosome' = 'string:X' ],(33:0.0[%taxoncolor = 5  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:X' ],34:0.0[%taxoncolor = 5  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:X' ]):0.0):0.0,31:0.0):0.0,30:0.0[%taxoncolor = 5  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:X' ]):0.0,29:0.0[%taxoncolor = 5  , 'nexss:sequence_type' = 'string:TRAM'  , 'nexss:chromosome' = 'string:X' ]):0.0):0.00322):0.0008,((43:0.0016[%taxoncolor = 5  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:X' ],(39:0.0[%taxoncolor = 5  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:X' ],((42:0.0[%taxoncolor = 5  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:X' ],41:0.0[%taxoncolor = 5  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:X' ]):0.0,40:0.0[%taxoncolor = 5  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:X' ]):0.0):0.0016):0.0,(36:0.0[%taxoncolor = 5  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:X' ],(38:0.0[%taxoncolor = 5  , 'nexss:sequence_type' = 'string:SANG'  , 'nexss:chromosome' = 'string:X' ],37:0.0008):0.0):0.0016):0.0):0.0008):0.0):0.00652,45:0.01824[%'nexss:sequence_type' = 'string:TRAM' ]):0.04053,(51:0.05137[%'nexss:sequence_type' = 'string:TRAM' ],((50:0.00703[%'nexss:sequence_type' = 'string:TRAM' ],((48:0.00337,49:0.00301[%'nexss:sequence_type' = 'string:TRAM' ]):0.00317,47:0.00383[%'nexss:sequence_type' = 'string:TRAM' ]):0.0):0.00399,46:0.02497[%'nexss:sequence_type' = 'string:TRAM' ]):0.02782):0.01115):0.05786):0.18559,57:0.30838);
+
+END;
+
+
+Begin MESQUITE;
+		MESQUITESCRIPTVERSION 2;
+		TITLE AUTO;
+		tell ProjectCoordinator;
+		timeSaved 1411162070127;
+		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			setID 0 4175996813593988396 otus1;
+		endTell;
+		getWindow;
+		tell It;
+			suppress;
+			setResourcesState false false 10;
+			setPopoutState 400;
+			setExplanationSize 0;
+			setAnnotationSize 0;
+			setFontIncAnnot 0;
+			setFontIncExp 0;
+			setSize 700 572;
+			setLocation 8 22;
+			setFont SanSerif;
+			setFontSize 10;
+			getToolPalette;
+			tell It;
+			endTell;
+			desuppress;
+		endTell;
+		getEmployee  #mesquite.trees.BasicTreeWindowCoord.BasicTreeWindowCoord;
+		tell It;
+			makeTreeWindow #4175996813593988396  #mesquite.trees.BasicTreeWindowMaker.BasicTreeWindowMaker;
+			tell It;
+				suppressEPCResponse;
+				setTreeSource  #mesquite.trees.StoredTrees.StoredTrees;
+				tell It;
+					setTreeBlock 1;
+					toggleUseWeights off;
+				endTell;
+				setAssignedID 886.1411162061987.3438056041548642886;
+				getTreeWindow;
+				tell It;
+					setExplanationSize 30;
+					setAnnotationSize 20;
+					setFontIncAnnot 0;
+					setFontIncExp 0;
+					setSize 690 500;
+					setLocation 8 22;
+					setFont SanSerif;
+					setFontSize 10;
+					getToolPalette;
+					tell It;
+					endTell;
+					setActive;
+					getTreeDrawCoordinator #mesquite.trees.BasicTreeDrawCoordinator.BasicTreeDrawCoordinator;
+				tell It;
+					suppress;
+					setTreeDrawer  #mesquite.trees.StyledSquareTree.StyledSquareTree;
+					tell It;
+						setNodeLocs #mesquite.trees.NodeLocsStandard.NodeLocsStandard;
+						tell It;
+							branchLengthsToggle on;
+							toggleScale off;
+							toggleBroadScale off;
+							toggleCenter on;
+							toggleEven off;
+							setFixedTaxonDistance 0;
+						endTell;
+						setEdgeWidth 2;
+						setStemWidth 2;
+						orientRight;
+					endTell;
+					setBackground White;
+					setBranchColor Black;
+					showNodeNumbers off;
+					showBranchColors on;
+					labelBranchLengths off;
+					centerBrLenLabels on;
+					showBrLensUnspecified on;
+					showBrLenLabelsOnTerminals on;
+					setBrLenLabelColor 0 0 255;
+					setNumBrLenDecimals 6;
+					desuppress;
+					getEmployee #mesquite.trees.BasicDrawTaxonNames.BasicDrawTaxonNames;
+					tell It;
+						setFont Helvetica;
+						setFontSize 12;
+						setColor Black;
+						toggleColorPartition off;
+						toggleColorAssigned on;
+						toggleShadePartition off;
+						toggleShowFootnotes on;
+						toggleNodeLabels on;
+						toggleCenterNodeNames off;
+						toggleShowNames on;
+						namesAngle ?;
+					endTell;
+				endTell;
+					setTreeNumber 1;
+					setDrawingSizeMode 0;
+					toggleLegendFloat on;
+					scale 0;
+					toggleTextOnTree off;
+					showWindow;
+				endTell;
+				desuppressEPCResponse;
+				getEmployee #mesquite.trees.ColorBranches.ColorBranches;
+				tell It;
+					setColor Red;
+					removeColor off;
+				endTell;
+				getEmployee #mesquite.ornamental.BranchNotes.BranchNotes;
+				tell It;
+					setAlwaysOn off;
+				endTell;
+				getEmployee #mesquite.ornamental.ColorTreeByPartition.ColorTreeByPartition;
+				tell It;
+					colorByPartition off;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocDoubles.DrawTreeAssocDoubles;
+				tell It;
+					setOn on;
+					toggleShow consensusFrequency;
+					setDigits 4;
+					writeAsPercentage off;
+					toggleCentred off;
+					toggleHorizontal on;
+					toggleWhiteEdges on;
+					setFontSize 10;
+					setOffset 0  0;
+				endTell;
+				getEmployee #mesquite.ornamental.DrawTreeAssocStrings.DrawTreeAssocStrings;
+				tell It;
+					setOn on;
+					toggleCentred on;
+					toggleHorizontal on;
+					setFontSize 10;
+					setOffset 0  0;
+				endTell;
+				getEmployee #mesquite.trees.TreeInfoValues.TreeInfoValues;
+				tell It;
+					panelOpen false;
+				endTell;
+			endTell;
+		endTell;
+		endTell;
+end;
+
+

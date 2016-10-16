@@ -13,7 +13,8 @@ tree {
 }
 
 scale {
-	visible: false;
+	visible: true;
+	font-size: 18pt;
 }
 
 node[nexss:trophic_level=herbivore] {

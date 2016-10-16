@@ -1,15 +1,10 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<nex:nexml
-    version="0.9"
-    xsi:schemaLocation="http://www.nexml.org/2009 ../xsd/nexml.xsd"
-    xmlns:dendropy="http://packages.python.org/DendroPy/"
-    xmlns="http://www.nexml.org/2009"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:xml="http://www.w3.org/XML/1998/namespace"
-    xmlns:nex="http://www.nexml.org/2009"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
->
-    <otus id="d0">
+<nex:nexml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:nex="http://www.nexml.org/2009"
+  xmlns:nexss="http://phylotastic.org/nexss#"   xmlns:cdao="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns="http://www.nexml.org/2009" version="0.9"
+  xml:base="http://example.org/"
+  xsi:schemaLocation="http://www.nexml.org/2009 ../xsd/nexml.xsd">
+    <otus id="d0" label="roottaxa">
         <otu id="d1" label="Myrmotherula brachyura" />
         <otu id="d2" label="Myrmotherula sclateri" />
         <otu id="d3" label="Myrmotherula ambigua" />
@@ -210,8 +205,8 @@
         <otu id="d198" label="Myrmotherula klagesi" />
         <otu id="d199" label="Myrmotherula ignota" />
     </otus>
-    <trees id="d200" otus="d0">
-        <tree id="d201" xsi:type="nex:FloatTree">
+    <trees id="d200" otus="d0" label="maintree">
+        <tree id="d201" xsi:type="nex:FloatTree" label="tree1">
             <node id="d202" />
             <node id="d203" otu="d1" />
             <node id="d204" label="100">

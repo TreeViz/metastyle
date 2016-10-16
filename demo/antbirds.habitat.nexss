@@ -17,7 +17,7 @@ scale {
 }
 
 /* tree example bootstrap labels
-   make bootstrp labels > 90  widest branch size 
+   make bootstrp labels > 90  widest branch size
    make bootstrp labels > 80  middle size
    make bootstrp labels > 50  skinny  */
 
@@ -39,7 +39,7 @@ node[dendropy:support>=50][dendropy:support<=79] {
 	font-size: 500%;
 }
 
-/* 
+/*
    number of habitats
    = 0  grey  -- we do not have data for
    = 1  red -- only live in one habitat = specialist?
@@ -65,16 +65,16 @@ node[nexss:habitatCount>=2] {
    vulnerable
    near threatened  */
 
-node[nexss:iucnStatus = 'critically endangered'] {
+node[nexss:iucnStatus='critically_endangered'] {
       background-color: red;
 }
-node[nexss:iucnStatus = 'endangered'] {
+node[nexss:iucnStatus='endangered'] {
       background-color: orange;
 }
-node[nexss:iucnStatus = 'near threatened'] {
+node[nexss:iucnStatus='near_threatened'] {
       background-color: yellow;
 }
-node[nexss:iucnStatus = 'vulnerable'] {
+node[nexss:iucnStatus='vulnerable'] {
       background-color: yellow;
 }
 

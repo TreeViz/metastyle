@@ -1,0 +1,82 @@
+#NEXUS
+[written Fri Sep 19 13:45:18 EDT 2014 by Mesquite  version 3.0 (build 644) at 0587390370.wireless.umich.net/35.2.221.162]
+
+BEGIN TAXA;
+	TITLE t;
+	DIMENSIONS NTAX=27;
+	TAXLABELS
+		_Thomomys_monticola OHU65300_Orthogeomys_heterodus PPGMTCYTBA_Pappogeomys_bulleri CGYMTCYTBD_Cratogeomys_gymnurus _Cratogeomys_planiceps__LSUMZ_36303 CGYMTCYTBB_Cratogeomys_fumosus _Cratogeomys_goldmani__G19 CGYMTCYTBA_Cratogeomys_castanops _Cratogeomys_fulvescens_CNMA_41824 1173_Crawford_GA 13260_Walton_FL 12411_Tattnall_GA 5687_Houston_GA 31421_Suwannee_FL 4832_Osceola_FL _Geomys_personatus_megapotamus__AK5242 _Geomys_personatus_personatus__AK7964 _Geomys_tropicalis__TK27098 _Geomys_streckeri__SKD47 _Geomys_attwateri__LSUMZ29596 _Geomys_bursarius_major _Geomys_bursarius_halli _Geomys_texensis_llanensis__PDS_504 _Geomys_arenarius__LSUMZ31456 _Geomys_knoxjonesi__UNTSBB8 Geomys_breviceps_breviceps _Geomys_breviceps__LVT_5500 
+	;
+	IDS d1 d2 d3 d4 d5 d6 d7 d8 d9 d10 d11 d12 d13 d14 d15 d16 d17 d18 d19 d20 d21 d22 d23 d24 d25 d26 d27 ;
+	BLOCKID d0;
+
+END;
+
+
+BEGIN TREES;
+	Title t;
+	LINK Taxa = t;
+	TRANSLATE
+[0] 		1 _Thomomys_monticola,
+[1] 		2 OHU65300_Orthogeomys_heterodus,
+[2] 		3 PPGMTCYTBA_Pappogeomys_bulleri,
+[3] 		4 CGYMTCYTBD_Cratogeomys_gymnurus,
+[4] 		5 _Cratogeomys_planiceps__LSUMZ_36303,
+[5] 		6 CGYMTCYTBB_Cratogeomys_fumosus,
+[6] 		7 _Cratogeomys_goldmani__G19,
+[7] 		8 CGYMTCYTBA_Cratogeomys_castanops,
+[8] 		9 _Cratogeomys_fulvescens_CNMA_41824,
+[9] 		10 1173_Crawford_GA,
+[10] 		11 13260_Walton_FL,
+[11] 		12 12411_Tattnall_GA,
+[12] 		13 5687_Houston_GA,
+[13] 		14 31421_Suwannee_FL,
+[14] 		15 4832_Osceola_FL,
+[15] 		16 _Geomys_personatus_megapotamus__AK5242,
+[16] 		17 _Geomys_personatus_personatus__AK7964,
+[17] 		18 _Geomys_tropicalis__TK27098,
+[18] 		19 _Geomys_streckeri__SKD47,
+[19] 		20 _Geomys_attwateri__LSUMZ29596,
+[20] 		21 _Geomys_bursarius_major,
+[21] 		22 _Geomys_bursarius_halli,
+[22] 		23 _Geomys_texensis_llanensis__PDS_504,
+[23] 		24 _Geomys_arenarius__LSUMZ31456,
+[24] 		25 _Geomys_knoxjonesi__UNTSBB8,
+[25] 		26 Geomys_breviceps_breviceps,
+[26] 		27 _Geomys_breviceps__LVT_5500;
+	TREE 't+' = (1:5.88090136775E6,((((11:2.89064312936E4,10:2.89064312936E4):1.72082097826E6,((12:1.53317199079E5,(14:1.34031735461E5,13:1.34031735461E5):1.92854636185E4):2.92439761804E5,15:4.45756960883E5):1.30397044867E6):1.98238241683E6,((27:2.95804242129E5,26:2.95804242129E5):2.60297037167E6,((((21:1.09723355455E6,22:1.09723355455E6):2.87808351662E5,23:1.38504190622E6):2.16323979376E5,(24:1.07727402568E6,25:1.07727402568E6):5.24091859909E5):5.09450524156E5,((20:1.37664026476E6,19:1.37664026476E6):3.96068405241E5,(18:5.22967892042E5,(17:8.63355054155E4,16:8.63355054155E4):4.36632386626E5):1.24974077796E6):3.38107739753E5):7.87958204053E5):8.33335212574E5):1.09505292695E6,(2:4.20344430563E6,(3:3.90437755208E6,(((8:1.54442903223E6,7:1.54442903223E6):9.8218672335E5,9:2.52661575558E6):4.5089491513E5,(4:1.64754283226E6,(6:1.60155062131E6,5:1.60155062131E6):4.59922109456E4)t:1.32996783845E6)t:9.26866881372E5)t:2.99066753548E5)t:6.23718447704E5)t:1.05373861442E6)t;
+
+END;
+
+
+Begin MESQUITE;
+		MESQUITESCRIPTVERSION 2;
+		TITLE AUTO;
+		tell ProjectCoordinator;
+		timeSaved 1411148718486;
+		getEmployee #mesquite.minimal.ManageTaxa.ManageTaxa;
+		tell It;
+			setID 0 8183397415198454526 d0;
+		endTell;
+		getWindow;
+		tell It;
+			suppress;
+			setResourcesState true false 10;
+			setPopoutState 400;
+			setExplanationSize 0;
+			setAnnotationSize 0;
+			setFontIncAnnot 0;
+			setFontIncExp 0;
+			setSize 700 464;
+			setLocation 8 8;
+			setFont SanSerif;
+			setFontSize 10;
+			getToolPalette;
+			tell It;
+			endTell;
+			desuppress;
+		endTell;
+		endTell;
+end;
+
+

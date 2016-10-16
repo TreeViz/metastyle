@@ -8,15 +8,15 @@
   xml:base="http://example.org/"
   xsi:schemaLocation="http://www.nexml.org/2009 ../xsd/nexml.xsd">
 
-  <otus id="tax1" label="RootTaxaBlock">
+  <otus id="tax1">
     <otu id="t1" label="species 1"/>
     <otu id="t2" label="species 2"/>
     <otu id="t3" label="species 3"/>
     <otu id="t4" label="species 4"/>
     <otu id="t5" label="species 5"/>
   </otus>
-  <trees otus="tax1" id="Trees" label="TreesBlockFromXML">
-    <tree id="tree1" xsi:type="nex:FloatTree" label="tree1">
+  <trees otus="tax1" id="Trees">
+    <tree id="tree1" xsi:type="nex:FloatTree">
       <node id="n1" label="n1" root="true">
         <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta1" property="nexss:syndrome_probability" content="[70,10,20]"/>
         <meta datatype="xsd:string" xsi:type="nex:LiteralMeta" id="meta22" property="nexss:environment" content="benthic"/>
