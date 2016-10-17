@@ -53,6 +53,16 @@ This shows tree nodes alongside a standard table of geologic time scale (GTS). W
 
 ![Geological timeline](https://github.com/OpenTreeOfLife/tree-illustrator/blob/master/wishlist-images/MPN_example.png "GTS example")
 
+## Simple cases
+
+At a minimum, we need to support the simplest cases that are in papers: i.e., colored labels, branch widths, clade designations.
+
+![Simple case](https://github.com/daisieh/phylostylotastic/blob/master/analysis/populus.png "Simple cladogram")
+
+It is also possible that one might want to indicate a group of terminal taxa that don't completely correspond to clade, e.g. geography.
+
+![Non-clade grouping](https://github.com/daisieh/phylostylotastic/blob/master/analysis/lupinus.png "Non-clade grouping")
+
 ## scrap and notes
 
 * I like this: http://epidemic.bio.ed.ac.uk/how_to_read_a_phylogeny
