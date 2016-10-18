@@ -53,6 +53,10 @@ This shows tree nodes alongside a standard table of geologic time scale (GTS). W
 
 ![Geological timeline](https://github.com/OpenTreeOfLife/tree-illustrator/blob/master/wishlist-images/MPN_example.png "GTS example")
 
+## Stacked colored lines (left figure) indicating aggregated states changing along branches
+
+![stacked lines](Rhododendron-supfig.png "stacked lines")
+
 ## Simple cases
 
 At a minimum, we need to support the simplest cases that are in papers: i.e., colored labels, branch widths, clade designations.
@@ -62,6 +66,10 @@ At a minimum, we need to support the simplest cases that are in papers: i.e., co
 It is also possible that one might want to indicate a group of terminal taxa that don't completely correspond to clade, e.g. geography.
 
 ![Non-clade grouping](https://github.com/daisieh/phylostylotastic/blob/master/analysis/lupinus.png "Non-clade grouping")
+
+### Branch labels, markers, and labeled markers
+
+![simple case](lupinus-legcyc.jpg "branch labels and markers")
 
 ## scrap and notes
 
