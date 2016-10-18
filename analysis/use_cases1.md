@@ -71,6 +71,27 @@ It is also possible that one might want to indicate a group of terminal taxa tha
 
 ![simple case](lupinus-legcyc.jpg "branch labels and markers")
 
+## Notes Oct 18
+
+(Please edit freely -- this is not my forte!)
+
+* BAMM colormap tree tricky - in terms of storage - values are assigned to branch segments
+* recruit R expert?
+* artifact of squishing short branches + outline of path
+* need reference marks, not every kind of visual shape, geological timescale, etc
+* don't need to replicate fancy R addons with built-in design decisions
+* main thing is to represent data -- use skeleton indicators that can be enhanced e.g. in Illustrator
+* out of scope to support arbitrary positioning to manage crowding
+* levels of abstraction - data values and style/presentation
+* need to accomodate accessibility -- choosing alternative styles
+* need to define what graphical features to serialize
+* want to serialize data ("bootstrap value"), but this is difficult for tree viewers to handle
+* separate data values and graphical renderings
+* use nexson for data serialization?
+* Stamatakis paper - problem of rooting in tree viewers - e.g. can lead to incorrect placement of bootstrap values
+* serialization - nested vs non-nested representation of trees?
+* newick is inadequate
+
 ## scrap and notes
 
 * I like this: http://epidemic.bio.ed.ac.uk/how_to_read_a_phylogeny
