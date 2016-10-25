@@ -71,6 +71,31 @@ It is also possible that one might want to indicate a group of terminal taxa tha
 
 ![simple case](lupinus-legcyc.jpg "branch labels and markers")
 
+### Vertical labels, branch length calibration rulers, node images and silhouttes
+
+http://www.nature.com/nature/journal/v526/n7574/fig_tab/nature15697_F1.html
+![image](https://cloud.githubusercontent.com/assets/163658/19475951/e9c39a86-9536-11e6-953f-31334364b5f5.png)
+![image](https://cloud.githubusercontent.com/assets/163658/19475961/f4424d72-9536-11e6-8659-eba629d201e3.png)
+
+### Silhouettes, node background, more branch length rulers, notes on nodes
+
+http://www.nature.com/articles/srep20252/figures/2
+![image](https://cloud.githubusercontent.com/assets/163658/19475927/cf37cda4-9536-11e6-9343-6788a25f3ab6.png)
+
+### backgrounds, vertical label bands
+
+http://www.sciencedirect.com/science/article/pii/S1055790313000298#f0005
+![image](https://cloud.githubusercontent.com/assets/163658/19475915/c3dc6668-9536-11e6-97fd-d27f59ac7251.png)
+
+### collapsed nodes, aligned data matrices 
+http://www.nature.com/nature/journal/v504/n7479/fig_tab/nature12779_F2.html
+![image](https://cloud.githubusercontent.com/assets/163658/19475884/a16d54ac-9536-11e6-868d-94a2e0dd882e.png)
+
+### large trees summarized (e.g. metagenomics), circular tree representation, Bars in terminal nodes
+
+http://www.nytimes.com/interactive/2012/06/19/science/0619-microbiome.html?ref=science&_r=0 
+![image](https://cloud.githubusercontent.com/assets/163658/19475876/94d30e94-9536-11e6-91b3-2fb0653d7594.png)
+
 ## Notes Oct 18
 
 (Please edit freely -- this is not my forte!)
