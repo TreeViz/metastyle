@@ -117,6 +117,20 @@ http://www.nytimes.com/interactive/2012/06/19/science/0619-microbiome.html?ref=s
 * serialization - nested vs non-nested representation of trees?
 * newick is inadequate
 
+## notes Oct 25
+
+json-formatted version of something like VEGA
+
+separate visualization from rich data model
+
+one strategy: encourage NeXML
+another: manifest, here comes a bundle of files; node_id
+
+content-value drives format acceptance
+
+unmet need: merge tree-associated content from different sources into usable forme
+
+
 ## scrap and notes
 
 * I like this: http://epidemic.bio.ed.ac.uk/how_to_read_a_phylogeny
