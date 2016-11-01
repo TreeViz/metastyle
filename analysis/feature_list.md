@@ -10,6 +10,8 @@ everything I can think of so far, roughly ordered from top to bottom in terms of
 * branch lines
    * used for: drawing tree
    * features: control thickness, color, style
+* branch lengths
+   * is this too obvious for this list?
 * branch labels
    * used for: assigning a name, ID, or footnote marker to a branch
    * features: 
@@ -30,6 +32,7 @@ everything I can think of so far, roughly ordered from top to bottom in terms of
       * label (variable font, size, color)
       * vertical label is frequently desired
       * clade image with vertical-center alignment to clade
+      * possibly collapse clade with a triangle notation?
 * scale bar 
    * used for: distance or substitutions or other units
    * features: bar, value (length), units
@@ -79,4 +82,7 @@ everything I can think of so far, roughly ordered from top to bottom in terms of
 * link nodes to map via reference lines
    * used for: phylogeography
    * features: variable width, color
-* 
+* pie labels at nodes
+   * used for: ancestral state reconstruction
+   * features: multiple colors, various percentages
+   * could be represented as a small matrix of states and percentages attached to particular nodes
