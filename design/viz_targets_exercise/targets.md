@@ -2,19 +2,7 @@
 
 ## Notes before starting 
 
-The data inputs consist of 
-* a Newick tree in "tree.nwk"
-* tip data in "tip\_data.csv"
-* metadata describing columns and their meaning in "tip\_data\_meta.csv"
-* internal node data in "inode\_data.csv"
-* metadata describing columns and their meaning in "inode\_data\_meta.csv"
-* support values in two additional Newick files, "tree\_boots.nwk" and "tree\_posteriors.nwk"
-
-Each tip or inode has a unique label that is either a species name or a higher taxon name.  In order to accomplish the steps below using the inputs provided, implementations must be able to cross-reference these names with the "Newick label" column in the CSV files.  
-
-Note that using a fully labeled tree by-passes an issue that will come up eventually in real data, which is how to identify nodes in Newick strings that lack internal node labels.  The two obvious solutions are 
-1. use phyloreferences that refer to tip labels, e.g., `label clade(otu1, otu7) "carnivores"`
-1. begin the process of creating a rich tree by assigning inode labels (e.g., inode1, inode2), then save those and use them. 
+Read the notes on the README if you haven't already. 
 
 ## 1. Overall tree style
 
