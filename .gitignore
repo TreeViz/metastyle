@@ -55,3 +55,5 @@ target/
 
 # Temp files (from vi/Vim, etc)
 *.swp
+# my own personal scratch folder
+scratch
