@@ -2,24 +2,32 @@
 
 ## Notes before starting 
 
-* there is a single table of data for tips, and another for internal nodes (inodes)
-* the Newick string and the data tables are cross-referenced by the tip and inode labels in the Newick string.  For readability, I am using higher taxon names (a kind of human-readable label) as node identifiers.  However, it many circumstances these will be arbitrary identifiers. That is, you might have a tree with "inode1" through "inode7" instead of taxon names.  
-* The same thing goes for tips.  In the real world, these are often codes like "D_melanogaster_NM288433".
-* In order to accomplish the steps below using the inputs provided, implementations must be able to match Newick ids with labels that are stored in separate data file.  
+The data inputs consist of 
+* a Newick tree in "tree.nwk"
+* tip data in "tip\_data.csv"
+* internal node data in "inode\_data.csv"
+* support values in two additional Newick files, "tree\_boots.nwk" and "tree\_posteriors.nwk"
 
-## Overall tree style
+Each tip or inode has a unique label that is either a species name or a higher taxon name.  In order to accomplish the steps below using the inputs provided, implementations must be able to cross-reference these names with the "Newick label" column in the CSV files.  
+
+Note that using a fully labeled tree by-passes an issue that will come up eventually in real data, which is how to identify nodes in Newick strings that lack internal node labels.  The two obvious solutions are 
+1. use phyloreferences that refer to tip labels, e.g., `label clade(otu1, otu7) "carnivores"`
+1. begin the process of creating a rich tree by assigning inode labels (e.g., inode1, inode2), then save those and use them. 
+
+## 1. Overall tree style
 
 ### Recipe
 * display tree with 6-point lines in dark green
 * display labels in 16-point Helvetica  
 
 ### Rendering options 
-* 
+* none
+
 ### Extra credit
 
 ### Comments and notes
 
-## Labeling parts
+## 2. Labeling parts
 
 ### Recipe
 * show `vernacularName` as label for inodes "Cervidae", "Bovidae" and "Carnivora" 
@@ -38,7 +46,7 @@
 ### Comments and notes
 
 
-## Images and linkouts
+## 3. Images and linkouts
 
 ### Recipe
 * Display image at `imageURL` for tips
@@ -55,15 +63,30 @@
 
 ### Comments and notes
 
-
-## Categorical and numeric data
+## 4. Multiple types of support values 
 
 ### Recipe
-* align tips with data table 
-   * show viz_sample7.nwk with categorical data in trophic habit column of viz_sample7_data.csv 
-   * show viz_sample7.nwk with numeric data in body mass column of viz_sample7_data.csv 
+* show bootstrap values in green, posterior probabilities in blue
+   * preferred: bootstraps above, posteriors below node
 
 ### Rendering options 
+* show both values on the same side (above or below) the node
+
+### Extra credit
+
+### Comments and notes
+
+## 5. Categorical and numeric data
+
+### Recipe
+* show values of categorical variable `trophic_habit`
+   * preferred: color-coded blocks
+* show values of numeric variable `mass_in_kg`
+   * preferred: bar chart
+
+### Rendering options 
+* categorical values in color with key, or as text labels
+* numeric values in text format, or as bar chart
 
 ### Extra credit
 
