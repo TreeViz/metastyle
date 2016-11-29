@@ -24,6 +24,7 @@ Each tip or inode has a unique label that is either a species name or a higher t
 In order to accomplish the steps described in `targets.md`, implementations must be able to cross-reference these names with the "Newick label" column in the CSV files.  
 
 Note that using a fully labeled tree by-passes an issue that will come up eventually in real data, which is how to identify nodes in Newick strings that lack internal node labels.  The two obvious solutions are 
+
 1. use phyloreferences that refer to tip labels, e.g., `label clade(otu1, otu7) "carnivores"`
 1. begin the process of integration by assigning inode labels (e.g., inode1, inode2), then save those and use them. 
 
