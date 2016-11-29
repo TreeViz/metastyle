@@ -36,18 +36,18 @@ $proj->insert( $forest );
 $proj->insert( $taxa = $forest->make_taxa );
 
 # apply the annotations
-annotate(@tip_data)  if @tip_data;
-annotate(@node_data) if @node_data;
+annotate('tip'  => @tip_data)  if @tip_data;
+annotate('node' => @node_data) if @node_data;
 
 # write output
 print $proj->to_xml;
 
 sub annotate {
-	my ( $data, $meta ) = @_;
+	my ( $prefix, $data, $meta ) = @_;
 
 	# the metadata file is second command line argument
 	$log->info("Going to read data from $data");
-	$proj->set_namespaces( 'node' => $base_url . '/' . $meta );
+	$proj->set_namespaces( $prefix => $base_url . '/' . $meta );
 	my @header;
 	my $csv = Text::CSV->new;
 	open my $fh, "<:encoding(utf8)", $data or die $!;	
@@ -60,7 +60,7 @@ sub annotate {
 			if ( my $node = $tree->get_by_name($line[0]) ) {
 				$log->info("Going to annotate node ".$line[0]);
 				for my $i ( 1 .. $#line ) {
-					$node->set_meta_object( "node:".$header[$i] => $line[$i] );
+					$node->set_meta_object( "$prefix:".$header[$i] => $line[$i] );
 				}
 			}
 			else {
