@@ -1,0 +1,148 @@
+<nex:nexml generator="Bio::Phylo::Project v.0.58" version="0.9" xmlns="http://www.nexml.org/2009" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:map="http://phylomap.org/terms.owl#" xmlns:nex="http://www.nexml.org/2009" xmlns:node="https://github.com/OpenTreeOfLife/phylostylotastic/tree/master/design/viz_targets_exercise/inode_data_meta.csv" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.nexml.org/2009 http://www.nexml.org/2009/nexml.xsd">
+  <meta content="rvosa" datatype="xsd:string" id="ma120" property="dc:creator" xsi:type="nex:LiteralMeta"/>
+  <meta content="2016-11-29T20:14:34" datatype="xsd:date" id="ma121" property="dc:date" xsi:type="nex:LiteralMeta"/>
+  <otus id="os19">
+    <otu id="ou23" label="Bos_taurus"/>
+    <otu id="ou22" label="Cervus_elaphus"/>
+    <otu id="ou25" label="Cystophora_cristata"/>
+    <otu id="ou26" label="Mephitis_mephitis"/>
+    <otu id="ou24" label="Ovis_orientalis"/>
+    <otu id="ou21" label="Rangifer_tarandus"/>
+    <otu id="ou20" label="Suricata_suricatta"/>
+  </otus>
+  <trees id="ts18" otus="os19">
+    <tree id="te3" xsi:type="nex:IntTree">
+      <node id="ne4" label="Mammalia" root="true">
+        <meta content="Mammals" datatype="xsd:string" id="ma90" property="node:vernacularName" xsi:type="nex:LiteralMeta"/>
+        <meta href="http://eol.org/pages/1642/overview" id="ma91" rel="node:infoURL" xsi:type="nex:ResourceMeta"/>
+        <meta content="class" datatype="xsd:string" id="ma92" property="node:rank" xsi:type="nex:LiteralMeta"/>
+        <meta content="NA" datatype="xsd:string" id="ma93" property="node:bootstrap" xsi:type="nex:LiteralMeta"/>
+        <meta content="NA" datatype="xsd:string" id="ma94" property="node:posterior" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="ne5" label="Artiodactyla">
+        <meta content="Even-toed ungulates" datatype="xsd:string" id="ma115" property="node:vernacularName" xsi:type="nex:LiteralMeta"/>
+        <meta href="http://eol.org/pages/7678/overview" id="ma116" rel="node:infoURL" xsi:type="nex:ResourceMeta"/>
+        <meta content="order" datatype="xsd:string" id="ma117" property="node:rank" xsi:type="nex:LiteralMeta"/>
+        <meta content="92" datatype="xsd:integer" id="ma118" property="node:bootstrap" xsi:type="nex:LiteralMeta"/>
+        <meta content="0.81" datatype="xsd:float" id="ma119" property="node:posterior" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="ne12" label="Carnivora">
+        <meta content="Carnivores" datatype="xsd:string" id="ma95" property="node:vernacularName" xsi:type="nex:LiteralMeta"/>
+        <meta href="http://eol.org/pages/7662/overview" id="ma96" rel="node:infoURL" xsi:type="nex:ResourceMeta"/>
+        <meta content="order" datatype="xsd:string" id="ma97" property="node:rank" xsi:type="nex:LiteralMeta"/>
+        <meta content="96" datatype="xsd:integer" id="ma98" property="node:bootstrap" xsi:type="nex:LiteralMeta"/>
+        <meta content="0.89" datatype="xsd:float" id="ma99" property="node:posterior" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="ne6" label="Cervidae">
+        <meta content="Cervids" datatype="xsd:string" id="ma110" property="node:vernacularName" xsi:type="nex:LiteralMeta"/>
+        <meta href="http://eol.org/pages/7685/overview" id="ma111" rel="node:infoURL" xsi:type="nex:ResourceMeta"/>
+        <meta content="family" datatype="xsd:string" id="ma112" property="node:rank" xsi:type="nex:LiteralMeta"/>
+        <meta content="98" datatype="xsd:integer" id="ma113" property="node:bootstrap" xsi:type="nex:LiteralMeta"/>
+        <meta content="0.96" datatype="xsd:float" id="ma114" property="node:posterior" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="ne9" label="Bovidae">
+        <meta content="Bovids" datatype="xsd:string" id="ma105" property="node:vernacularName" xsi:type="nex:LiteralMeta"/>
+        <meta href="http://eol.org/pages/7687/overview" id="ma106" rel="node:infoURL" xsi:type="nex:ResourceMeta"/>
+        <meta content="family" datatype="xsd:string" id="ma107" property="node:rank" xsi:type="nex:LiteralMeta"/>
+        <meta content="99" datatype="xsd:integer" id="ma108" property="node:bootstrap" xsi:type="nex:LiteralMeta"/>
+        <meta content="0.95" datatype="xsd:float" id="ma109" property="node:posterior" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="ne13" label="Suricata_suricatta" otu="ou20">
+        <meta content="Meerkat" datatype="xsd:string" id="ma63" property="node:vernacularName" xsi:type="nex:LiteralMeta"/>
+        <meta href="http://media.eol.org/content/2016/08/16/05/67138_orig.jpg" id="ma64" rel="node:imageURL" xsi:type="nex:ResourceMeta"/>
+        <meta content="CC-BY-SA" datatype="xsd:string" id="ma65" property="node:imageLicense" xsi:type="nex:LiteralMeta"/>
+        <meta content="Sara&amp;Joachim" datatype="xsd:string" id="ma66" property="node:imageAuthor" xsi:type="nex:LiteralMeta"/>
+        <meta href="http://eol.org/pages/311580/overview" id="ma67" rel="node:infoURL" xsi:type="nex:ResourceMeta"/>
+        <meta content="0.73" datatype="xsd:float" id="ma68" property="node:mass_in_kg" xsi:type="nex:LiteralMeta"/>
+        <meta content="carnivore" datatype="xsd:string" id="ma69" property="node:trophic_habit" xsi:type="nex:LiteralMeta"/>
+        <meta content="37032" datatype="xsd:integer" id="ma70" property="node:ncbi_taxid" xsi:type="nex:LiteralMeta"/>
+        <meta content="species" datatype="xsd:string" id="ma71" property="node:rank" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="ne14" label="Caniformia">
+        <meta content="Dog-like" datatype="xsd:string" id="ma100" property="node:vernacularName" xsi:type="nex:LiteralMeta"/>
+        <meta href="http://eol.org/pages/2849494/overview" id="ma101" rel="node:infoURL" xsi:type="nex:ResourceMeta"/>
+        <meta content="suborder" datatype="xsd:string" id="ma102" property="node:rank" xsi:type="nex:LiteralMeta"/>
+        <meta content="98" datatype="xsd:integer" id="ma103" property="node:bootstrap" xsi:type="nex:LiteralMeta"/>
+        <meta content="0.93" datatype="xsd:float" id="ma104" property="node:posterior" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="ne7" label="Rangifer_tarandus" otu="ou21">
+        <meta content="Reindeer" datatype="xsd:string" id="ma27" property="node:vernacularName" xsi:type="nex:LiteralMeta"/>
+        <meta href="http://media.eol.org/content/2012/06/13/00/48543_orig.jpg" id="ma28" rel="node:imageURL" xsi:type="nex:ResourceMeta"/>
+        <meta content="CC-BY-SA" datatype="xsd:string" id="ma29" property="node:imageLicense" xsi:type="nex:LiteralMeta"/>
+        <meta content="Alexandre Buisse (Nattfodd)" datatype="xsd:string" id="ma30" property="node:imageAuthor" xsi:type="nex:LiteralMeta"/>
+        <meta href="http://eol.org/pages/328653/overview" id="ma31" rel="node:infoURL" xsi:type="nex:ResourceMeta"/>
+        <meta content="109.09" datatype="xsd:float" id="ma32" property="node:mass_in_kg" xsi:type="nex:LiteralMeta"/>
+        <meta content="herbivore" datatype="xsd:string" id="ma33" property="node:trophic_habit" xsi:type="nex:LiteralMeta"/>
+        <meta content="9870" datatype="xsd:integer" id="ma34" property="node:ncbi_taxid" xsi:type="nex:LiteralMeta"/>
+        <meta content="species" datatype="xsd:string" id="ma35" property="node:rank" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="ne8" label="Cervus_elaphus" otu="ou22">
+        <meta content="Red deer" datatype="xsd:string" id="ma36" property="node:vernacularName" xsi:type="nex:LiteralMeta"/>
+        <meta href="http://media.eol.org/content/2014/09/16/00/20239_orig.jpg" id="ma37" rel="node:imageURL" xsi:type="nex:ResourceMeta"/>
+        <meta content="CC-BY-SA" datatype="xsd:string" id="ma38" property="node:imageLicense" xsi:type="nex:LiteralMeta"/>
+        <meta content="Sciadopitys" datatype="xsd:string" id="ma39" property="node:imageAuthor" xsi:type="nex:LiteralMeta"/>
+        <meta href="http://eol.org/pages/328649/overview" id="ma40" rel="node:infoURL" xsi:type="nex:ResourceMeta"/>
+        <meta content="240.87" datatype="xsd:float" id="ma41" property="node:mass_in_kg" xsi:type="nex:LiteralMeta"/>
+        <meta content="herbivore" datatype="xsd:string" id="ma42" property="node:trophic_habit" xsi:type="nex:LiteralMeta"/>
+        <meta content="9860" datatype="xsd:integer" id="ma43" property="node:ncbi_taxid" xsi:type="nex:LiteralMeta"/>
+        <meta content="species" datatype="xsd:string" id="ma44" property="node:rank" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="ne10" label="Bos_taurus" otu="ou23">
+        <meta content="Cattle" datatype="xsd:string" id="ma45" property="node:vernacularName" xsi:type="nex:LiteralMeta"/>
+        <meta href="http://media.eol.org/content/2016/06/04/10/27046_orig.jpg" id="ma46" rel="node:imageURL" xsi:type="nex:ResourceMeta"/>
+        <meta content="CC-BY-SA" datatype="xsd:string" id="ma47" property="node:imageLicense" xsi:type="nex:LiteralMeta"/>
+        <meta content="Cynthia Sims Parr" datatype="xsd:string" id="ma48" property="node:imageAuthor" xsi:type="nex:LiteralMeta"/>
+        <meta href="http://eol.org/pages/328699/overview" id="ma49" rel="node:infoURL" xsi:type="nex:ResourceMeta"/>
+        <meta content="618.64" datatype="xsd:float" id="ma50" property="node:mass_in_kg" xsi:type="nex:LiteralMeta"/>
+        <meta content="herbivore" datatype="xsd:string" id="ma51" property="node:trophic_habit" xsi:type="nex:LiteralMeta"/>
+        <meta content="9913" datatype="xsd:integer" id="ma52" property="node:ncbi_taxid" xsi:type="nex:LiteralMeta"/>
+        <meta content="species" datatype="xsd:string" id="ma53" property="node:rank" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="ne11" label="Ovis_orientalis" otu="ou24">
+        <meta content="Asiatic mouflon" datatype="xsd:string" id="ma54" property="node:vernacularName" xsi:type="nex:LiteralMeta"/>
+        <meta href="http://media.eol.org/content/2015/05/20/03/80720_orig.jpg" id="ma55" rel="node:imageURL" xsi:type="nex:ResourceMeta"/>
+        <meta content="CC-BY-SA" datatype="xsd:string" id="ma56" property="node:imageLicense" xsi:type="nex:LiteralMeta"/>
+        <meta content="J\x9Arg Hempel" datatype="xsd:string" id="ma57" property="node:imageAuthor" xsi:type="nex:LiteralMeta"/>
+        <meta href="http://eol.org/pages/311906/overview" id="ma58" rel="node:infoURL" xsi:type="nex:ResourceMeta"/>
+        <meta content="39.1" datatype="xsd:float" id="ma59" property="node:mass_in_kg" xsi:type="nex:LiteralMeta"/>
+        <meta content="herbivore" datatype="xsd:string" id="ma60" property="node:trophic_habit" xsi:type="nex:LiteralMeta"/>
+        <meta content="469796" datatype="xsd:integer" id="ma61" property="node:ncbi_taxid" xsi:type="nex:LiteralMeta"/>
+        <meta content="species" datatype="xsd:string" id="ma62" property="node:rank" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="ne15" label="Cystophora_cristata" otu="ou25">
+        <meta content="Hooded seal" datatype="xsd:string" id="ma72" property="node:vernacularName" xsi:type="nex:LiteralMeta"/>
+        <meta href="http://media.eol.org/content/2013/06/18/07/63362_orig.jpg" id="ma73" rel="node:imageURL" xsi:type="nex:ResourceMeta"/>
+        <meta content="CC-BY-SA" datatype="xsd:string" id="ma74" property="node:imageLicense" xsi:type="nex:LiteralMeta"/>
+        <meta content="Ecomare, Salko de Wolf" datatype="xsd:string" id="ma75" property="node:imageAuthor" xsi:type="nex:LiteralMeta"/>
+        <meta href="http://eol.org/pages/328632/overview" id="ma76" rel="node:infoURL" xsi:type="nex:ResourceMeta"/>
+        <meta content="278.9" datatype="xsd:float" id="ma77" property="node:mass_in_kg" xsi:type="nex:LiteralMeta"/>
+        <meta content="omnivore" datatype="xsd:string" id="ma78" property="node:trophic_habit" xsi:type="nex:LiteralMeta"/>
+        <meta content="39293" datatype="xsd:integer" id="ma79" property="node:ncbi_taxid" xsi:type="nex:LiteralMeta"/>
+        <meta content="species" datatype="xsd:string" id="ma80" property="node:rank" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <node id="ne16" label="Mephitis_mephitis" otu="ou26">
+        <meta content="Striped skunk" datatype="xsd:string" id="ma81" property="node:vernacularName" xsi:type="nex:LiteralMeta"/>
+        <meta href="http://media.eol.org/content/2012/06/15/06/75234_orig.jpg" id="ma82" rel="node:imageURL" xsi:type="nex:ResourceMeta"/>
+        <meta content="CC-BY" datatype="xsd:string" id="ma83" property="node:imageLicense" xsi:type="nex:LiteralMeta"/>
+        <meta content="Kevin Bowman" datatype="xsd:string" id="ma84" property="node:imageAuthor" xsi:type="nex:LiteralMeta"/>
+        <meta href="http://eol.org/pages/328593/overview" id="ma85" rel="node:infoURL" xsi:type="nex:ResourceMeta"/>
+        <meta content="2.4" datatype="xsd:float" id="ma86" property="node:mass_in_kg" xsi:type="nex:LiteralMeta"/>
+        <meta content="omnivore" datatype="xsd:string" id="ma87" property="node:trophic_habit" xsi:type="nex:LiteralMeta"/>
+        <meta content="30548" datatype="xsd:integer" id="ma88" property="node:ncbi_taxid" xsi:type="nex:LiteralMeta"/>
+        <meta content="species" datatype="xsd:string" id="ma89" property="node:rank" xsi:type="nex:LiteralMeta"/>
+      </node>
+      <edge id="edge5" length="1" source="ne4" target="ne5"/>
+      <edge id="edge12" length="1" source="ne4" target="ne12"/>
+      <edge id="edge6" length="1" source="ne5" target="ne6"/>
+      <edge id="edge9" length="1" source="ne5" target="ne9"/>
+      <edge id="edge13" length="2" source="ne12" target="ne13"/>
+      <edge id="edge14" length="1" source="ne12" target="ne14"/>
+      <edge id="edge7" length="1" source="ne6" target="ne7"/>
+      <edge id="edge8" length="1" source="ne6" target="ne8"/>
+      <edge id="edge10" length="1" source="ne9" target="ne10"/>
+      <edge id="edge11" length="1" source="ne9" target="ne11"/>
+      <edge id="edge15" length="1" source="ne14" target="ne15"/>
+      <edge id="edge16" length="1" source="ne14" target="ne16"/>
+    </tree>
+  </trees>
+</nex:nexml>
