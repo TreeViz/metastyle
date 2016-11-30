@@ -48,15 +48,20 @@ for my $node ( @{ $project->get_items(_NODE_) } ) {
 	}
 	
 	# attach under confidence node
-	my $c = $fac->create_meta( '-triple' => { 'px:confidence' => 1 } );
-	$node->add_meta($c);
+	my $c;	
 	for my $m ( @{ $node->get_meta(qw(node:bootstrap node:posterior)) } ) {
 		my ( $p, $o ) = ( $m->get_predicate, $m->get_object );
 		$p =~ s/node:/px:/;
 		$m->set_triple( $p => $o );	
-		$c->add_meta($m);
+		if ( not $c ) {
+			$c = $fac->create_meta( '-triple' => { 'px:confidence' => $m } );
+			$node->add_meta($c);
+		}
+		else {		
+			$c->add_meta($m);
+		}
 		$node->remove_meta($m);	
-	}
+	}	
 }
 
 # attach license and rightsHolder to image

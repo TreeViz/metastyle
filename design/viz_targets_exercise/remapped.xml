@@ -1,8 +1,8 @@
 <nex:nexml generator="Bio::Phylo::Project v.0.58" version="0.9" xmlns="http://www.nexml.org/2009" xmlns:cdao="http://www.evolutionaryontology.org/cdao/1.0/cdao.owl#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dwc="http://rs.tdwg.org/dwc/terms/" xmlns:map="http://phylomap.org/terms.owl#" xmlns:nex="http://www.nexml.org/2009" xmlns:node="https://github.com/OpenTreeOfLife/phylostylotastic/tree/master/design/viz_targets_exercise/inode_data_meta.csv" xmlns:px="http://www.phyloxml.org/1.10/terms#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:tip="https://github.com/OpenTreeOfLife/phylostylotastic/tree/master/design/viz_targets_exercise/tip_data_meta.csv" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.nexml.org/2009 http://www.nexml.org/2009/nexml.xsd">
   <meta content="rvosa" datatype="xsd:string" id="ma119" property="dc:creator" xsi:type="nex:LiteralMeta"/>
   <meta content="2016-11-29T20:18:33" datatype="xsd:string" id="ma120" property="dc:date" xsi:type="nex:LiteralMeta"/>
-  <meta content="rutger.vos" datatype="xsd:string" id="ma163" property="dc:creator" xsi:type="nex:LiteralMeta"/>
-  <meta content="2016-11-30T11:04:23" datatype="xsd:date" id="ma164" property="dc:date" xsi:type="nex:LiteralMeta"/>
+  <meta content="rutger.vos" datatype="xsd:string" id="ma156" property="dc:creator" xsi:type="nex:LiteralMeta"/>
+  <meta content="2016-11-30T11:13:17" datatype="xsd:date" id="ma157" property="dc:date" xsi:type="nex:LiteralMeta"/>
   <otus id="os19">
     <otu id="ou23" label="Bos_taurus"/>
     <otu id="ou22" label="Cervus_elaphus"/>
@@ -18,45 +18,45 @@
         <meta content="Mammals" datatype="xsd:string" id="ma13" property="dwc:vernacularName" xsi:type="nex:LiteralMeta"/>
         <meta href="http://eol.org/pages/1642/overview" id="ma14" rel="cdao:has_External_Reference" xsi:type="nex:ResourceMeta"/>
         <meta content="class" datatype="xsd:string" id="ma15" property="dwc:taxonRank" xsi:type="nex:LiteralMeta"/>
-        <meta content="1" datatype="xsd:integer" id="ma121" property="px:confidence" xsi:type="nex:LiteralMeta">
-          <meta content="NA" datatype="xsd:string" id="ma16" property="px:bootstrap" xsi:type="nex:LiteralMeta"/>
+        <meta id="ma121" rel="px:confidence" xsi:type="nex:ResourceMeta">
           <meta content="NA" datatype="xsd:string" id="ma17" property="px:posterior" xsi:type="nex:LiteralMeta"/>
+          <meta content="NA" datatype="xsd:string" id="ma16" property="px:bootstrap" xsi:type="nex:LiteralMeta"/>
         </meta>
       </node>
       <node about="#ne5" id="ne5" label="Artiodactyla">
         <meta content="Even-toed ungulates" datatype="xsd:string" id="ma19" property="dwc:vernacularName" xsi:type="nex:LiteralMeta"/>
         <meta href="http://eol.org/pages/7678/overview" id="ma20" rel="cdao:has_External_Reference" xsi:type="nex:ResourceMeta"/>
         <meta content="order" datatype="xsd:string" id="ma21" property="dwc:taxonRank" xsi:type="nex:LiteralMeta"/>
-        <meta content="1" datatype="xsd:integer" id="ma122" property="px:confidence" xsi:type="nex:LiteralMeta">
-          <meta content="92" datatype="xsd:integer" id="ma22" property="px:bootstrap" xsi:type="nex:LiteralMeta"/>
+        <meta id="ma122" rel="px:confidence" xsi:type="nex:ResourceMeta">
           <meta content="0.81" datatype="xsd:float" id="ma23" property="px:posterior" xsi:type="nex:LiteralMeta"/>
+          <meta content="92" datatype="xsd:integer" id="ma22" property="px:bootstrap" xsi:type="nex:LiteralMeta"/>
         </meta>
       </node>
       <node about="#ne12" id="ne12" label="Carnivora">
         <meta content="Carnivores" datatype="xsd:string" id="ma25" property="dwc:vernacularName" xsi:type="nex:LiteralMeta"/>
         <meta href="http://eol.org/pages/7662/overview" id="ma26" rel="cdao:has_External_Reference" xsi:type="nex:ResourceMeta"/>
         <meta content="order" datatype="xsd:string" id="ma27" property="dwc:taxonRank" xsi:type="nex:LiteralMeta"/>
-        <meta content="1" datatype="xsd:integer" id="ma123" property="px:confidence" xsi:type="nex:LiteralMeta">
-          <meta content="96" datatype="xsd:integer" id="ma28" property="px:bootstrap" xsi:type="nex:LiteralMeta"/>
+        <meta id="ma123" rel="px:confidence" xsi:type="nex:ResourceMeta">
           <meta content="0.89" datatype="xsd:float" id="ma29" property="px:posterior" xsi:type="nex:LiteralMeta"/>
+          <meta content="96" datatype="xsd:integer" id="ma28" property="px:bootstrap" xsi:type="nex:LiteralMeta"/>
         </meta>
       </node>
       <node about="#ne6" id="ne6" label="Cervidae">
         <meta content="Cervids" datatype="xsd:string" id="ma31" property="dwc:vernacularName" xsi:type="nex:LiteralMeta"/>
         <meta href="http://eol.org/pages/7685/overview" id="ma32" rel="cdao:has_External_Reference" xsi:type="nex:ResourceMeta"/>
         <meta content="family" datatype="xsd:string" id="ma33" property="dwc:taxonRank" xsi:type="nex:LiteralMeta"/>
-        <meta content="1" datatype="xsd:integer" id="ma124" property="px:confidence" xsi:type="nex:LiteralMeta">
-          <meta content="98" datatype="xsd:integer" id="ma34" property="px:bootstrap" xsi:type="nex:LiteralMeta"/>
+        <meta id="ma124" rel="px:confidence" xsi:type="nex:ResourceMeta">
           <meta content="0.96" datatype="xsd:float" id="ma35" property="px:posterior" xsi:type="nex:LiteralMeta"/>
+          <meta content="98" datatype="xsd:integer" id="ma34" property="px:bootstrap" xsi:type="nex:LiteralMeta"/>
         </meta>
       </node>
       <node about="#ne9" id="ne9" label="Bovidae">
         <meta content="Bovids" datatype="xsd:string" id="ma37" property="dwc:vernacularName" xsi:type="nex:LiteralMeta"/>
         <meta href="http://eol.org/pages/7687/overview" id="ma38" rel="cdao:has_External_Reference" xsi:type="nex:ResourceMeta"/>
         <meta content="family" datatype="xsd:string" id="ma39" property="dwc:taxonRank" xsi:type="nex:LiteralMeta"/>
-        <meta content="1" datatype="xsd:integer" id="ma125" property="px:confidence" xsi:type="nex:LiteralMeta">
-          <meta content="99" datatype="xsd:integer" id="ma40" property="px:bootstrap" xsi:type="nex:LiteralMeta"/>
+        <meta id="ma125" rel="px:confidence" xsi:type="nex:ResourceMeta">
           <meta content="0.95" datatype="xsd:float" id="ma41" property="px:posterior" xsi:type="nex:LiteralMeta"/>
+          <meta content="99" datatype="xsd:integer" id="ma40" property="px:bootstrap" xsi:type="nex:LiteralMeta"/>
         </meta>
       </node>
       <node about="#ne13" id="ne13" label="Suricata_suricatta" otu="ou20">
@@ -68,15 +68,14 @@
         <meta href="http://eol.org/pages/311580/overview" id="ma47" rel="cdao:has_External_Reference" xsi:type="nex:ResourceMeta"/>
         <meta content="37032" datatype="xsd:integer" id="ma50" property="dwc:taxonID" xsi:type="nex:LiteralMeta"/>
         <meta content="species" datatype="xsd:string" id="ma51" property="dwc:taxonRank" xsi:type="nex:LiteralMeta"/>
-        <meta content="1" datatype="xsd:integer" id="ma126" property="px:confidence" xsi:type="nex:LiteralMeta"/>
       </node>
       <node about="#ne14" id="ne14" label="Caniformia">
         <meta content="Dog-like" datatype="xsd:string" id="ma53" property="dwc:vernacularName" xsi:type="nex:LiteralMeta"/>
         <meta href="http://eol.org/pages/2849494/overview" id="ma54" rel="cdao:has_External_Reference" xsi:type="nex:ResourceMeta"/>
         <meta content="suborder" datatype="xsd:string" id="ma55" property="dwc:taxonRank" xsi:type="nex:LiteralMeta"/>
-        <meta content="1" datatype="xsd:integer" id="ma127" property="px:confidence" xsi:type="nex:LiteralMeta">
-          <meta content="98" datatype="xsd:integer" id="ma56" property="px:bootstrap" xsi:type="nex:LiteralMeta"/>
+        <meta id="ma126" rel="px:confidence" xsi:type="nex:ResourceMeta">
           <meta content="0.93" datatype="xsd:float" id="ma57" property="px:posterior" xsi:type="nex:LiteralMeta"/>
+          <meta content="98" datatype="xsd:integer" id="ma56" property="px:bootstrap" xsi:type="nex:LiteralMeta"/>
         </meta>
       </node>
       <node about="#ne7" id="ne7" label="Rangifer_tarandus" otu="ou21">
@@ -88,7 +87,6 @@
         <meta href="http://eol.org/pages/328653/overview" id="ma63" rel="cdao:has_External_Reference" xsi:type="nex:ResourceMeta"/>
         <meta content="9870" datatype="xsd:integer" id="ma66" property="dwc:taxonID" xsi:type="nex:LiteralMeta"/>
         <meta content="species" datatype="xsd:string" id="ma67" property="dwc:taxonRank" xsi:type="nex:LiteralMeta"/>
-        <meta content="1" datatype="xsd:integer" id="ma128" property="px:confidence" xsi:type="nex:LiteralMeta"/>
       </node>
       <node about="#ne8" id="ne8" label="Cervus_elaphus" otu="ou22">
         <meta content="Red deer" datatype="xsd:string" id="ma69" property="dwc:vernacularName" xsi:type="nex:LiteralMeta"/>
@@ -99,7 +97,6 @@
         <meta href="http://eol.org/pages/328649/overview" id="ma73" rel="cdao:has_External_Reference" xsi:type="nex:ResourceMeta"/>
         <meta content="9860" datatype="xsd:integer" id="ma76" property="dwc:taxonID" xsi:type="nex:LiteralMeta"/>
         <meta content="species" datatype="xsd:string" id="ma77" property="dwc:taxonRank" xsi:type="nex:LiteralMeta"/>
-        <meta content="1" datatype="xsd:integer" id="ma129" property="px:confidence" xsi:type="nex:LiteralMeta"/>
       </node>
       <node about="#ne10" id="ne10" label="Bos_taurus" otu="ou23">
         <meta content="Cattle" datatype="xsd:string" id="ma79" property="dwc:vernacularName" xsi:type="nex:LiteralMeta"/>
@@ -110,7 +107,6 @@
         <meta href="http://eol.org/pages/328699/overview" id="ma83" rel="cdao:has_External_Reference" xsi:type="nex:ResourceMeta"/>
         <meta content="9913" datatype="xsd:integer" id="ma86" property="dwc:taxonID" xsi:type="nex:LiteralMeta"/>
         <meta content="species" datatype="xsd:string" id="ma87" property="dwc:taxonRank" xsi:type="nex:LiteralMeta"/>
-        <meta content="1" datatype="xsd:integer" id="ma130" property="px:confidence" xsi:type="nex:LiteralMeta"/>
       </node>
       <node about="#ne11" id="ne11" label="Ovis_orientalis" otu="ou24">
         <meta content="Asiatic mouflon" datatype="xsd:string" id="ma89" property="dwc:vernacularName" xsi:type="nex:LiteralMeta"/>
@@ -121,7 +117,6 @@
         <meta href="http://eol.org/pages/311906/overview" id="ma93" rel="cdao:has_External_Reference" xsi:type="nex:ResourceMeta"/>
         <meta content="469796" datatype="xsd:integer" id="ma96" property="dwc:taxonID" xsi:type="nex:LiteralMeta"/>
         <meta content="species" datatype="xsd:string" id="ma97" property="dwc:taxonRank" xsi:type="nex:LiteralMeta"/>
-        <meta content="1" datatype="xsd:integer" id="ma131" property="px:confidence" xsi:type="nex:LiteralMeta"/>
       </node>
       <node about="#ne15" id="ne15" label="Cystophora_cristata" otu="ou25">
         <meta content="Hooded seal" datatype="xsd:string" id="ma99" property="dwc:vernacularName" xsi:type="nex:LiteralMeta"/>
@@ -132,7 +127,6 @@
         <meta href="http://eol.org/pages/328632/overview" id="ma103" rel="cdao:has_External_Reference" xsi:type="nex:ResourceMeta"/>
         <meta content="39293" datatype="xsd:integer" id="ma106" property="dwc:taxonID" xsi:type="nex:LiteralMeta"/>
         <meta content="species" datatype="xsd:string" id="ma107" property="dwc:taxonRank" xsi:type="nex:LiteralMeta"/>
-        <meta content="1" datatype="xsd:integer" id="ma132" property="px:confidence" xsi:type="nex:LiteralMeta"/>
       </node>
       <node about="#ne16" id="ne16" label="Mephitis_mephitis" otu="ou26">
         <meta content="Striped skunk" datatype="xsd:string" id="ma109" property="dwc:vernacularName" xsi:type="nex:LiteralMeta"/>
@@ -143,7 +137,6 @@
         <meta href="http://eol.org/pages/328593/overview" id="ma113" rel="cdao:has_External_Reference" xsi:type="nex:ResourceMeta"/>
         <meta content="30548" datatype="xsd:integer" id="ma116" property="dwc:taxonID" xsi:type="nex:LiteralMeta"/>
         <meta content="species" datatype="xsd:string" id="ma117" property="dwc:taxonRank" xsi:type="nex:LiteralMeta"/>
-        <meta content="1" datatype="xsd:integer" id="ma133" property="px:confidence" xsi:type="nex:LiteralMeta"/>
       </node>
       <edge id="edge18" length="1" source="ne4" target="ne5"/>
       <edge id="edge24" length="1" source="ne4" target="ne12"/>
@@ -159,45 +152,45 @@
       <edge id="edge108" length="1" source="ne14" target="ne16"/>
     </tree>
   </trees>
-  <characters id="cs137" label="mass_in_kg" otus="os19" xsi:type="nex:ContinuousCells">
+  <characters id="cs130" label="mass_in_kg" otus="os19" xsi:type="nex:ContinuousCells">
     <format>
-      <char id="cr140"/>
+      <char id="cr133"/>
     </format>
     <matrix>
-      <row id="rw139" otu="ou20">
-        <cell char="cr140" state="0.73"/>
+      <row id="rw132" otu="ou20">
+        <cell char="cr133" state="0.73"/>
       </row>
-      <row id="rw141" otu="ou21">
-        <cell char="cr140" state="109.09"/>
+      <row id="rw134" otu="ou21">
+        <cell char="cr133" state="109.09"/>
       </row>
-      <row id="rw142" otu="ou22">
-        <cell char="cr140" state="240.87"/>
+      <row id="rw135" otu="ou22">
+        <cell char="cr133" state="240.87"/>
       </row>
-      <row id="rw143" otu="ou23">
-        <cell char="cr140" state="618.64"/>
+      <row id="rw136" otu="ou23">
+        <cell char="cr133" state="618.64"/>
       </row>
-      <row id="rw144" otu="ou24">
-        <cell char="cr140" state="39.1"/>
+      <row id="rw137" otu="ou24">
+        <cell char="cr133" state="39.1"/>
       </row>
-      <row id="rw145" otu="ou25">
-        <cell char="cr140" state="278.9"/>
+      <row id="rw138" otu="ou25">
+        <cell char="cr133" state="278.9"/>
       </row>
-      <row id="rw146" otu="ou26">
-        <cell char="cr140" state="2.4"/>
+      <row id="rw139" otu="ou26">
+        <cell char="cr133" state="2.4"/>
       </row>
     </matrix>
   </characters>
-  <characters id="cs150" label="trophic_habit" otus="os19" xsi:type="nex:StandardCells">
+  <characters id="cs143" label="trophic_habit" otus="os19" xsi:type="nex:StandardCells">
     <format>
-      <states id="ss151">
+      <states id="ss144">
         <state about="#s1" id="s1" symbol="0">
-          <meta content="carnivore" datatype="xsd:string" id="ma161" property="rdfs:label" xsi:type="nex:LiteralMeta"/>
+          <meta content="carnivore" datatype="xsd:string" id="ma154" property="rdfs:label" xsi:type="nex:LiteralMeta"/>
         </state>
         <state about="#s2" id="s2" symbol="1">
-          <meta content="herbivore" datatype="xsd:string" id="ma162" property="rdfs:label" xsi:type="nex:LiteralMeta"/>
+          <meta content="herbivore" datatype="xsd:string" id="ma155" property="rdfs:label" xsi:type="nex:LiteralMeta"/>
         </state>
         <state about="#s3" id="s3" symbol="2">
-          <meta content="omnivore" datatype="xsd:string" id="ma160" property="rdfs:label" xsi:type="nex:LiteralMeta"/>
+          <meta content="omnivore" datatype="xsd:string" id="ma153" property="rdfs:label" xsi:type="nex:LiteralMeta"/>
         </state>
         <uncertain_state_set id="s4" symbol="-"/>
         <uncertain_state_set id="s5" symbol="?">
@@ -207,29 +200,29 @@
           <member state="s4"/>
         </uncertain_state_set>
       </states>
-      <char id="cr153" states="ss151"/>
+      <char id="cr146" states="ss144"/>
     </format>
     <matrix>
-      <row id="rw152" otu="ou20">
-        <cell char="cr153" state="s1"/>
+      <row id="rw145" otu="ou20">
+        <cell char="cr146" state="s1"/>
       </row>
-      <row id="rw154" otu="ou21">
-        <cell char="cr153" state="s2"/>
+      <row id="rw147" otu="ou21">
+        <cell char="cr146" state="s2"/>
       </row>
-      <row id="rw155" otu="ou22">
-        <cell char="cr153" state="s2"/>
+      <row id="rw148" otu="ou22">
+        <cell char="cr146" state="s2"/>
       </row>
-      <row id="rw156" otu="ou23">
-        <cell char="cr153" state="s2"/>
+      <row id="rw149" otu="ou23">
+        <cell char="cr146" state="s2"/>
       </row>
-      <row id="rw157" otu="ou24">
-        <cell char="cr153" state="s2"/>
+      <row id="rw150" otu="ou24">
+        <cell char="cr146" state="s2"/>
       </row>
-      <row id="rw158" otu="ou25">
-        <cell char="cr153" state="s3"/>
+      <row id="rw151" otu="ou25">
+        <cell char="cr146" state="s3"/>
       </row>
-      <row id="rw159" otu="ou26">
-        <cell char="cr153" state="s3"/>
+      <row id="rw152" otu="ou26">
+        <cell char="cr146" state="s3"/>
       </row>
     </matrix>
   </characters>
