@@ -1,7 +1,7 @@
 phylostylotastic reborn
 =======================
 
-We have taken over this repo for a broader project than the original phylostylotastic.  The general thrust of it is to move things forward with regard to supporting portable renderings of richly annotated trees with data.  
+We have taken over this repo for a broader project than the original phylostylotastic.  The general thrust of it is to move things forward with regard to supporting portable renderings of richly annotated trees with data.  The phylostylotastic approach is one part of one possible approach to this challenge. 
 
 ## Our plan
 
