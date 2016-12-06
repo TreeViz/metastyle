@@ -75,12 +75,12 @@ BEGIN NOTES;
 	PICTURE TAXON=7 FORMAT=JPG SOURCE=FILE PICTURE=http://media.eol.org/content/2012/06/15/06/75234_orig.jpg;
 
 	TEXT TAXON=1 TEXT="http://eol.org/pages/328653/overview";
-	TEXT TAXON=1 TEXT="http://eol.org/pages/328649/overview";
-	TEXT TAXON=1 TEXT="http://eol.org/pages/328699/overview";
-	TEXT TAXON=1 TEXT="http://eol.org/pages/311906/overview";
-	TEXT TAXON=1 TEXT="http://eol.org/pages/311580/overview";
-	TEXT TAXON=1 TEXT="http://eol.org/pages/328632/overview";
-	TEXT TAXON=1 TEXT="http://eol.org/pages/328593/overview";
+	TEXT TAXON=2 TEXT="http://eol.org/pages/328649/overview";
+	TEXT TAXON=3 TEXT="http://eol.org/pages/328699/overview";
+	TEXT TAXON=4 TEXT="http://eol.org/pages/311906/overview";
+	TEXT TAXON=5 TEXT="http://eol.org/pages/311580/overview";
+	TEXT TAXON=6 TEXT="http://eol.org/pages/328632/overview";
+	TEXT TAXON=7 TEXT="http://eol.org/pages/328593/overview";
 END;
 
 
