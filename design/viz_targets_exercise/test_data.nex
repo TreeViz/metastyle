@@ -56,15 +56,23 @@ END;
 
 BEGIN NOTES;
 
-	SUT   TAXON = 1 NAME = NCBI_taxid STRING = 9870;
-	SUT   TAXON = 2 NAME = NCBI_taxid STRING = 9860;
-	SUT   TAXON = 3 NAME = NCBI_taxid STRING = 9913;
-	SUT   TAXON = 4 NAME = NCBI_taxid STRING = 469796;
-	SUT   TAXON = 5 NAME = NCBI_taxid STRING = 37032;
-	SUT   TAXON = 6 NAME = NCBI_taxid STRING = 39293;
-	SUT   TAXON = 7 NAME = NCBI_taxid STRING = 30548;
-
 	ALTTAXNAMES vernacularName  =  Reindeer Red_deer Cattle Asiatic_mouflon Meerkat Hooded_seal Striped_skunk;
+
+	TEXT TAXON=1 NAME=info_URL TEXT="http://eol.org/pages/328653/overview";
+	TEXT TAXON=2 NAME=info_URL TEXT="http://eol.org/pages/328649/overview";
+	TEXT TAXON=3 NAME=info_URL TEXT="http://eol.org/pages/328699/overview";
+	TEXT TAXON=4 NAME=info_URL TEXT="http://eol.org/pages/311906/overview";
+	TEXT TAXON=5 NAME=info_URL TEXT="http://eol.org/pages/311580/overview";
+	TEXT TAXON=6 NAME=info_URL TEXT="http://eol.org/pages/328632/overview";
+	TEXT TAXON=7 NAME=info_URL TEXT="http://eol.org/pages/328593/overview";
+
+	TEXT TAXON=1 NAME=NCBI_taxid TEXT="9870";
+	TEXT TAXON=2 NAME=NCBI_taxid TEXT="9860";
+	TEXT TAXON=3 NAME=NCBI_taxid TEXT="9913";
+	TEXT TAXON=4 NAME=NCBI_taxid TEXT="469796";
+	TEXT TAXON=5 NAME=NCBI_taxid TEXT="37032";
+	TEXT TAXON=6 NAME=NCBI_taxid TEXT="39293";
+	TEXT TAXON=7 NAME=NCBI_taxid TEXT="30548";
 	
 	PICTURE TAXON=1 FORMAT=JPG SOURCE=FILE PICTURE=http://media.eol.org/content/2012/06/13/00/48543_orig.jpg; 
 	PICTURE TAXON=2 FORMAT=JPG SOURCE=FILE PICTURE=http://media.eol.org/content/2014/09/16/00/20239_orig.jpg;
@@ -74,13 +82,6 @@ BEGIN NOTES;
 	PICTURE TAXON=6 FORMAT=JPG SOURCE=FILE PICTURE=http://media.eol.org/content/2013/06/18/07/63362_orig.jpg;
 	PICTURE TAXON=7 FORMAT=JPG SOURCE=FILE PICTURE=http://media.eol.org/content/2012/06/15/06/75234_orig.jpg;
 
-	TEXT TAXON=1 TEXT="http://eol.org/pages/328653/overview";
-	TEXT TAXON=2 TEXT="http://eol.org/pages/328649/overview";
-	TEXT TAXON=3 TEXT="http://eol.org/pages/328699/overview";
-	TEXT TAXON=4 TEXT="http://eol.org/pages/311906/overview";
-	TEXT TAXON=5 TEXT="http://eol.org/pages/311580/overview";
-	TEXT TAXON=6 TEXT="http://eol.org/pages/328632/overview";
-	TEXT TAXON=7 TEXT="http://eol.org/pages/328593/overview";
 END;
 
 
