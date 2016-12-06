@@ -1,3 +1,41 @@
+phylostylotastic reborn
+=======================
+
+We have taken over this repo for a broader project than the original phylostylotastic.  The general thrust of it is to move things forward with regard to supporting portable renderings of richly annotated trees with data.  
+
+## Our plan
+
+Our plan has not fully materialized, but it is something like this
+* part 1: talk a lot, build up team (done)
+* part 2: 
+   * Complete an exercise in serialization and rendering 
+   * Write something up about that 
+* part 3: organize a movement for broader adoption, including a hackathon 
+
+### Serialization and rendering exercise 
+
+* Stage 1: Create implementation targets -- DONE (Dec 6, 2016)
+   * (Arlin) Create small (7 otu) data set to support mashups
+   * (Arlin, Rutger, Jaime) Serialize that in NeXML, NEXUS and Newick + csv
+   * (Arlin) Write natural language instructions for 5 increasingly complex views including some or all of the data and key viz features. 
+   * Meet to review implementation targets (so everyone understands)
+* Stage 2: Proof-of-concept implementations (due 13 December)
+   * (Jaime) ETE using internal command language
+   * (Jim and Rick) TreeIllustrator using Vega 
+   * (Daisie) Mesquite using stylesheets
+* Stage 3: Analysis (20 December)
+   * Take a week to review implementations
+   * Meet to discuss and evaluate
+      * consider
+         * Serialization of data
+         * Representation of graphical commands
+         * graphical conventions 
+      * relative to criteria of 
+         * Compelling design logic
+         * Extensibility
+         * Ease of use
+
+
 phylostylotastic
 ================
 
