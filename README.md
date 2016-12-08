@@ -20,8 +20,10 @@ Our plan has not fully materialized, but it is something like this
       * NEXUS - canceled
       * NeXML - [NeXML file remapped.xml](https://github.com/OpenTreeOfLife/phylostylotastic/blob/master/design/viz_targets_exercise/remapped.xml)
       * phffft (phylo flat file format) - https://github.com/jhcepas/tree_formats
-   * (Arlin) Write natural language instructions for 5 increasingly complex views including some or all of the data and key viz features. 
-   * Meet to review implementation targets (so everyone understands)
+   * (Arlin) Write natural language instructions for 5 views covering key data and key viz features. 
+      * [instructions](https://github.com/OpenTreeOfLife/phylostylotastic/blob/master/design/viz_targets_exercise/targets.md)
+      * [graphical hints](https://github.com/OpenTreeOfLife/phylostylotastic/blob/master/design/viz_targets_exercise/tree_viz_targets.pdf) illustrating what a satisfactory rendering might look like
+   * Meet to review implementation targets (so everyone understands) 
 * Stage 2: Proof-of-concept implementations (due 13 December)
    * (Jaime) ETE using internal command language
    * (Jim and Rick) TreeIllustrator using Vega 
