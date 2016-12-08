@@ -17,6 +17,9 @@ Our plan has not fully materialized, but it is something like this
 * Stage 1: Create implementation targets -- DONE (Dec 6, 2016)
    * (Arlin) Create small (7 otu) data set to support mashups
    * (Arlin, Rutger, Jaime) Serialize that in NeXML, NEXUS and Newick + csv
+      * NEXUS - canceled
+      * NeXML - [NeXML file remapped.xml](https://github.com/OpenTreeOfLife/phylostylotastic/blob/master/design/viz_targets_exercise/remapped.xml)
+      * phffft (phylo flat file format) - https://github.com/jhcepas/tree_formats
    * (Arlin) Write natural language instructions for 5 increasingly complex views including some or all of the data and key viz features. 
    * Meet to review implementation targets (so everyone understands)
 * Stage 2: Proof-of-concept implementations (due 13 December)
