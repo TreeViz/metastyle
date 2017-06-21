@@ -1,9 +1,9 @@
-#TSS Specification
+# TSS Specification
 
-##TSS namespace
+## TSS namespace
 TSS has the xmlns namespace xmlns:tss="http://www.phylotastic.org/tss"
 
-##NeXML Annotations
+## NeXML Annotations
 
 Annotations to nodes and edges are specified in the NeXML file as meta tags, with the following general format:
 
@@ -41,8 +41,8 @@ The tss file itself is set up exactly like a css file to allow existing css pars
 
 Below are described the tss components and properties.
 
-##General Components
-###Canvas
+## General Components
+### Canvas
 The canvas represents the rendering box for the tree. This is functionally similar to the body of an html document.
 
 <pre><code>
@@ -67,7 +67,7 @@ canvas {
  }
 </code></pre>
 
-###Tree
+### Tree
 The tree represents the entire drawn tree and contains default properties for the rendering of the tree as a whole
 
 <pre><code>
@@ -96,7 +96,7 @@ tree {
  }
 </code></pre>
 
-###Scale
+### Scale
 Describes the style of a scale bar for the tree
 
 <pre><code>
@@ -128,7 +128,7 @@ scale {
 </code></pre>
 
 
-##Specific Annotated Components
+## Specific Annotated Components
 Everything else in the tss file refers to specific annotations of nodes or edges. The options are detailed below.
 
 Some general properties and parameters will apply to many features. The first of these is the (potential) alignment of the styled element. Where the item should be rendered relative to the annotated element is controlled by the “align” parameter. Because directions on a tree vary relative to the direction it is drawn, we are using the terms “root” and “tip” to specify alignments on the root side or tip side of an object, and “left” and “right” to indicate the left or right side of the object WHEN FACING THE TIP (as opposed to the actual screen). “Center” specifies the center of the element.
@@ -151,12 +151,12 @@ When align is left or right for annotated edges, an additional parameter “edge
 
 In addition to a few specialized parameters, tree renderers will need to recognize existing css definitions for things such as colors, borders, fonts, and opacity.
 
-##Labels
+## Labels
 Labels for edges and nodes may come from multiple places. First, if the node is an OTU, it may have a label in the OTU block of the NeXML file which specifies a name (e.g., the species name). Specific annotations may contain content which can be used as a label. Finally, the text for a label can be specified based in the tss itself.
 
 To label an edge or node with text based on a specific annotation, use the “text” parameter. Text can either be specified with a literal string in quotes, or be the content of the annotation by using VALUE, or be the label associated with the element by using LABEL. Generally, only OTU’s will make use of the LABEL element. The relative alignment of the text to the annotated element is controlled using the align (and if applicable, edge-align) parameters. Other aspects of the text, such as color, font, etc., use standard css formatting. If not specified, the default font properties are those of the canvas (e.g., by default most tree renderers will label tips with the OTU labels using the default canvas font). Some specific examples of controlling labels with tss:
 
-####Example: labeling nodes with the specified property content
+#### Example: labeling nodes with the specified property content
 ***NeXML annotation:***
 <pre><code>&lt;meta id="meta1" property="tss:clade_b" content="Clade Ruelliae" 
    xsi:type="nex:LiteralMeta" datatype="xsd:string"/&gt;
@@ -187,7 +187,7 @@ To label an edge or node with text based on a specific annotation, use the “te
   edge-align: center;
 }</code></pre>
 
-####Example: labeling edges with bootstrap values above 95% with an *
+#### Example: labeling edges with bootstrap values above 95% with an *
 ***NeXML annotation:***
 <pre><code>&lt;meta id="meta1" property="tss:bootstrap" content="98" xsi:type="nex:LiteralMeta"
    datatype="xsd:string"/></code></pre>&gt;
@@ -199,7 +199,7 @@ To label an edge or node with text based on a specific annotation, use the “te
   edge-align: center;
 }</code></pre>
 
-####Example: labeling edges with bootstrap values below 50% with specific text
+#### Example: labeling edges with bootstrap values below 50% with specific text
 ***NeXML annotation:***
 <pre><code>&lt;meta id="meta1" property="tss:boostrap" content="47" xsi:type="nex:LiteralMeta"
    datatype="xsd:string"/&gt;</code></pre>
@@ -211,7 +211,7 @@ To label an edge or node with text based on a specific annotation, use the “te
   edge-align: center;
 }</code></pre>
 
-####Example: labeling edges with their bootstrap values 
+#### Example: labeling edges with their bootstrap values 
 ***NeXML annotation:***
 <pre><code>&lt;meta id="meta1" property="tss:boostrap" content="86" xsi:type="nex:LiteralMeta" datatype="xsd:string"/&gt;</code></pre>
 ***tss:***
@@ -222,7 +222,7 @@ To label an edge or node with text based on a specific annotation, use the “te
   edge-align: center;
 }</code></pre>
 
-####Example: changing the color of OTU labels based on an annotation 
+#### Example: changing the color of OTU labels based on an annotation 
 ***NeXML annotation:***
 <pre><code>&lt;meta id="meta1" property="tss:trophic_level" content="herbivore"
    xsi:type="nex:LiteralMeta" datatype="xsd:string"/&gt;</code></pre>
@@ -232,10 +232,10 @@ To label an edge or node with text based on a specific annotation, use the “te
   color: red;
 }</code></pre>
 
-##Edges
+## Edges
 The rendering of the edge itself can be specified for specific annotation by specifying border properties. Examples:
 
-####Example: styling edges with bootstrap values above 95%
+#### Example: styling edges with bootstrap values above 95%
 ***NeXML annotation:***
 <pre><code>&lt;meta id="meta1" property="tss:bootstrap" content="98" xsi:type="nex:LiteralMeta" 
   datatype="xsd:string"/&gt;</code></pre>
@@ -246,7 +246,7 @@ The rendering of the edge itself can be specified for specific annotation by spe
   border-color: red;
 }</code></pre>
 
-####Example: styling edges with different content
+#### Example: styling edges with different content
 ***NeXML annotation:***
 <pre><code>&lt;meta id="meta1" property="tss:trophic_level" content="herbivore" 
   xsi:type="nex:LiteralMeta" datatype="xsd:string"/&gt;</code></pre>
@@ -259,7 +259,7 @@ trophic_level.carnivore {
   border-color: red;
 }</code></pre>
 
-####Example: styling edges which have a property
+#### Example: styling edges which have a property
 ***NeXML annotation:***
 <pre><code>&lt;meta id="meta1" property="tss:extinct" content="" xsi:type="nex:LiteralMeta" 
   datatype="xsd:string"/&gt;</code></pre>
@@ -305,7 +305,7 @@ trophic_level.carnivore {
   align: tip;
 }</code></pre>
 
-####Example: adding images next to edges based on an annotated property
+#### Example: adding images next to edges based on an annotated property
 ***NeXML annotation:***
 <pre><code>&lt;meta id="meta1" property="tss:extinct" content="" xsi:type="nex:LiteralMeta" datatype="xsd:string"/&gt;</code></pre>
 
@@ -316,10 +316,10 @@ trophic_level.carnivore {
   edge-align: center;
 }</code></pre>
 
-##Symbols
+## Symbols
 Symbols are best displayed by leveraging the ability to add text labels consisting of special unicode characters. such as • ● ▲ ► ▼ ◄ ♦ ♥ ◊ ■ and ▪. By controlling the size and color of these and similar symbols, one can easy draw circle, boxes, ticks, and other symbols on top of nodes or along edges.
 
-####Example: adding red circles to nodes representing gene duplication events
+#### Example: adding red circles to nodes representing gene duplication events
 ***NeXML annotation:***
 <pre><code>&lt;meta id="meta1" property="tss:split_type" content="duplication" 
   xsi:type="nex:LiteralMeta" datatype="xsd:string"/&gt;</code></pre>
@@ -332,7 +332,7 @@ Symbols are best displayed by leveraging the ability to add text labels consisti
   align: center;
 }</code></pre>
 
-####Example: adding tick marks and crosses to edges representing character change and reversal
+#### Example: adding tick marks and crosses to edges representing character change and reversal
 ***NeXML annotation:***
 <pre><code>&lt;meta id="meta1" property="tss:char1change" content="forward"
    xsi:type="nex:LiteralMeta" datatype="xsd:string"/&gt;
@@ -353,10 +353,10 @@ char1change.reverse {
   align: center;
 }</code></pre>
 
-##Collapsing Nodes
+## Collapsing Nodes
 To specify that a specific node should be collapsed, set the collapsed parameter to true. In addition to collapsing the node, properties of the collapsed set can be specified. Text labels can be added, with their font properties controlled through standard font- and color settings. The color of the collapsed region is controlled by the border-color, since color and background-color are reserved for the label.
 
-####Example: labeling nodes with custom text for a specific property value
+#### Example: labeling nodes with custom text for a specific property value
 ***NeXML annotation:***
 <pre><code>&lt;meta id="meta1" property="tss:labeled_clade" content="Ruelliae"
    xsi:type="nex:LiteralMeta" datatype="xsd:string"/&gt;</code></pre>
@@ -369,10 +369,10 @@ To specify that a specific node should be collapsed, set the collapsed parameter
   border-color: red;
 }</code></pre>
 
-##Confidence Intervals
+## Confidence Intervals
 To specify that a confidence interval around a node (e.g., representing a range of depth), use the special bar parameter. The range of the bar should be specified as a two item vector in the content of the property. Since the bar can be viewed as a thick border, we use those properties to style it.
 
-####Example: labeling nodes with custom text for a specific property value
+#### Example: labeling nodes with custom text for a specific property value
 ***NeXML annotation:***
 <pre><code>&lt;meta id="meta1" property="tss:conf_int" content="(50,70)" xsi:type="nex:LiteralMeta"
    datatype="xsd:string"/&gt;</code></pre>
